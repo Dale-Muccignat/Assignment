@@ -4,6 +4,7 @@ import javax.swing.*;
  * Created by Dale Muccignat on 21/09/2016.
  * Super Trump
  */
+// TODO: Set up github
 public class SuperTrump {
     public static void main(String[] args) {
         displayWelcome();
@@ -20,7 +21,7 @@ public class SuperTrump {
                 displayMessege("Error: \nNumber must be between 3 and 5");
             }
         }
-        displayMessege("You have indicated that there are " + playerNo + " players.");
+        getConfirmation("You have indicated that there are " + playerNo + " players.\nIs this correct?");
         //Player[] players = new Player[playerNo];
         // TODO: create player class
     }
@@ -28,8 +29,7 @@ public class SuperTrump {
     private static void displayHelp() {
         int selection;
         Boolean option;
-        selection = JOptionPane.showConfirmDialog(null, "Would you like to read how to play?");
-        option = (selection == JOptionPane.YES_OPTION);
+        option = getConfirmation("Would you like to read how to play?");
         // TODO: Show how to play screen
     }
 
@@ -40,6 +40,10 @@ public class SuperTrump {
     /* JOptionPane methods to reduce complexity */
     private static void displayMessege(String message) {
         JOptionPane.showMessageDialog(null, message);
+    }
+
+    private static Boolean getConfirmation(String message) {
+        return JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, "Would you like to read how to play?");
     }
 
     public static String getInput(String messege) {
