@@ -17,9 +17,6 @@ public class Deck {
     public Deck() {
         //D:\USB\2P2\CP2406\Prac7\Assignment\MstCards_151021.plist
         cards = new ArrayList<>();
-        for (int x = 0; x < INIT_NO_CARDS; x++) {
-             cards.add(new Card("A","B","C","D",x,1.0));
-        }
         //todo read cards from file
     }
 

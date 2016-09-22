@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 
 /**
@@ -25,15 +26,15 @@ abstract class Player {
     public abstract void runTurn();
 
     public void displayHand() {
+        System.out.println(name);
         for (Card card : cardsHand) {
-            System.out.println("blah" + card.getHardness());
+            System.out.println(card.getHardness());
         }
     }
 
     public void initializeHand() {
         ArrayList<Card> cards = Deck.dealCards(NO_CARDS_IN_HAND);               //get 8 cards
         setCards(cards);
-        //todo create array of 8 cards from the deck
         displayHand();
     }
 
@@ -68,4 +69,19 @@ abstract class Player {
     public Boolean getDealer() {
         return dealer;
     }
+
+    /* JOptionPane methods to reduce complexity */
+
+    static void displayMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+
+    static Boolean askConfirmation(String message) {
+        return JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, message);
+    }
+
+    static String askInput(String message) {
+        return JOptionPane.showInputDialog(null, message);
+    }
+
 }

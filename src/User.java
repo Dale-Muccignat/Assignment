@@ -13,5 +13,6 @@ public class User extends Player {
     @Override
     public void runTurn() {
         //todo menu choices for turn
+        askInput("What would you like to do? \n(1) ");
     }
 }
