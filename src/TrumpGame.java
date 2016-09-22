@@ -25,6 +25,7 @@ class TrumpGame {
 
     private void createDeck() {
         deck = new Deck();
+        deck.buildDeck();
     }
 
     private void createPlayers() {
