@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.Random;
 
 /**
  * Created by Dale Muccignat on 21/09/2016.
@@ -9,10 +10,10 @@ import javax.swing.*;
 public class TrumpGame {
     private static Player[] players;
     private  int playersNo;
-    private String name;
+    private String userName;
     public TrumpGame(String name, int playersNo) {
         this.playersNo = playersNo;
-        this.name = name;
+        this.userName = name;
         createPlayers();
         //createDeck();
     }
@@ -22,12 +23,14 @@ public class TrumpGame {
     }
 
     private void createPlayers() {
-        players = new Player[playersNo];
-        //todo set up player in random slot
-        //todo set up ai in random slot
-        for (int x=0; x < playersNo; x++) {                                     // Set player number
-            players[x]  = new Ai();                                          // And name
-            players[x].setPlayerNo(x);
+        Random rand = new Random();
+        int randomNum = rand.nextInt(playersNo + 1);                            //Randomly assign the user to a player no
+        players = new Player[playersNo];                                        //Dealer is always player 0
+        players[randomNum] = new User(userName,randomNum);
+        for (int x=0; x<playersNo; x++) {                                       //Assign the rest as Ai
+            if (x != randomNum) {
+                players[x] = new Ai("Player " + x,x);
+            }
         }
 
     }

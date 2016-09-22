@@ -14,7 +14,7 @@ public class SuperTrump {
         switch (input) {
             case "1": startGame();
                 break;
-            case "2": displayHelp(); //todo make it so it goes back to the menu
+            case "2": displayHelp();
                 break;
             default: displayMessage("Invalid selection");
                 break;
@@ -23,10 +23,9 @@ public class SuperTrump {
 
     private static void startGame() {
         int playersNo;
-        String name = askInput("Please input your name:");
+        String name = askInput("Please input your name:");                      //Gets userName
         playersNo = askPlayersNo();
-        TrumpGame newGame = new TrumpGame(name, playersNo);
-        //newGame.selectDealer();
+        TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game
     }
 
     private static int askPlayersNo() {
@@ -49,6 +48,7 @@ public class SuperTrump {
 
     private static void displayHelp() {
         // TODO: Show how to play screen
+        displayMenu();                                                          //Returns to menu
     }
 
     /* JOptionPane methods to reduce complexity */

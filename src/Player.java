@@ -3,11 +3,14 @@
  * Player object class
  */
 public abstract class Player {
-    private String name="hi";
+    private String name;
     private int playerNo;
+    private Boolean dealer = false;
     public Player() {}
-    public Player(String name) {
+    public Player(String name,int playerNo) {
         this.name = name;
+        this.playerNo = playerNo;
+        System.out.println(name + playerNo);
     }
 
     public int getPlayerNo() {
@@ -24,5 +27,13 @@ public abstract class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setDealer(Boolean dealer) {
+        this.dealer = dealer;
+    }
+
+    public Boolean getDealer() {
+        return dealer;
     }
 }
