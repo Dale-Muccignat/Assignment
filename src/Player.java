@@ -2,7 +2,7 @@
  * Created by Dale Muccignat on 21/09/2016.
  * Player object class
  */
-public class Player {
+public abstract class Player {
     private String name="hi";
     private int playerNo;
     public Player() {}

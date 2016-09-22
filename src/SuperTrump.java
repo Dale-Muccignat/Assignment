@@ -1,68 +1,54 @@
 import javax.swing.*;
 
 /**
- * Created by Dale Muccignat on 21/09/2016.
- * Super Trump (Game Object class)
+ * Created by Dale on 21/09/2016.
+ *
  */
-
-
 public class SuperTrump {
-    private static Player[] players;
-    private  int playersNo;
-    public SuperTrump() {
-        //displayWelcome();
-        //displayHelp(); // TODO: Move these to main
-        askPlayerNo();
-        createPlayers();
+    public static void main(String[] args) {
+        displayMenu();
     }
 
-    private void createPlayers() {
-        players = new Player[playersNo];
-        //int x=1;
-        for (int x=0; x < playersNo; x++) {                                   // Set player number
-            players[x] = new Player();
-            players[x].setPlayerNo(x);                                         // And name
-            players[x].setName(askInput("Player " + (x+1) + "\nPlease Enter your" +
-                    " name: "));
+    private static void displayMenu() {
+        String input = askInput("Menu: \n(1) New Game\n(2) How To Play");
+        switch (input) {
+            case "1": startGame();
+                break;
+            case "2": displayHelp(); //todo make it so it goes back to the menu
+                break;
+            default: displayMessage("Invalid selection");
+                break;
         }
-
     }
 
-    private void askPlayerNo() {
-        int playersNo = 0;
+    private static void startGame() {
+        int playersNo;
+        String name = askInput("Please input your name:");
+        playersNo = askPlayersNo();
+        TrumpGame newGame = new TrumpGame(name, playersNo);
+        //newGame.selectDealer();
+    }
+
+    private static int askPlayersNo() {
         Boolean confirm=false;
-        while (3 > playersNo || playersNo > 5 || !confirm) {                   // Error checks the users
-            String input = askInput("How many players are playing? " +         // input
+        int playersNo=0;
+        while (3 > playersNo || playersNo > 5 || !confirm) {                    // Error checks the users input
+            String input = askInput("How many players are playing? " +
                     "\n'Note: Must be between 3 and 5'");
             playersNo = Integer.parseInt(input);
             if (3 > playersNo || playersNo > 5) {
                 displayMessage("Error: \nNumber must be between 3 and 5");
             }
 
-            confirm = askConfirmation("You have indicated that there are " +   // Confirm selection
+            confirm = askConfirmation("You have indicated that there are " +    // Confirm selection
                     playersNo + " players.\nIs this correct?");
         }
-        setPlayersNo(playersNo);
-    }
-
-    private static void displayHelp() {
-        int selection;
-        Boolean option;
-        option = askConfirmation("Would you like to read how to play?");
-        // TODO: Show how to play screen
-    }
-
-    private static void displayWelcome() {
-        JOptionPane.showMessageDialog(null,"Welcome to SuperTrump!\n");
-    }
-
-    /* Getter/Setters */
-    public int getPlayersNo() {
         return playersNo;
     }
 
-    private void setPlayersNo(int playersNo) {
-        this.playersNo = playersNo;
+
+    private static void displayHelp() {
+        // TODO: Show how to play screen
     }
 
     /* JOptionPane methods to reduce complexity */
