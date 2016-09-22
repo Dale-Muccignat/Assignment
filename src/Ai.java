@@ -12,6 +12,6 @@ public class Ai extends Player {
 
     @Override
     public void runTurn() {
-
+        //todo auto turn
     }
 }

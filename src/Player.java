@@ -1,16 +1,40 @@
+import java.util.ArrayList;
+
 /**
  * Created by Dale Muccignat on 21/09/2016.
  * Player object class
  */
-public abstract class Player {
+abstract class Player {
+    private static final int NO_CARDS_IN_HAND = 8;
     private String name;
     private int playerNo;
     private Boolean dealer = false,pass = false;
-    public Player() {}
-    public Player(String name,int playerNo) {
+    private ArrayList<Card> cardsHand;
+
+    Player() {}
+    Player(String name,int playerNo) {
         this.name = name;
         this.playerNo = playerNo;
         System.out.println(name + playerNo);
+    }
+
+    private void setCards(ArrayList<Card> cards) {
+        this.cardsHand = cards;
+    }
+
+    public abstract void runTurn();
+
+    public void displayHand() {
+        for (Card card : cardsHand) {
+            System.out.println("blah" + card.getHardness());
+        }
+    }
+
+    public void initializeHand() {
+        ArrayList<Card> cards = Deck.dealCards(NO_CARDS_IN_HAND);               //get 8 cards
+        setCards(cards);
+        //todo create array of 8 cards from the deck
+        displayHand();
     }
 
     public Boolean getPass() {
@@ -44,6 +68,4 @@ public abstract class Player {
     public Boolean getDealer() {
         return dealer;
     }
-
-    public abstract void runTurn();
 }

@@ -8,20 +8,28 @@ import java.util.Random;
 
 class TrumpGame {
     private static Player[] players;
+    private Deck deck;
     private  int playersNo;
     private String userName;
+
     TrumpGame(String name, int playersNo) {
         this.playersNo = playersNo;
         this.userName = name;
     }
 
-    private void createDeck() {
-
+    void initialize() {
+        createPlayers();
+        createDeck();
+        dealCards();
     }
 
-    public void createPlayers() {
+    private void createDeck() {
+        deck = new Deck();
+    }
+
+    private void createPlayers() {
         Random rand = new Random();
-        int randomNum = rand.nextInt(playersNo + 1);                            //Randomly assign the user to a player no
+        int randomNum = rand.nextInt(playersNo);                            //Randomly assign the user to a player no
         players = new Player[playersNo];                                        //Dealer is always the last player
         players[randomNum] = new User(userName,randomNum);
         for (int x=0; x<playersNo; x++) {                                       //Assign the rest as Ai
@@ -29,24 +37,21 @@ class TrumpGame {
                 players[x] = new Ai("Player " + x,x);
             }
         }
-
     }
 
-    //todo finish
-    public void startRound() {
+    void startRound() {
         Boolean roundWon = false;
-        do {
+        while (!roundWon) {
             for (int x=0; x < playersNo; x++) {                                 //interate through players
                 if (!players[x].getPass()) {
                     players[x].runTurn();
                 }
             }
-            //todo round class
-        } while (!roundWon);
+            roundWon = true;
+        }
     }
 
-    public void dealCards() {
-        //todo deal cards
+    private void dealCards() {
         for (Player player : players) {
             player.initializeHand();
         }
@@ -62,17 +67,4 @@ class TrumpGame {
         this.playersNo = playersNo;
     }
 
-    /* JOptionPane methods to reduce complexity */
-
-    private static void displayMessage(String message) {
-        JOptionPane.showMessageDialog(null, message);
-    }
-
-    private static Boolean askConfirmation(String message) {
-        return JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, message);
-    }
-
-    private static String askInput(String message) {
-        return JOptionPane.showInputDialog(null, message);
-    }
 }

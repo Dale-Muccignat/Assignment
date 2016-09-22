@@ -1,5 +1,6 @@
 /**
  * Created by mirage_neos on 22/09/2016.
+ * user class
  */
 public class User extends Player {
     public User() {
@@ -11,6 +12,6 @@ public class User extends Player {
 
     @Override
     public void runTurn() {
-
+        //todo menu choices for turn
     }
 }
