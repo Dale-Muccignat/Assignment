@@ -6,26 +6,23 @@ import java.util.Random;
  * Super Trump (Game Object class)
  */
 
-
-public class TrumpGame {
+class TrumpGame {
     private static Player[] players;
     private  int playersNo;
     private String userName;
-    public TrumpGame(String name, int playersNo) {
+    TrumpGame(String name, int playersNo) {
         this.playersNo = playersNo;
         this.userName = name;
-        createPlayers();
-        //createDeck();
     }
 
     private void createDeck() {
 
     }
 
-    private void createPlayers() {
+    public void createPlayers() {
         Random rand = new Random();
         int randomNum = rand.nextInt(playersNo + 1);                            //Randomly assign the user to a player no
-        players = new Player[playersNo];                                        //Dealer is always player 0
+        players = new Player[playersNo];                                        //Dealer is always the last player
         players[randomNum] = new User(userName,randomNum);
         for (int x=0; x<playersNo; x++) {                                       //Assign the rest as Ai
             if (x != randomNum) {
@@ -33,6 +30,26 @@ public class TrumpGame {
             }
         }
 
+    }
+
+    //todo finish
+    public void startRound() {
+        Boolean roundWon = false;
+        do {
+            for (int x=0; x < playersNo; x++) {                                 //interate through players
+                if (!players[x].getPass()) {
+                    players[x].runTurn();
+                }
+            }
+            //todo round class
+        } while (!roundWon);
+    }
+
+    public void dealCards() {
+        //todo deal cards
+        for (Player player : players) {
+            player.initializeHand();
+        }
     }
 
     /* Getter/Setters */

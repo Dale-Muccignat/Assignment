@@ -8,4 +8,9 @@ public class User extends Player {
     public User(String name,int playerNo) {
         super(name,playerNo);
     }
+
+    @Override
+    public void runTurn() {
+
+    }
 }

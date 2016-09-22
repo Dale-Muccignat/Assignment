@@ -26,6 +26,9 @@ public class SuperTrump {
         String name = askInput("Please input your name:");                      //Gets userName
         playersNo = askPlayersNo();
         TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game
+        newGame.createPlayers();
+        newGame.dealCards();
+        newGame.startRound();
     }
 
     private static int askPlayersNo() {

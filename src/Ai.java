@@ -9,4 +9,9 @@ public class Ai extends Player {
     public Ai(String name,int playerNo) {
         super(name,playerNo);
     }
+
+    @Override
+    public void runTurn() {
+
+    }
 }

@@ -5,12 +5,20 @@
 public abstract class Player {
     private String name;
     private int playerNo;
-    private Boolean dealer = false;
+    private Boolean dealer = false,pass = false;
     public Player() {}
     public Player(String name,int playerNo) {
         this.name = name;
         this.playerNo = playerNo;
         System.out.println(name + playerNo);
+    }
+
+    public Boolean getPass() {
+        return pass;
+    }
+
+    public void setPass(Boolean pass) {
+        this.pass = pass;
     }
 
     public int getPlayerNo() {
@@ -36,4 +44,6 @@ public abstract class Player {
     public Boolean getDealer() {
         return dealer;
     }
+
+    public abstract void runTurn();
 }
