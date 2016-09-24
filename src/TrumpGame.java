@@ -11,6 +11,7 @@ class TrumpGame {
     private Deck deck;
     private  int playersNo;
     private String userName;
+    private Deck field;
 
     TrumpGame(String name, int playersNo) {
         this.playersNo = playersNo;
@@ -45,7 +46,7 @@ class TrumpGame {
         while (!roundWon) {
             for (int x=0; x < playersNo; x++) {                                 //interate through players
                 if (!players[x].getPass()) {
-                    players[x].runTurn();
+                    players[x].runTurn();                                       //todo return selection such as card/add to field if card
                 }
             }
             roundWon = true;
@@ -56,6 +57,9 @@ class TrumpGame {
         for (Player player : players) {
             player.initializeHand();
         }
+//        for (int x=0; x < deck.getCards().size();x++) {
+//            deck.getCards().get(x).display(x);
+//        }
     }
 
     /* Getter/Setters */

@@ -21,14 +21,14 @@ public class Deck {
     private static final int INIT_NO_CARDS = 60;
     private static ArrayList<Card> cards;
     public Deck() {
-        //D:\USB\2P2\CP2406\Prac7\Assignment\MstCards_151021.plist
-        //todo read cards from file
+        cards = new ArrayList<>();
     }
 
     void buildDeck() {
-        String cardType,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
-        cards = new ArrayList<>();
-        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
+        String subtitle,cardType,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
+
+        Path filePath = Paths.get("D:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
+//        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
         InputStream input;
         try
         {
@@ -36,7 +36,7 @@ public class Deck {
             BufferedReader reader = new
                     BufferedReader(new InputStreamReader(input));
             for (int x=0; x < 54 ; x++) {
-                cardType = reader.readLine();
+                reader.readLine();
                 chemistry = reader.readLine();
                 classification = reader.readLine();
                 cleavage = reader.readLine();
@@ -49,7 +49,16 @@ public class Deck {
                 occurrence = reader.readLine();
                 specificGravity = reader.readLine();
                 title = reader.readLine();
-                cards.add(new Card(cardType,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title));
+                cards.add(new PlayCard(x,fileName,imageName,title,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
+            }
+            //todo trump cards
+            for (int x = 54; x < 60; x++) {
+                reader.readLine();
+                fileName = reader.readLine();
+                imageName = reader.readLine();
+                subtitle = reader.readLine();
+                title = reader.readLine();
+                cards.add(new TrumpCard(x,fileName,imageName,title,subtitle));
             }
             input.close();
         }
@@ -69,5 +78,9 @@ public class Deck {
             hand.add(card);
         }
     return hand;
+    }
+
+    public static ArrayList<Card> getCards() {
+        return cards;
     }
 }

@@ -27,8 +27,8 @@ abstract class Player {
 
     public void displayHand() {
         System.out.println(name);
-        for (Card card : cardsHand) {
-            System.out.println(card.getTitle());
+        for (int x=0; x<cardsHand.size(); x++) {
+            cardsHand.get(x).display(x+1);
         }
     }
 

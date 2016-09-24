@@ -10,11 +10,13 @@ public class SuperTrump {
     }
 
     private static void displayMenu() {
-        String input = askInput("Menu: \n(1) New Game\n(2) How To Play");
+        String input = askInput("Menu: \n(1) New Game\n(2) How To Play\n(3) Quit");
         switch (input) {
             case "1": startGame();
                 break;
             case "2": displayHelp();
+                break;
+            case "3":
                 break;
             default: displayMessage("Invalid selection");
                 break;
