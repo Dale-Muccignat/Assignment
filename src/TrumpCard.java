@@ -11,7 +11,7 @@ public class TrumpCard extends Card{
 
     @Override
     public String display(int cardHandNo) {
-        return (cardHandNo + " TRUMP: Titile: " + title + " Subtitle: " + subtitle);
+        return ("(" + cardHandNo + ") TRUMP: Titile: " + title + " Subtitle: " + subtitle);
 
 
     }

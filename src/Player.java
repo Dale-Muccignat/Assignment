@@ -9,33 +9,44 @@ abstract class Player {
     private static final int NO_CARDS_IN_HAND = 8;
     private String name;
     private int playerNo;
-    private Boolean dealer = false,pass = false;
+    private Boolean pass = false;
     private ArrayList<Card> cardsHand;
 
     Player() {}
     Player(String name,int playerNo) {
         this.name = name;
         this.playerNo = playerNo;
-        System.out.println(name + playerNo);
+//        System.out.println(name + playerNo);
     }
 
     private void setCards(ArrayList<Card> cards) {
         this.cardsHand = cards;
     }
 
-    public abstract void runTurn();
+    public abstract String runTurn();
 
-    public void displayHand() {
-        System.out.println(name);
+    public String displayHand() {
+        String hand = name + "'s Hand:";
         for (int x=0; x<cardsHand.size(); x++) {
-            cardsHand.get(x).display(x+1);
+            hand += "\n" + cardsHand.get(x).display(x+2);
         }
+        return hand;
     }
 
     public void initializeHand() {
         ArrayList<Card> cards = Deck.dealCards(NO_CARDS_IN_HAND);               //get 8 cards
         setCards(cards);
-        displayHand();
+        //displayMessage(displayHand());
+    }
+    public void removeCard(int index) {
+        this.cardsHand.remove(index);
+    }
+    public void setCardsHand(ArrayList<Card> cardsHand) {
+        this.cardsHand = cardsHand;
+    }
+
+    public ArrayList<Card> getCardsHand() {
+        return cardsHand;
     }
 
     public Boolean getPass() {
@@ -60,14 +71,6 @@ abstract class Player {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setDealer(Boolean dealer) {
-        this.dealer = dealer;
-    }
-
-    public Boolean getDealer() {
-        return dealer;
     }
 
     /* JOptionPane methods to reduce complexity */

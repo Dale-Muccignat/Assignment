@@ -19,13 +19,17 @@ public class SuperTrump {
             case "3":
                 break;
             default: displayMessage("Invalid selection");
+                displayMenu();
                 break;
         }
     }
 
     private static void startGame() {
         int playersNo;
-        String name = askInput("Please input your name:");                      //Gets userName
+        String name = "";
+        while (name.isEmpty()) {
+            name = askInput("Please input your name:");                      //Gets userName
+        }
         playersNo = askPlayersNo();
         TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game
         newGame.initialize();
@@ -33,16 +37,23 @@ public class SuperTrump {
     }
 
     private static int askPlayersNo() {
-        Boolean confirm=false;
+        Boolean confirm=false,correct=false;
         int playersNo=0;
-        while (3 > playersNo || playersNo > 5 || !confirm) {                    // Error checks the users input
-            String input = askInput("How many players are playing? " +
-                    "\n'Note: Must be between 3 and 5'");
-            playersNo = Integer.parseInt(input);
-            if (3 > playersNo || playersNo > 5) {
-                displayMessage("Error: \nNumber must be between 3 and 5");
+        while (!confirm) {
+            while (3 > playersNo || playersNo > 5 || !correct) {                    // Error checks the users input
+                try {
+                    correct = false;
+                    String input = askInput("How many players are playing? " +
+                            "\n'Note: Must be between 3 and 5'");
+                    playersNo = Integer.parseInt(input);
+                    correct = true;
+                    if (3 > playersNo || playersNo > 5) {
+                        displayMessage("Error: \nNumber must be between 3 and 5");
+                    }
+                } catch (NumberFormatException e) {
+                    displayMessage("Error, please input a number.");
+                }
             }
-
             confirm = askConfirmation("You have indicated that there are " +    // Confirm selection
                     playersNo + " players.\nIs this correct?");
         }

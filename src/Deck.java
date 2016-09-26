@@ -25,7 +25,7 @@ public class Deck {
     }
 
     void buildDeck() {
-        String subtitle,cardType,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
+        String subtitle,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
 
         Path filePath = Paths.get("D:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
 //        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
@@ -35,7 +35,7 @@ public class Deck {
             input = Files.newInputStream(filePath);
             BufferedReader reader = new
                     BufferedReader(new InputStreamReader(input));
-            for (int x=0; x < 54 ; x++) {
+            for (int x=0; x < 54 ; x++) {                                       //Read cards from file
                 reader.readLine();
                 chemistry = reader.readLine();
                 classification = reader.readLine();
@@ -51,7 +51,6 @@ public class Deck {
                 title = reader.readLine();
                 cards.add(new PlayCard(x,fileName,imageName,title,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
             }
-            //todo trump cards
             for (int x = 54; x < 60; x++) {
                 reader.readLine();
                 fileName = reader.readLine();
@@ -80,7 +79,21 @@ public class Deck {
     return hand;
     }
 
-    public static ArrayList<Card> getCards() {
+    public String display() {
+        String ret = "";
+        int x=0;
+        for (Card card : cards) {
+            ++x;
+            ret += card.display(x) + "\n";
+        }
+        return ret;
+    }
+
+    public void addCard(Card card) {
+        cards.add(card);
+    }
+
+    public ArrayList<Card> getCards() {
         return cards;
     }
 }

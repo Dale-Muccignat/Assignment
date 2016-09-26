@@ -19,9 +19,9 @@ public class PlayCard extends Card {
 
     @Override
     public String display(int cardHandNo) {
-        return (cardHandNo + " PLAY: Title: " + title + " Chemistry: " + chemistry + " Classification: " +
+        return ("("  + cardHandNo + ") PLAY: Title: " + title + " Chemistry: " + chemistry + " Classification: " +
                 classification + " Cleavage: " + cleavage + " Crystal Abundance: " +
-                crystalAbundance + " Crystal System: " + crystalSystem + " Economic Value: " + economicValue +
+                crystalAbundance + "\nCrystal System: " + crystalSystem + " Economic Value: " + economicValue +
                 " Hardness: " + hardness + " Occurrence: " + occurrence + "Specific Gravity: " +
                 specificGravity);
     }

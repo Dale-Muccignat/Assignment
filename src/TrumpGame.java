@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Random;
 class TrumpGame {
     private static Player[] players;
     private Deck deck;
-    private  int playersNo;
+    private int playersNo;
     private String userName;
     private Deck field;
 
@@ -42,14 +43,32 @@ class TrumpGame {
     }
 
     void startRound() {
+        //todo put in catagory
         Boolean roundWon = false;
+        field = new Deck();
         while (!roundWon) {
             for (int x=0; x < playersNo; x++) {                                 //interate through players
                 if (!players[x].getPass()) {
-                    players[x].runTurn();                                       //todo return selection such as card/add to field if card
+                    try {
+                        String input = players[x].runTurn();
+                        int selection = Integer.parseInt(input);
+                        for (int i=0; i < players[x].getCardsHand().size();i++) {
+                            if (selection == 1) {                               // 1 is PASS, the rest are cards.
+                                players[x].setPass(true);
+                            } else if (selection == i) {
+                                Card card = players[x].getCardsHand().get(i-2); //store selected card
+                                players[x].removeCard(i-2);                     //remove card from hand
+                                field.addCard(card);                            //add card to field
+                            }
+                        }
+
+                    } catch (NumberFormatException e) {
+                        displayMessage("Error, please input a number.");
+                    }
                 }
             }
             roundWon = true;
+            displayMessage("Field: \n" + field.display());                      //display field
         }
     }
 
@@ -57,9 +76,6 @@ class TrumpGame {
         for (Player player : players) {
             player.initializeHand();
         }
-//        for (int x=0; x < deck.getCards().size();x++) {
-//            deck.getCards().get(x).display(x);
-//        }
     }
 
     /* Getter/Setters */
@@ -70,6 +86,20 @@ class TrumpGame {
 
     private void setPlayersNo(int playersNo) {
         this.playersNo = playersNo;
+    }
+
+    /* JOptionPane methods to reduce complexity */
+
+    private static void displayMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+
+    private static Boolean askConfirmation(String message) {
+        return JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, message);
+    }
+
+    private static String askInput(String message) {
+        return JOptionPane.showInputDialog(null, message);
     }
 
 }

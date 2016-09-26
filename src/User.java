@@ -11,8 +11,10 @@ public class User extends Player {
     }
 
     @Override
-    public void runTurn() {
-        //todo menu choices for turn
-        askInput("What would you like to do? \n(1) ");
+    public String runTurn() {
+        String input;
+        input = askInput("Type card number if you would like to play that card or pass: " +
+                "\nYour options:\n(1) PASS" + displayHand());
+        return input;
     }
 }
