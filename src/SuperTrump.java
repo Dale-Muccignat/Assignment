@@ -10,7 +10,7 @@ public class SuperTrump {
     }
 
     private static void displayMenu() {
-        String input = askInput("Menu: \n(1) New Game\n(2) How To Play\n(3) Quit");
+        String input = askInput("Welcome to SUPERTRUMPP!!!!\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
         switch (input) {
             case "1": startGame();
                 break;
@@ -28,7 +28,7 @@ public class SuperTrump {
         int playersNo;
         String name = "";
         while (name.isEmpty()) {
-            name = askInput("Please input your name:");                      //Gets userName
+            name = askInput("Please input your name:");                         //Gets userName
         }
         playersNo = askPlayersNo();
         TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game
@@ -40,7 +40,7 @@ public class SuperTrump {
         Boolean confirm=false,correct=false;
         int playersNo=0;
         while (!confirm) {
-            while (3 > playersNo || playersNo > 5 || !correct) {                    // Error checks the users input
+        while (3 > playersNo || playersNo > 5 || !correct) {                // Error checks the users input
                 try {
                     correct = false;
                     String input = askInput("How many players are playing? " +

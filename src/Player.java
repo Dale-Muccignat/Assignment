@@ -5,9 +5,10 @@ import java.util.ArrayList;
  * Created by Dale Muccignat on 21/09/2016.
  * Player object class
  */
+
 abstract class Player {
     private static final int NO_CARDS_IN_HAND = 8;
-    private String name;
+    String name;
     private int playerNo;
     private Boolean pass = false;
     private ArrayList<Card> cardsHand;
@@ -16,7 +17,7 @@ abstract class Player {
     Player(String name,int playerNo) {
         this.name = name;
         this.playerNo = playerNo;
-//        System.out.println(name + playerNo);
+        System.out.println(name + playerNo);
     }
 
     private void setCards(ArrayList<Card> cards) {
@@ -26,7 +27,7 @@ abstract class Player {
     public abstract String runTurn();
 
     public String displayHand() {
-        String hand = name + "'s Hand:";
+        String hand = "";
         for (int x=0; x<cardsHand.size(); x++) {
             hand += "\n" + cardsHand.get(x).display(x+2);
         }
@@ -36,11 +37,12 @@ abstract class Player {
     public void initializeHand() {
         ArrayList<Card> cards = Deck.dealCards(NO_CARDS_IN_HAND);               //get 8 cards
         setCards(cards);
-        //displayMessage(displayHand());
     }
+
     public void removeCard(int index) {
         this.cardsHand.remove(index);
     }
+
     public void setCardsHand(ArrayList<Card> cardsHand) {
         this.cardsHand = cardsHand;
     }

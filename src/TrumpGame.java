@@ -42,32 +42,44 @@ class TrumpGame {
         }
     }
 
-    void startRound() {
+    Player startRound(int catagory) {
         //todo put in catagory
-        Boolean roundWon = false;
+        //todo store who won, perhaps return
+        Boolean roundEnd= false,confirm=false;
         field = new Deck();
-        while (!roundWon) {
+        Player playerWon = new User();
+        while (!roundEnd) {
+            int noPlayersPassed=0;
             for (int x=0; x < playersNo; x++) {                                 //interate through players
+                confirm = false;
+                System.out.println(players[x].getPass() + players[x].getName());
                 if (!players[x].getPass()) {
-                    try {
+                    playerWon = players[x];                                     //Last player that played is stored
+                    while (!confirm) {
                         String input = players[x].runTurn();
-                        int selection = Integer.parseInt(input);
-                        for (int i=0; i < players[x].getCardsHand().size();i++) {
-                            if (selection == 1) {                               // 1 is PASS, the rest are cards.
-                                players[x].setPass(true);
-                            } else if (selection == i) {
-                                Card card = players[x].getCardsHand().get(i-2); //store selected card
-                                players[x].removeCard(i-2);                     //remove card from hand
+                        if (input.equals("1")) {                               // 1 is PASS, the rest are cards.
+                            players[x].setPass(true);
+                            noPlayersPassed += 1;
+                            confirm = true;
+                        }
+                        for (int i = 2; i < players[x].getCardsHand().size(); i++) {
+                            String index = Integer.toString(i);
+                            if (input.equals(index)) {
+                                Card card = players[x].getCardsHand().get(i - 2); //store selected card
+                                players[x].removeCard(i - 2);                     //remove card from hand
                                 field.addCard(card);                            //add card to field
+                                confirm = true;
                             }
                         }
-
-                    } catch (NumberFormatException e) {
-                        displayMessage("Error, please input a number.");
                     }
+                } else {
+                    noPlayersPassed += 1;
                 }
             }
-            roundWon = true;
+            if (noPlayersPassed == (playersNo - 1)) {
+                roundEnd = true;
+                displayMessage(playerWon.getName() + " won the round");
+            }
             displayMessage("Field: \n" + field.display());                      //display field
         }
     }

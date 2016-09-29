@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Created by mirage_neos on 22/09/2016.
  * Ai class, extends player
@@ -13,6 +15,7 @@ public class Ai extends Player {
     @Override
     public String runTurn() {
         //todo auto turn
-        return "1";
+        Random rand = new Random();
+        return Integer.toString(rand.nextInt(getCardsHand().size()+1));
     }
 }
