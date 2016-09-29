@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -13,10 +12,19 @@ class TrumpGame {
     private int playersNo;
     private String userName;
     private Deck field;
+    enum Category {HARD, SPEC, CLEA, CRUS, ECON};
 
     TrumpGame(String name, int playersNo) {
         this.playersNo = playersNo;
         this.userName = name;
+
+        startGame();
+    }
+
+    private void startGame() {
+        initialize();
+        players[0].askCategory();
+        startRound();
     }
 
     void initialize() {
@@ -34,10 +42,10 @@ class TrumpGame {
         Random rand = new Random();
         int randomNum = rand.nextInt(playersNo);                            //Randomly assign the user to a player no
         players = new Player[playersNo];                                        //Dealer is always the last player
-        players[randomNum] = new User(userName,randomNum);
+        players[randomNum] = new User(userName,randomNum+1);
         for (int x=0; x<playersNo; x++) {                                       //Assign the rest as Ai
             if (x != randomNum) {
-                players[x] = new Ai("Player " + x,x);
+                players[x] = new Ai("Player " + x,x+1);
             }
         }
     }

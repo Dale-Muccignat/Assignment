@@ -25,7 +25,7 @@ public class Deck {
     }
 
     void buildDeck() {
-        String subtitle,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
+        String subtitle,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
 
         Path filePath = Paths.get("D:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
 //        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
@@ -40,7 +40,7 @@ public class Deck {
                 chemistry = reader.readLine();
                 classification = reader.readLine();
                 cleavage = reader.readLine();
-                crystalAbundance = reader.readLine();
+                crustalAbundance = reader.readLine();
                 crystalSystem = reader.readLine();
                 economicValue = reader.readLine();
                 fileName = reader.readLine();
@@ -49,7 +49,7 @@ public class Deck {
                 occurrence = reader.readLine();
                 specificGravity = reader.readLine();
                 title = reader.readLine();
-                cards.add(new PlayCard(x,fileName,imageName,title,chemistry,classification,cleavage,crystalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
+                cards.add(new PlayCard(x,fileName,imageName,title,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
             }
             for (int x = 54; x < 60; x++) {
                 reader.readLine();

@@ -12,6 +12,7 @@ abstract class Player {
     private int playerNo;
     private Boolean pass = false;
     private ArrayList<Card> cardsHand;
+    enum Category {HARD, SPEC, CLEA, CRUS, ECON};
 
     Player() {}
     Player(String name,int playerNo) {
@@ -89,4 +90,5 @@ abstract class Player {
         return JOptionPane.showInputDialog(null, message);
     }
 
+    public abstract Category askCategory();
 }
