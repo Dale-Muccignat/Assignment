@@ -12,7 +12,6 @@ abstract class Player {
     private int playerNo;
     private Boolean pass = false;
     private ArrayList<Card> cardsHand;
-    enum Category {HARD, SPEC, CLEA, CRUS, ECON};
 
     Player() {}
     Player(String name,int playerNo) {
@@ -25,12 +24,12 @@ abstract class Player {
         this.cardsHand = cards;
     }
 
-    public abstract String runTurn();
+    public abstract String runTurn(Category category, Deck field);
 
     public String displayHand() {
         String hand = "";
-        for (int x=0; x<cardsHand.size(); x++) {
-            hand += "\n" + cardsHand.get(x).display(x+2);
+        for (int x = 0; x < cardsHand.size(); x++) {
+            hand += "\n" + cardsHand.get(x).display(x + 2);
         }
         return hand;
     }

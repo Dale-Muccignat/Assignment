@@ -11,10 +11,10 @@ public class User extends Player {
     }
 
     @Override
-    public String runTurn() {
+    public String runTurn(Category category, Deck field) {
         String input;
-        input = askInput(name + "'s Turn!\nType card number if you would like to play that card or pass: " +
-                "\nYour options:\n(1) Pass" + displayHand());
+        input = askInput(name + "'s Turn!\nCategory: " + category + "\nType card number if you would like to play that card or pass: " +
+                "\n(1) Pass" + displayHand() + "\n Field: \n" + field.display());
         return input;
     }
 

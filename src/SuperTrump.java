@@ -32,6 +32,7 @@ public class SuperTrump {
         }
         playersNo = askPlayersNo();
         TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game
+        newGame.startGame();
     }
 
     private static int askPlayersNo() {

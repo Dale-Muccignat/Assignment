@@ -27,8 +27,8 @@ public class Deck {
     void buildDeck() {
         String subtitle,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
 
-        Path filePath = Paths.get("D:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
-//        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
+//        Path filePath = Paths.get("D:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
+        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
         InputStream input;
         try
         {
