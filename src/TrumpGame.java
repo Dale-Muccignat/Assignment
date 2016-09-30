@@ -8,11 +8,12 @@ import java.util.Random;
  */
 
 class TrumpGame {
+    private static final int NO_CARDS_IN_HAND = 8;
     private static ArrayList<Player> players,playersWon;
     private Deck deck;
     private int playersNo;
     private String userName;
-    private Deck field,stored;
+    private Deck storedCards;
     private String[] economicValueValues = {"trivial", "low", "moderate", "high", "very high", "I'm rich!"},
             crustalAbundanceValues = {"ultratrace", "trace", "low", "moderate", "high", "very high"},
             cleavageValues = {"none", "poor/none", "1 poor", "2 poor", "1 good", "1 good, 1 poor", "2 good",
@@ -38,7 +39,7 @@ class TrumpGame {
             }
             Player playerWon = startRound(category);
             System.out.println("WON PLAYER: " + playerWon.getName());
-            shiftArray(players, players.size() - (players.indexOf(playerWon)));
+            shiftArray(players, players.size() - (players.indexOf(playerWon))); //shift array so player won is the first of the next round
         }
         System.out.println(players.get(0).getName() +" Won");
     }
@@ -66,7 +67,7 @@ class TrumpGame {
     private Player startRound(Category category) {
         System.out.println("Category: " + category);
         Boolean roundEnd= false,confirm;
-        field = new Deck();
+        Deck field = new Deck();
         Player playerWonRound = null;
         while (!roundEnd) {
 //            System.out.println("Round Number: " + roundNo);
@@ -75,12 +76,10 @@ class TrumpGame {
             for (int x=0; x < playersNo; x++) {                                 //iterate through players
                 Player player = players.get(x);
                 confirm = false;
-//                System.out.println("Before: " + player.getPass() + " " + player.getName());
-                if (!player.getPass()) {
+                if (!player.getPass() && !player.getWon()) {
                     playerWonRound = player;
                     while (!confirm) {
                         String input = player.runTurn(category,field);
-//                        System.out.println(input);
                         if (input.equals("1")) {
                             // 1 is PASS, the rest are cards.
                             player.setPass(true);
@@ -92,7 +91,14 @@ class TrumpGame {
                             if (input.equals(index)) {
                                 Card card = player.getCardsHand().get(i - 2); //store selected card
                                 if (card instanceof TrumpCard) {
-                                    //todo change category
+                                    Category category1 = ((TrumpCard) card).getCategory();
+                                    if (category != Category.GEOL) {            //change category unless its the geologist
+                                        category = category1;
+                                    } else {                                    //if geologist ask category
+                                        player.askCategory();
+                                    }
+                                    player.removeCard(i - 2);                     //remove card from hand
+                                    field.addCard(card);                            //add card to field
                                 } else {
                                     if (lastCard != null) {                         //if there is a last card
                                         Boolean indicator = compareCards((PlayCard)lastCard, (PlayCard)card, category); //compare cards
@@ -116,7 +122,6 @@ class TrumpGame {
                 } else {
                     noPlayersPassed += 1;
                 }
-//                System.out.println("After: " + player.getPass() + " " + player.getName());
                 if (player.getCardsHand().size() == 0) {
                     playersWon.add(player);
                     players.remove(x);
@@ -127,16 +132,15 @@ class TrumpGame {
             if (noPlayersPassed >= (playersNo - 1)) {
                 roundEnd = true;
                 for (Player player : players) {
-//                    System.out.println(player.getName() + player.getPass());
                     if (!player.getPass()) {
                         System.out.println(player.displayHand());
                         playerWonRound = player;
-//                        displayMessage(playerWonRound.getName() + " won the round");
+                        displayMessage(playerWonRound.getName() + " won the round");
                     }
                 }
             }
-//            displayMessage("Field: \n" + field.display());                      //display field
         }
+        storedCards.addCards(field);
         return playerWonRound;
     }
 
@@ -145,8 +149,6 @@ class TrumpGame {
     private Boolean compareCards(PlayCard lastCard, PlayCard card, Category category) {
         int lastint=0, thisint=0;
         double lastDouble,thisDouble;
-//        System.out.println("Last card: " + lastCard.display(1));
-//        System.out.println("This card: " + card.display(1));
         switch (category) {
             case HARD:
                 lastDouble = lastCard.getHigherValue(2);
@@ -205,7 +207,8 @@ class TrumpGame {
 
     private void dealCards() {
         for (Player player : players) {
-            player.initializeHand();
+            ArrayList<Card> cards = deck.dealCards(NO_CARDS_IN_HAND);               //get 8 cards
+            player.setCards(cards);
         }
     }
 

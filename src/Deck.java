@@ -68,7 +68,7 @@ public class Deck {
     }
 
 
-    static ArrayList<Card> dealCards(int noCardsInHand) {
+    ArrayList<Card> dealCards(int noCardsInHand) {
         ArrayList<Card> hand = new ArrayList<>();
         for (int i = 0; i < noCardsInHand; i++) {
             Random rand = new Random();
@@ -95,5 +95,9 @@ public class Deck {
 
     public ArrayList<Card> getCards() {
         return cards;
+    }
+
+    public void addCards(Deck field) {
+        cards.addAll(field.getCards());
     }
 }

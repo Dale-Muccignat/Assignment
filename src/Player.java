@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 abstract class Player {
-    private static final int NO_CARDS_IN_HAND = 8;
+
     String name;
     private int playerNo;
     private Boolean pass = false,won=false;
@@ -20,7 +20,7 @@ abstract class Player {
         System.out.println(name + playerNo);
     }
 
-    private void setCards(ArrayList<Card> cards) {
+    public void setCards(ArrayList<Card> cards) {
         this.cardsHand = cards;
     }
 
@@ -34,9 +34,8 @@ abstract class Player {
         return hand;
     }
 
-    public void initializeHand() {
-        ArrayList<Card> cards = Deck.dealCards(NO_CARDS_IN_HAND);               //get 8 cards
-        setCards(cards);
+    public void initializeHand(Deck deck) {
+
     }
 
     public void removeCard(int index) {

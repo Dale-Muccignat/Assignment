@@ -14,4 +14,15 @@ public class TrumpCard extends Card{
     public String display(int cardHandNo) {
         return ("(" + cardHandNo + ") TRUMP: Titile: " + title + " Subtitle: " + subtitle);
     }
+    public Category getCategory() {
+        switch (this.title) {
+            case "The Miner": return Category.ECON;
+            case "The Petrologist": return Category.CRUS;
+            case "The Gemmologist": return Category.HARD;
+            case "The Mineralogist": return Category.CLEA;
+            case "The Geophysicist": return Category.SPEC;
+            case "The Geologist": return Category.GEOL;
+        }
+        return null;
+    }
 }
