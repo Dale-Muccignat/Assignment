@@ -23,7 +23,7 @@ public class Ai extends Player {
     @Override
     public Category askCategory() {
         Random rand = new Random();
-        int input = rand.nextInt(5);
+        int input = rand.nextInt(4)+1;
         switch (input) {
             case 1: return Category.HARD;
             case 2: return Category.SPEC;

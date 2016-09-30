@@ -10,7 +10,8 @@ public class SuperTrump {
     }
 
     private static void displayMenu() {
-        String input = askInput("Welcome to SUPERTRUMPP!!!!\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
+//        String input = askInput("Welcome to SUPERTRUMPP!!!!\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
+        String input = "1";
         switch (input) {
             case "1": startGame();
                 break;
@@ -28,7 +29,8 @@ public class SuperTrump {
         int playersNo;
         String name = "";
         while (name.isEmpty()) {
-            name = askInput("Please input your name:");                         //Gets userName
+//            name = askInput("Please input your name:");                         //Gets userName
+            name = "Dale";
         }
         playersNo = askPlayersNo();
         TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game

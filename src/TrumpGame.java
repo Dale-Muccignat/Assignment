@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -7,11 +8,11 @@ import java.util.Random;
  */
 
 class TrumpGame {
-    private static Player[] players;
+    private static ArrayList<Player> players,playersWon;
     private Deck deck;
     private int playersNo;
     private String userName;
-    private Deck field;
+    private Deck field,stored;
     private String[] economicValueValues = {"trivial", "low", "moderate", "high", "very high", "I'm rich!"},
             crustalAbundanceValues = {"ultratrace", "trace", "low", "moderate", "high", "very high"},
             cleavageValues = {"none", "poor/none", "1 poor", "2 poor", "1 good", "1 good, 1 poor", "2 good",
@@ -27,11 +28,19 @@ class TrumpGame {
         createPlayers();
         createDeck();
         dealCards();
-        //todo categories
-        //todo re-arrange players to so that last player starts
         //todo check if hands are empty
-        Category category = players[0].askCategory();
-        Player playerWon = startRound(category);
+        while (players.size() != 1) {
+            Category category = players.get(0).askCategory();
+            for (int x=0; x < players.size(); ++x) {
+                Player player = players.get(x);
+                player.setPass(false);
+                players.set(x,player);
+            }
+            Player playerWon = startRound(category);
+            System.out.println("WON PLAYER: " + playerWon.getName());
+            shiftArray(players, players.size() - (players.indexOf(playerWon)));
+        }
+        System.out.println(players.get(0).getName() +" Won");
     }
 
     private void createDeck() {
@@ -42,56 +51,59 @@ class TrumpGame {
     private void createPlayers() {
         Random rand = new Random();
         int randomNum = rand.nextInt(playersNo);                            //Randomly assign the user to a player no
-        players = new Player[playersNo];                                        //Dealer is always the last player
-        players[randomNum] = new User(userName,randomNum+1);
+        players = new ArrayList<>();                                        //Dealer is always the last player
         for (int x=0; x < playersNo; x++) {                                       //Assign the rest as Ai
             if (x != randomNum) {
-                players[x] = new Ai("Player " + x+1,x+1);
+                Player ai = new Ai("Player " + (x+1),x+1);
+                players.add(ai);
+            } else {
+                Player player = new User(userName,randomNum+1);
+                players.add(player);
             }
         }
     }
 
-    Player startRound(Category category) {
+    private Player startRound(Category category) {
         System.out.println("Category: " + category);
         Boolean roundEnd= false,confirm;
         field = new Deck();
-        Player playerWon = null;
-        int roundNo=0;
+        Player playerWonRound = null;
         while (!roundEnd) {
-            ++roundNo;
-            System.out.println("Round Number: " + roundNo);
+//            System.out.println("Round Number: " + roundNo);
             int noPlayersPassed=0;
             Card lastCard = null;
             for (int x=0; x < playersNo; x++) {                                 //iterate through players
+                Player player = players.get(x);
                 confirm = false;
-                System.out.println("Before: " + players[x].getPass() + " " + players[x].getName());
-                if (!players[x].getPass()) {
-                    playerWon = players[x];
+//                System.out.println("Before: " + player.getPass() + " " + player.getName());
+                if (!player.getPass()) {
+                    playerWonRound = player;
                     while (!confirm) {
-                        String input = players[x].runTurn(category,field);
-                        System.out.println(input);
-                        if (input.equals("1")) {                               // 1 is PASS, the rest are cards.
-                            players[x].setPass(true);
+                        String input = player.runTurn(category,field);
+//                        System.out.println(input);
+                        if (input.equals("1")) {
+                            // 1 is PASS, the rest are cards.
+                            player.setPass(true);
                             noPlayersPassed += 1;
                             confirm = true;
                         }
-                        for (int i = 2; i < players[x].getCardsHand().size(); i++) {
+                        for (int i = 2; i <= (player.getCardsHand().size()+1); i++) {
                             String index = Integer.toString(i);
                             if (input.equals(index)) {
-                                Card card = players[x].getCardsHand().get(i - 2); //store selected card
+                                Card card = player.getCardsHand().get(i - 2); //store selected card
                                 if (card instanceof TrumpCard) {
                                     //todo change category
                                 } else {
                                     if (lastCard != null) {                         //if there is a last card
                                         Boolean indicator = compareCards((PlayCard)lastCard, (PlayCard)card, category); //compare cards
                                         if (indicator) {                            //if valid placement
-                                            players[x].removeCard(i - 2);                     //remove card from hand
+                                            player.removeCard(i - 2);                     //remove card from hand
                                             field.addCard(card);                            //add card to field
                                             confirm = true;
                                             lastCard = card;
                                         }
                                     } else {                                        //if there is no last card
-                                        players[x].removeCard(i - 2);                     //remove card from hand
+                                        player.removeCard(i - 2);                     //remove card from hand
                                         field.addCard(card);                            //add card to field
                                         confirm = true;
                                         lastCard = card;
@@ -104,16 +116,28 @@ class TrumpGame {
                 } else {
                     noPlayersPassed += 1;
                 }
-                System.out.println("After: " + players[x].getPass() + " " + players[x].getName());
+//                System.out.println("After: " + player.getPass() + " " + player.getName());
+                if (player.getCardsHand().size() == 0) {
+                    playersWon.add(player);
+                    players.remove(x);
+                } else {
+                    players.set(x,player);
+                }
             }
-            System.out.println("No Passed: " + noPlayersPassed);
             if (noPlayersPassed >= (playersNo - 1)) {
                 roundEnd = true;
-                displayMessage(playerWon.getName() + " won the round");
+                for (Player player : players) {
+//                    System.out.println(player.getName() + player.getPass());
+                    if (!player.getPass()) {
+                        System.out.println(player.displayHand());
+                        playerWonRound = player;
+//                        displayMessage(playerWonRound.getName() + " won the round");
+                    }
+                }
             }
-            displayMessage("Field: \n" + field.display());                      //display field
+//            displayMessage("Field: \n" + field.display());                      //display field
         }
-        return playerWon;
+        return playerWonRound;
     }
 
 
@@ -121,17 +145,17 @@ class TrumpGame {
     private Boolean compareCards(PlayCard lastCard, PlayCard card, Category category) {
         int lastint=0, thisint=0;
         double lastDouble,thisDouble;
-        System.out.println("Last card: " + lastCard.display(1));
-        System.out.println("This card: " + card.display(1));
+//        System.out.println("Last card: " + lastCard.display(1));
+//        System.out.println("This card: " + card.display(1));
         switch (category) {
             case HARD:
                 lastDouble = lastCard.getHigherValue(2);
                 thisDouble = card.getHigherValue(2);
-                if (lastDouble < thisDouble) { return true; } else { return false; }
+                return lastDouble < thisDouble;
             case SPEC:
                 lastDouble = lastCard.getHigherValue(1);
                 thisDouble = card.getHigherValue(1);
-                if (lastDouble < thisDouble) { return true; } else { return false; }
+                return lastDouble < thisDouble;
             case CLEA:
                 for (int x=0; x < cleavageValues.length; x++) {
                     if (cleavageValues[x].equals(lastCard.getCleavage())) {
@@ -141,11 +165,7 @@ class TrumpGame {
                         thisint = x;
                     }
                 }
-                if (lastint < thisint) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return lastint < thisint;
             case CRUS:
                 for (int x=0; x < crustalAbundanceValues.length; x++) {
                     if (crustalAbundanceValues[x].equals(lastCard.getCrustalAbundance())) {
@@ -155,9 +175,7 @@ class TrumpGame {
                         thisint = x;
                     }
                 }
-                if (lastint < thisint) {
-                    return true;
-                } else { return false; }
+                return lastint < thisint;
             case ECON:
                 for (int x=0; x < economicValueValues.length; x++) {
                     if (economicValueValues[x].equals(lastCard.getEconomicValue())) {
@@ -167,13 +185,23 @@ class TrumpGame {
                         thisint = x;
                     }
                 }
-                if (lastint < thisint) {
-                    return true;
-                } else { return false; }
+                return lastint < thisint;
             default: return false;
             }
     }
+    public static <Player> ArrayList<Player> shiftArray(ArrayList<Player> array, int shift)
+    {
+        if (array.size() == 0)
+            return array;
+        for(int i = 0; i < shift; i++)
+        {
+            // remove last element, add it to front of the ArrayList
+            Player element = array.remove( array.size() - 1 );
+            array.add(0, element);
+        }
 
+        return array;
+    }
 
     private void dealCards() {
         for (Player player : players) {

@@ -10,7 +10,7 @@ abstract class Player {
     private static final int NO_CARDS_IN_HAND = 8;
     String name;
     private int playerNo;
-    private Boolean pass = false;
+    private Boolean pass = false,won=false;
     private ArrayList<Card> cardsHand;
 
     Player() {}
@@ -75,7 +75,14 @@ abstract class Player {
         this.name = name;
     }
 
-    /* JOptionPane methods to reduce complexity */
+    public Boolean getWon() {
+        return won;
+    }
+
+    public void setWon(Boolean won) {
+        this.won = won;
+    }
+/* JOptionPane methods to reduce complexity */
 
     static void displayMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
