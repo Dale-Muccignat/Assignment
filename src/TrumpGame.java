@@ -27,10 +27,13 @@ class TrumpGame {
     }
 
     public void startGame() {
+        int roundNo=0;
         createPlayers();
         createDeck();
         dealCards();
         while (players.size() != 1) {
+            ++roundNo;
+            System.out.println(roundNo);
             Category category = players.get(0).askCategory();
             // error checking
             while (category == null) {
@@ -38,15 +41,16 @@ class TrumpGame {
             }
             // start round which returns the winning player of that round
             Player playerWon = startRound(category);
+            System.out.println(playerWon.getName() + "winning player");
             // shift array so that winning player is first while retaining order
             shiftArray(players, players.size() - (players.indexOf(playerWon))); //shift array so player won is the first of the next round
         }
         // display winning players
-        String message = "The winning players in order are: ";
-        for (int x=0; x < playersWon.size(); ++x) {
-            message += "/n(" + x + ") " + playersWon.get(x-1).getName();
-        }
-        displayMessage(message);
+//        String message = "The winning players in order are: ";
+//        for (int x=0; x < playersWon.size(); ++x) {
+//            message += "/n(" + x + ") " + playersWon.get(x-1).getName();
+//        }
+//        displayMessage(message);
     }
 
     private void createDeck() {
@@ -70,51 +74,65 @@ class TrumpGame {
     }
 
     private Player startRound(Category category) {
-        Boolean roundEnd= false,confirm;
+        Boolean roundEnd = false, confirm,roundWon=false;
         Deck field = new Deck();
-        Player playerWonRound = null,currentPlayer;
+        Player playerWonRound = null, currentPlayer;
         int noPlayersPassed;
-        Card lastCard,currentCard;
-        String input,index;
+        Card lastCard, currentCard;
+        String input, index;
         // set players pass to false
         setPlayersPass(false);
         for (Player player : players) {
             System.out.println(player.getName());
         }
         while (!roundEnd) {
-            noPlayersPassed=0;
             lastCard = null;
             //iterate through players
-            for (int x=0; x < players.size(); x++) {
+            for (int x = 0; x < players.size(); x++) {
                 currentPlayer = players.get(x);
                 confirm = false;
-                if (!currentPlayer.getPass() && !currentPlayer.getWon()) {
-                    playerWonRound = currentPlayer;
+                // if player hasn't passed and round hasn't been won
+                if (!currentPlayer.getPass() && !roundWon) {
                     while (!confirm) {
                         input = currentPlayer.runTurn(category, field);
                         if (input.equals("1")) {
                             // 1 is PASS, the rest are cards.
                             pass(currentPlayer);
-                            noPlayersPassed += 1;
                             confirm = true;
+                            // if there's one player player left, return the player
+                            if (checkPassed()) {
+                                playerWonRound = getRoundWinner();
+                                displayMessage(playerWonRound.getName() + " won the round!");
+                                //todo isn't ending the round
+                                roundWon = true;
+                                roundEnd = true;
+//                                return player;
+                            }
                         } else {
                             for (int i = 2; i <= (currentPlayer.getCardsHand().size() + 1); i++) {
                                 //iterate through rest of selection
                                 index = Integer.toString(i);
                                 if (input.equals(index)) {
-                                    currentCard = currentPlayer.getCardsHand().get(i - 2); //store selected card
+                                    //store selected card
+                                    currentCard = currentPlayer.getCardsHand().get(i - 2);
                                     if (currentCard instanceof TrumpCard) {
                                         Category category1 = ((TrumpCard) currentCard).getCategory();
-                                        if (category1 != Category.GEOLOGIST) {            //change category unless its the geologist
+                                        //change category unless its the geologist
+                                        if (category1 != Category.GEOLOGIST) {
                                             category = category1;
-                                        } else {                                    //if geologist ask category
+                                        } else {
+                                            //if geologist ask category
                                             category = currentPlayer.askCategory();
                                         }
                                         displayMessage("Category has been changed to: " + category.toString().toLowerCase());
-                                        currentPlayer.removeCard(i - 2);                     //remove card from hand
-                                        storedCards.addCard(currentCard);                            //add card to field
-                                        shiftArray(players, players.size() - (players.indexOf(currentPlayer))); //shift array so player is the first of the next round
-                                        startRound(category);                       //new round when trump is played
+                                        //remove card from hand
+                                        currentPlayer.removeCard(i - 2);
+                                        //add card to stored cards
+                                        storedCards.addCard(currentCard);
+                                        //shift array so player is the first of the next round
+                                        shiftArray(players, players.size() - (players.indexOf(currentPlayer)));
+                                        //start new round when trump is played
+                                        startRound(category);
                                     } else {
                                         if (lastCard != null) {                         //if there is a last card
                                             Boolean indicator = compareCards((PlayCard) lastCard, (PlayCard) currentCard, category); //compare cards
@@ -131,13 +149,10 @@ class TrumpGame {
                                             lastCard = currentCard;
                                         }
                                     }
-
                                 }
                             }
                         }
                     }
-                } else {
-                    noPlayersPassed += 1;
                 }
                 if (currentPlayer.getCardsHand().size() == 0) {
                     displayMessage(currentPlayer.getName() + " HAS WON");
@@ -145,20 +160,32 @@ class TrumpGame {
                     players.remove(currentPlayer);
                 }
             }
-            if (noPlayersPassed >= (playersNo - 1)) {
-                roundEnd = true;
-                for (Player player : players) {
-                    if (!player.getPass()) {
-                        playerWonRound = player;
-                        displayMessage(playerWonRound.getName() + " won the round");
-                    }
-                }
-            }
+            // Should now be invalid
+//            if (noPlayersPassed >= (players.size() - 1)) {
+//                roundEnd = true;
+//                for (Player player : players) {
+//                    if (!player.getPass()) {
+//                        playerWonRound = player;
+//                        displayMessage(playerWonRound.getName() + " won the round");
+//                    }
+//                }
+//            }
         }
         if (!field.getCards().isEmpty()) {
             storedCards.addCards(field);
         }
         return playerWonRound;
+    }
+
+    private Boolean checkPassed() {
+        // Checks to see if there is one player left to pass, returns true if there is
+        int count = 0;
+        for (Player player : players) {
+            if (player.getPass()) {
+                ++count;
+            }
+        }
+        return count >= (players.size() - 1);
     }
 
     private void pass(Player player) {
@@ -242,6 +269,17 @@ class TrumpGame {
         for (Player player : players) {
             player.setPass(playersPass);
         }
+    }
+
+    public Player getRoundWinner() {
+        // returns player that hasn't passed
+            for (Player player : players) {
+                if (!player.getPass()) {
+                    return player;
+                }
+            }
+        // Should never be reached
+        return null;
     }
 
     /* Getter/Setters */

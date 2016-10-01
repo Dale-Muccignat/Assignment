@@ -15,6 +15,7 @@ public class Ai extends Player {
     @Override
     public String runTurn(Category category, Deck field) {
         //todo auto turn
+        displayMessage(name + "'s Turn");
         Random rand = new Random();
         return Integer.toString(rand.nextInt(getCardsHand().size())+1);
 //        return "1";
