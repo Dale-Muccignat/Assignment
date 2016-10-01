@@ -25,14 +25,13 @@ public class Ai extends Player {
         Random rand = new Random();
         int input = rand.nextInt(4)+1;
         switch (input) {
-            case 1: return Category.HARD;
-            case 2: return Category.SPEC;
-            case 3: return Category.CLEA;
-            case 4: return Category.CRUS;
-            case 5: return Category.ECON;
+            case 1: return Category.HARDNESS;
+            case 2: return Category.SPECIFICGRAVITY;
+            case 3: return Category.CLEAVAGE;
+            case 4: return Category.CRUSTALABUNDANCE;
+            case 5: return Category.ECONOMICVALUE;
             default: askCategory();
-                break;
+                return null;
         }
-        return null;
     }
 }

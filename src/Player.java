@@ -17,11 +17,6 @@ abstract class Player {
     Player(String name,int playerNo) {
         this.name = name;
         this.playerNo = playerNo;
-        System.out.println(name + playerNo);
-    }
-
-    public void setCards(ArrayList<Card> cards) {
-        this.cardsHand = cards;
     }
 
     public abstract String runTurn(Category category, Deck field);
@@ -32,10 +27,6 @@ abstract class Player {
             hand += "\n" + cardsHand.get(x).display(x + 2);
         }
         return hand;
-    }
-
-    public void initializeHand(Deck deck) {
-
     }
 
     public void removeCard(int index) {

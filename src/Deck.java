@@ -19,7 +19,7 @@ import java.util.Random;
  */
 public class Deck {
     private static final int INIT_NO_CARDS = 60;
-    private static ArrayList<Card> cards;
+    private ArrayList<Card> cards;
     public Deck() {
         cards = new ArrayList<>();
     }
@@ -98,6 +98,6 @@ public class Deck {
     }
 
     public void addCards(Deck field) {
-        cards.addAll(field.getCards());
+        cards.addAll(0,field.getCards());
     }
 }

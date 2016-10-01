@@ -12,10 +12,8 @@ public class User extends Player {
 
     @Override
     public String runTurn(Category category, Deck field) {
-        String input;
-        input = askInput(name + "'s Turn!\nCategory: " + category + "\nType card number if you would like to play that card or pass: " +
+        return askInput(name + "'s Turn!\nCategory: " + category.toString().toLowerCase() + "\nType card number if you would like to play that card or pass: " +
                 "\n(1) Pass" + displayHand() + "\n Field: \n" + field.display());
-        return input;
     }
 
     @Override
@@ -24,15 +22,15 @@ public class User extends Player {
                 "\n(4) Crustal Abundance\n(5) Economic Value";
         String input = askInput(message);
         switch (input) {
-            case "1": return Category.HARD;
-            case "2": return Category.SPEC;
-            case "3": return Category.CLEA;
-            case "4": return Category.CRUS;
-            case "5": return Category.ECON;
+            case "1":
+                return Category.HARDNESS;
+            case "2":
+                return Category.SPECIFICGRAVITY;
+            case "3": return Category.CLEAVAGE;
+            case "4": return Category.CRUSTALABUNDANCE;
+            case "5": return Category.ECONOMICVALUE;
             default: displayMessage("Invalid Selection");
-                askCategory();
-                break;
+                return null;
         }
-        return null;
     }
 }

@@ -16,12 +16,12 @@ public class TrumpCard extends Card{
     }
     public Category getCategory() {
         switch (this.title) {
-            case "The Miner": return Category.ECON;
-            case "The Petrologist": return Category.CRUS;
-            case "The Gemmologist": return Category.HARD;
-            case "The Mineralogist": return Category.CLEA;
-            case "The Geophysicist": return Category.SPEC;
-            case "The Geologist": return Category.GEOL;
+            case "The Miner": return Category.ECONOMICVALUE;
+            case "The Petrologist": return Category.CRUSTALABUNDANCE;
+            case "The Gemmologist": return Category.HARDNESS;
+            case "The Mineralogist": return Category.CLEAVAGE;
+            case "The Geophysicist": return Category.SPECIFICGRAVITY;
+            case "The Geologist": return Category.GEOLOGIST;
         }
         return null;
     }

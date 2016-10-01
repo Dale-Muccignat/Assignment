@@ -10,8 +10,8 @@ public class SuperTrump {
     }
 
     private static void displayMenu() {
-//        String input = askInput("Welcome to SUPERTRUMPP!!!!\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
-        String input = "1";
+        String input = askInput("Welcome to Super-Trump!\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
+//        String input = "1";
         switch (input) {
             case "1": startGame();
                 break;
@@ -26,22 +26,23 @@ public class SuperTrump {
     }
 
     private static void startGame() {
+        //todo custom number of human players
         int playersNo;
         String name = "";
-        while (name.isEmpty()) {
+//        while (name.isEmpty()) {
 //            name = askInput("Please input your name:");                         //Gets userName
             name = "Dale";
-        }
+//        }
         playersNo = askPlayersNo();
         TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game
         newGame.startGame();
     }
 
     private static int askPlayersNo() {
+        //todo pressing no doesn't work
         Boolean confirm=false,correct=false;
         int playersNo=0;
-        while (!confirm) {
-        while (3 > playersNo || playersNo > 5 || !correct) {                // Error checks the users input
+            while (!confirm || 3 > playersNo || playersNo > 5 || !correct) {                // Error checks the users input
                 try {
                     correct = false;
                     String input = askInput("How many players are playing? " +
@@ -54,10 +55,9 @@ public class SuperTrump {
                 } catch (NumberFormatException e) {
                     displayMessage("Error, please input a number.");
                 }
+                confirm = askConfirmation("You have indicated that there are " +    // Confirm selection
+                        playersNo + " players.\nIs this correct?");
             }
-            confirm = askConfirmation("You have indicated that there are " +    // Confirm selection
-                    playersNo + " players.\nIs this correct?");
-        }
         return playersNo;
     }
 
