@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -27,8 +28,8 @@ public class Deck {
     void buildDeck() {
         String subtitle,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
 
-        Path filePath = Paths.get("D:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
-//        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
+//        Path filePath = Paths.get("D:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\dataPlay.txt");
+        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\Resources\\dataPlay.txt");
         InputStream input;
         try
         {
@@ -68,9 +69,9 @@ public class Deck {
     }
 
 
-    ArrayList<Card> dealCards(int noCardsInHand) {
+    ArrayList<Card> dealCards(int noCardsDealt) {
         ArrayList<Card> hand = new ArrayList<>();
-        for (int i = 0; i < noCardsInHand; i++) {
+        for (int i = 0; i < noCardsDealt; i++) {
             Random rand = new Random();
             int randomNum = rand.nextInt(cards.size());
             Card card = cards.remove(randomNum);
