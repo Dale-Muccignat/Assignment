@@ -26,39 +26,8 @@ public class SuperTrump {
     }
 
     private static void startGame() {
-        //todo custom number of human players
-        int playersNo;
-        String name = "";
-        while (name.isEmpty()) {
-            name = askInput("Please input your name:");                         //Gets userName
-//            name = "Dale";
-        }
-        playersNo = askPlayersNo();
-        TrumpGame newGame = new TrumpGame(name, playersNo);                     //Create game
+        TrumpGame newGame = new TrumpGame();                     //Create game
         newGame.startGame();
-    }
-
-    private static int askPlayersNo() {
-        Boolean confirm=false,correct=false;
-        int playersNo=0;
-            while (!confirm || 3 > playersNo || playersNo > 5 || !correct) {                // Error checks the users input
-                try {
-                    correct = false;
-                    String input = askInput("How many players are playing? " +
-                            "\n'Note: Must be between 3 and 5'");
-                    playersNo = Integer.parseInt(input);
-                    correct = true;
-                    if (3 > playersNo || playersNo > 5) {
-                        displayMessage("Error: \nNumber must be between 3 and 5");
-                    } else {
-                        confirm = askConfirmation("You have indicated that there are " +    // Confirm selection
-                                playersNo + " players.\nIs this correct?");
-                    }
-                } catch (NumberFormatException e) {
-                    displayMessage("Error, please input a number.");
-                }
-            }
-        return playersNo;
     }
 
 

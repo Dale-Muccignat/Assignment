@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Random;
 
 class TrumpGame {
     private static final int NO_CARDS_IN_HAND = 8;
-    private ArrayList<Player> players,playersWon;
+    private ArrayList<Player> players,playersWon = new ArrayList<>();
     private static Deck deck;
     private int playersNo;
     private String userName;
@@ -24,20 +25,17 @@ class TrumpGame {
             "3 good", "1 perfect", "1 perfect, 1 good", "1 perfect, 2 good", "2 perfect, 1 good", "3 perfect",
             "4 perfect", "6 perfect"};
 
-    TrumpGame(String name, int playersNo) {
-        this.playersNo = playersNo;
-        this.userName = name;
-        playersWon = new ArrayList<>();
+    TrumpGame() {
+
     }
 
     public void startGame() {
-        int roundNo=0;
+        //creates game, plays rounds
         createPlayers();
         createDeck();
         dealCards();
         while (players.size() != 1) {
             //while there is not one player left
-            ++roundNo;
             roundEnd = false;
             currentCategory = players.get(0).askCategory();
             // error checking
@@ -54,6 +52,7 @@ class TrumpGame {
     }
 
     private void displayWinners() {
+        //displays winners in order
         String message = "The winning players in order are: ";
         int x=0;
         for (Player player : playersWon) {
@@ -64,23 +63,78 @@ class TrumpGame {
     }
 
     private void createDeck() {
+        //builds the deck
         deck = new Deck();
         deck.buildDeck();
     }
 
     private void createPlayers() {
-        //todo custom amount of humans
-        Random rand = new Random();
-        int randomNum = rand.nextInt(playersNo);                            //Randomly assign the user to a player no
+        //create's players array, custom amount of humans/ai
+        Boolean confirm =false;
+        int noHumans=0,noAI=0;
+        while (!confirm) {
+            String input = askInput("How many human players are playing?" + "\nMust be between 0 and 5 inclusive");
+            switch (input) {
+                case "1": noHumans = 1;
+                    break;
+                case "2": noHumans = 2;
+                    break;
+                case "3": noHumans = 3;
+                    break;
+                case "4": noHumans = 4;
+                    break;
+                case "5": noHumans = 5;
+                    break;
+                case "0": noHumans = 0;
+                    break;
+                default:
+                    displayMessage("Error, please enter a valid selection (single integer).");
+                    break;
+            }
+            confirm = askConfirmation("You have indicated that there are " + noHumans +
+                    " humans.\nIs this Correct?");
+        }
+        confirm = false;
+        while (!confirm) {
+            Boolean asked = false;
+            String input = askInput("How many AI players are playing?\nMust be between " + (3-noHumans) +
+                    " and " + (5 - noHumans) + " inclusive.");
+            for (int x = (3-noHumans); x <= (5-noHumans); x++) {
+                System.out.println(x);
+                String option = Integer.toString(x);
+                if (option.equals(input)) {
+                    noAI = Integer.parseInt(option);
+                    confirm = true;
+                }
+            }
+            if (!confirm) {
+                displayMessage("Error, please enter a valid selection (single integer).");
+            } else {
+                confirm = askConfirmation("You have indicated that there are " + noAI +
+                        " AI.\nIs this Correct?");
+            }
+        }
         players = new ArrayList<>();                                        //Dealer is always the last player
-        for (int x=0; x < playersNo; x++) {                                       //Assign the rest as Ai
-//            if (x != randomNum) {
-                Player ai = new Ai("Player " + (x+1),x+1);
-                players.add(ai);
-//            } else {
-//                Player player = new User(userName,randomNum+1);
-//                players.add(player);
-//            }
+        int playerCount=0;
+        for (int x=0;x<noHumans;x++) {
+            ++playerCount;
+            String name="";
+            while (name.isEmpty()) {
+                name = askInput("Player " + (x+1) + "\nPlease input your name:");                         //Gets userName
+            }
+            Player player = new User(name,playerCount+1);
+            players.add(player);
+        }
+        for (int i=0;i<noAI;i++) {
+            Player player = new Ai("Ai " + (i+1),playerCount+1);
+            players.add(player);
+        }
+        for (Player player : players) {
+            System.out.println(player.name);
+        }
+        Collections.shuffle(players);
+        for (Player player : players) {
+            System.out.println(player.name);
         }
     }
 
