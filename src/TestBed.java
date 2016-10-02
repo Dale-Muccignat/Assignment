@@ -5,19 +5,11 @@ import java.util.ArrayList;
  */
 public class TestBed {
     public static void main(String[] args) {
-//        ArrayList<Player> players = new ArrayList<>();
-//        for (int x=0;x<4;x++) {
-//            Player player = new User("Player" + x,x);
-//            players.add(player);
-//            System.out.println(players.get(x).getName());
-//        }
-//        players.get(1).setPass(true);
-//        System.out.println(players.get(1).getPass());
-        Double one,two=5.5;
-        String sevon = "7";
-        one = Double.parseDouble(sevon);
-        System.out.println(one < two);
-
+        Deck deck = new Deck();
+        deck.buildDeck();
+        System.out.println(deck.display());
+        deck.getCards().clear();
+        System.out.println("DECK: " + deck.display());
 
     }
 }

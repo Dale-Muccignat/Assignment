@@ -36,26 +36,31 @@ class TrumpGame {
         createDeck();
         dealCards();
         while (players.size() != 1) {
+            //while there is not one player left
             ++roundNo;
             roundEnd = false;
-            System.out.println("ROUND " + roundNo);
             currentCategory = players.get(0).askCategory();
             // error checking
             while (currentCategory == null) {
                 currentCategory = players.get(0).askCategory();
             }
             // start round which returns the winning player of that round
-            Player playerWon = startRound();
-            System.out.println(playerWon.getName() + "winning player");
+            startRound();
             // shift array so that winning player is first while retaining order
-            shiftArray(players, players.size() - (players.indexOf(playerWon))); //shift array so player won is the first of the next round
+            shiftArray(players, players.size() - (players.indexOf(playerWonRound))); //shift array so player won is the first of the next round
         }
         // display winning players
-//        String message = "The winning players in order are: ";
-//        for (int x=0; x < playersWon.size(); ++x) {
-//            message += "/n(" + x + ") " + playersWon.get(x-1).getName();
-//        }
-//        displayMessage(message);
+        displayWinners();
+    }
+
+    private void displayWinners() {
+        String message = "The winning players in order are: ";
+        int x=0;
+        for (Player player : playersWon) {
+            ++x;
+            message += "\n(" + x + ") " + player.getName();
+        }
+        displayMessage(message);
     }
 
     private void createDeck() {
@@ -64,6 +69,7 @@ class TrumpGame {
     }
 
     private void createPlayers() {
+        //todo custom amount of humans
         Random rand = new Random();
         int randomNum = rand.nextInt(playersNo);                            //Randomly assign the user to a player no
         players = new ArrayList<>();                                        //Dealer is always the last player
@@ -78,12 +84,8 @@ class TrumpGame {
         }
     }
 
-    private Player startRound() {
-//        Boolean confirm,roundEnd=false;
-//        Deck field = new Deck();
-//        Player playerWonRound = null, currentPlayer;
-//        Card lastCard, currentCard;
-        String input, index;
+    private void startRound() {
+        String input;
         // set players pass to false
         setPlayersPass(false);
         lastCard = null;
@@ -118,10 +120,13 @@ class TrumpGame {
                 checkGameWinner();
             }
         }
+        storeCards();
+    }
+
+    private void storeCards() {
         if (!field.getCards().isEmpty()) {
             storedCards.addCards(field);
         }
-        return playerWonRound;
     }
 
     private void processCard(String input) {
@@ -225,7 +230,13 @@ class TrumpGame {
         //Player is dealt card when passing
         System.out.println(player.getName() + " Has decided to pass");
         displayMessage(player.getName() + " Has decided to pass");
-        player.getCardsHand().addAll(deck.dealCards(1));
+        //if deck isn't empty, deal card, else fill deck up with stored cards
+        if (!deck.getCards().isEmpty()) {
+            player.getCardsHand().addAll(deck.dealCards(1));
+        } else {
+            deck.getCards().addAll(storedCards.getCards());
+            storedCards.getCards().clear();
+        }
 
     }
 
