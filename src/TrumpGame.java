@@ -31,20 +31,20 @@ class TrumpGame {
         createPlayers();
         createDeck();
         dealCards();
-        while (players.size() != 1) {
+//        while (players.size() != 1) {
             ++roundNo;
-            System.out.println(roundNo);
+            System.out.println("ROUND " + roundNo);
             Category category = players.get(0).askCategory();
             // error checking
             while (category == null) {
                 category = players.get(0).askCategory();
             }
             // start round which returns the winning player of that round
-            Player playerWon = startRound(category);
+            Player playerWon = startRound(category,false);
             System.out.println(playerWon.getName() + "winning player");
             // shift array so that winning player is first while retaining order
             shiftArray(players, players.size() - (players.indexOf(playerWon))); //shift array so player won is the first of the next round
-        }
+//        }
         // display winning players
 //        String message = "The winning players in order are: ";
 //        for (int x=0; x < playersWon.size(); ++x) {
@@ -73,80 +73,100 @@ class TrumpGame {
         }
     }
 
-    private Player startRound(Category category) {
-        Boolean roundEnd = false, confirm,roundWon=false;
+    private Player startRound(Category category,Boolean roundEnd) {
+        Boolean confirm;
         Deck field = new Deck();
         Player playerWonRound = null, currentPlayer;
-        int noPlayersPassed;
         Card lastCard, currentCard;
         String input, index;
         // set players pass to false
         setPlayersPass(false);
-        for (Player player : players) {
-            System.out.println(player.getName());
-        }
+        lastCard = null;
+        displayMessage("Category is: " + category.toString().toLowerCase());
         while (!roundEnd) {
-            lastCard = null;
             //iterate through players
+//            System.out.println("#####\nnew sweep\n######");
             for (int x = 0; x < players.size(); x++) {
                 currentPlayer = players.get(x);
                 confirm = false;
                 // if player hasn't passed and round hasn't been won
-                if (!currentPlayer.getPass() && !roundWon) {
-                    while (!confirm) {
-                        input = currentPlayer.runTurn(category, field);
-                        if (input.equals("1")) {
-                            // 1 is PASS, the rest are cards.
-                            pass(currentPlayer);
-                            confirm = true;
-                            // if there's one player player left, return the player
-                            if (checkPassed()) {
-                                playerWonRound = getRoundWinner();
-                                displayMessage(playerWonRound.getName() + " won the round!");
-                                //todo isn't ending the round
-                                roundWon = true;
-                                roundEnd = true;
-//                                return player;
-                            }
-                        } else {
-                            for (int i = 2; i <= (currentPlayer.getCardsHand().size() + 1); i++) {
-                                //iterate through rest of selection
-                                index = Integer.toString(i);
-                                if (input.equals(index)) {
-                                    //store selected card
-                                    currentCard = currentPlayer.getCardsHand().get(i - 2);
-                                    if (currentCard instanceof TrumpCard) {
-                                        Category category1 = ((TrumpCard) currentCard).getCategory();
-                                        //change category unless its the geologist
-                                        if (category1 != Category.GEOLOGIST) {
-                                            category = category1;
+                if (!roundEnd) {
+                    if (!currentPlayer.getPass()) {
+//                        System.out.println("--------------\nRound end: " + roundEnd);
+//                        System.out.println(currentPlayer.getName() + "'s Turn");
+//                        System.out.println("Passed? " + currentPlayer.getPass());
+                        while (!confirm) {
+                            //todo display ranking system for categories
+                            input = currentPlayer.runTurn(category, field);
+                            if (input.equals("1")) {
+                                // 1 is PASS, the rest are cards.
+                                confirm = true;
+                                // if there's one player player left, return the player
+                                pass(currentPlayer);
+                                switch (checkPassed()) {
+                                    case "1":   //all but one player has passed, return winner
+                                        playerWonRound = getRoundWinner();
+                                        //todo null error
+//                                        System.out.println(playerWonRound.getName() + " won the round!");
+                                        displayMessage(playerWonRound.getName() + " won the round!");
+                                        roundEnd = true;
+                                        break;
+                                    case "2":   //all players have passed, return current.
+                                        //this shouldn't be reached??
+                                        System.out.println("WAS REACHED");
+                                        playerWonRound = currentPlayer;
+                                        displayMessage(playerWonRound.getName() + " won the round!");
+                                        roundEnd = true;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            } else {
+                                for (int i = 2; i <= (currentPlayer.getCardsHand().size() + 1); i++) {
+                                    //iterate through rest of selection
+                                    index = Integer.toString(i);
+                                    if (input.equals(index)) {
+                                        //store selected card
+                                        currentCard = currentPlayer.getCardsHand().get(i - 2);
+                                        if (currentCard instanceof TrumpCard) {
+                                            Category category1 = ((TrumpCard) currentCard).getCategory();
+                                            //change category unless its the geologist
+                                            if (category1 != Category.GEOLOGIST) {
+                                                category = category1;
+                                            } else {
+                                                //if geologist ask category
+                                                category = currentPlayer.askCategory();
+                                            }
+                                            displayMessage("Category has been changed to: " + category.toString().toLowerCase());
+                                            //remove card from hand
+                                            currentPlayer.removeCard(i - 2);
+                                            //add card to stored cards
+                                            storedCards.addCard(currentCard);
+                                            //shift array so player is the first of the next round
+                                            shiftArray(players, players.size() - (players.indexOf(currentPlayer)));
+                                            //start new round when trump is played
+                                            startRound(category, false);
                                         } else {
-                                            //if geologist ask category
-                                            category = currentPlayer.askCategory();
-                                        }
-                                        displayMessage("Category has been changed to: " + category.toString().toLowerCase());
-                                        //remove card from hand
-                                        currentPlayer.removeCard(i - 2);
-                                        //add card to stored cards
-                                        storedCards.addCard(currentCard);
-                                        //shift array so player is the first of the next round
-                                        shiftArray(players, players.size() - (players.indexOf(currentPlayer)));
-                                        //start new round when trump is played
-                                        startRound(category);
-                                    } else {
-                                        if (lastCard != null) {                         //if there is a last card
-                                            Boolean indicator = compareCards((PlayCard) lastCard, (PlayCard) currentCard, category); //compare cards
-                                            if (indicator) {                            //if valid placement
+                                            if (lastCard != null) {                         //if there is a last card
+                                                Boolean indicator = compareCards((PlayCard) lastCard, (PlayCard) currentCard, category); //compare cards
+                                                if (indicator) {                            //if valid placement
+                                                    currentPlayer.removeCard(i - 2);                     //remove card from hand
+                                                    field.addCard(currentCard);                            //add card to field
+                                                    confirm = true;
+                                                    displayMessage(currentPlayer.getName() + " has played: " +
+                                                            declareCard((PlayCard) currentCard, category));
+                                                    lastCard = currentCard;
+                                                } else if (currentPlayer instanceof User) {
+                                                    displayMessage("Error, card has lower value than the previous card.");
+                                                }
+                                            } else {                                        //if there is no last card
                                                 currentPlayer.removeCard(i - 2);                     //remove card from hand
                                                 field.addCard(currentCard);                            //add card to field
                                                 confirm = true;
+                                                displayMessage(currentPlayer.getName() + " has played: " +
+                                                        declareCard((PlayCard) currentCard, category));
                                                 lastCard = currentCard;
                                             }
-                                        } else {                                        //if there is no last card
-                                            currentPlayer.removeCard(i - 2);                     //remove card from hand
-                                            field.addCard(currentCard);                            //add card to field
-                                            confirm = true;
-                                            lastCard = currentCard;
                                         }
                                     }
                                 }
@@ -177,7 +197,12 @@ class TrumpGame {
         return playerWonRound;
     }
 
-    private Boolean checkPassed() {
+    private String declareCard(PlayCard currentCard, Category category) {
+        return currentCard.getTitle() + ", " + category.toString().toLowerCase() +
+                ", (" + currentCard.getCategoryValue(category) + ")";
+    }
+
+    private String checkPassed() {
         // Checks to see if there is one player left to pass, returns true if there is
         int count = 0;
         for (Player player : players) {
@@ -185,12 +210,17 @@ class TrumpGame {
                 ++count;
             }
         }
-        return count >= (players.size() - 1);
+        if (count == (players.size() - 1)) {
+            return "1";
+        } else if (count == players.size()) {
+            return "2";
+        } else { return "3"; }
     }
 
     private void pass(Player player) {
         player.setPass(true);
         //Player is dealt card when passing
+        System.out.println(player.getName() + " Has decided to pass");
         displayMessage(player.getName() + " Has decided to pass");
         player.getCardsHand().addAll(deck.dealCards(1));
     }
@@ -199,12 +229,14 @@ class TrumpGame {
     private Boolean compareCards(PlayCard lastCard, PlayCard card, Category category) {
         int lastint=0, thisint=0;
         double lastDouble,thisDouble;
+//        System.out.println(lastCard.display(1));
+//        System.out.println(card.display(1));
         switch (category) {
             case HARDNESS:
                 lastDouble = lastCard.getHigherValue(2);
                 thisDouble = card.getHigherValue(2);
-                System.out.println("LAST: (" + lastDouble + ") THIS: (" + thisDouble + ")");
-                System.out.println(lastDouble < thisDouble);
+//                System.out.println("LAST: " + lastDouble + " THIS: " + thisDouble);
+//                System.out.println(lastDouble < thisDouble);
                 return lastDouble < thisDouble;
             case SPECIFICGRAVITY:
                 lastDouble = lastCard.getHigherValue(1);
@@ -279,6 +311,7 @@ class TrumpGame {
                 }
             }
         // Should never be reached
+        System.out.println("NULL WAS REACHED ABORT ABORT");
         return null;
     }
 

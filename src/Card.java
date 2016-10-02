@@ -14,4 +14,7 @@ public abstract class Card {
     }
     public abstract String display(int cardHandNo);
 
+    public String getTitle() {
+        return title;
+    }
 }

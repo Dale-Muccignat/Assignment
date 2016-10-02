@@ -21,7 +21,7 @@ public class PlayCard extends Card {
     public String display(int cardHandNo) {
         return ("("  + cardHandNo + ") PLAY: Title: " + title + " Hardness: (" + hardness + ") Specific Gravity: (" +
                 specificGravity + ") Cleavage: (" + cleavage + ") Crustal Abundance: (" +
-                crustalAbundance + ") Economic Value: (" + economicValue);
+                crustalAbundance + ") Economic Value: (" + economicValue + ")");
 //                " Chemistry: " + chemistry + " Classification: " +
 //                classification + "Crystal System: " + crystalSystem +
 //                " Occurrence: " + occurrence);
@@ -39,13 +39,7 @@ public class PlayCard extends Card {
         return economicValue;
     }
 
-    public String getHardness() {
-        return hardness;
-    }
 
-    public String getSpecificGravity() {
-        return specificGravity;
-    }
 
     public double getHigherValue(int ident) {
         String string;
@@ -66,5 +60,16 @@ public class PlayCard extends Card {
             higherValue = Double.parseDouble(stringHigherValue);
         }
         return higherValue;
+    }
+
+    public String getCategoryValue(Category category) {
+        switch (category) {
+            case HARDNESS: return hardness;
+            case CLEAVAGE: return cleavage;
+            case CRUSTALABUNDANCE: return crustalAbundance;
+            case SPECIFICGRAVITY: return specificGravity;
+            case ECONOMICVALUE: return economicValue;
+            default: return null;
+        }
     }
 }
