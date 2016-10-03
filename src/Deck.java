@@ -85,7 +85,7 @@ public class Deck {
         int x=0;
         for (Card card : cards) {
             ++x;
-            ret += card.display(x) + "\n";
+            ret += "\n" + card.display(x);
         }
         return ret;
     }

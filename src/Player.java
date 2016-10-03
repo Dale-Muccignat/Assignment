@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Created by Dale Muccignat on 21/09/2016.
@@ -72,18 +73,18 @@ abstract class Player {
     public void setWon(Boolean won) {
         this.won = won;
     }
-/* JOptionPane methods to reduce complexity */
 
-    static void displayMessage(String message) {
-        JOptionPane.showMessageDialog(null, message);
+    /* Scanner methods to reduce complexity */
+
+    public static void displayMessage(String message) {
+        System.out.println(message);
     }
 
-    static Boolean askConfirmation(String message) {
-        return JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, message);
-    }
-
-    static String askInput(String message) {
-        return JOptionPane.showInputDialog(null, message);
+    public static String askInput(String message)
+    {
+        System.out.println(message);
+        Scanner inputDevice = new Scanner(System.in);
+        return inputDevice.next();
     }
 
     public abstract Category askCategory();

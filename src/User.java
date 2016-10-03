@@ -14,9 +14,9 @@ public class User extends Player {
 
     @Override
     public String runTurn(Category category, Deck field) {
-        return askInput(name+ "'s turn!\nSelect a card to play or pass\nCategory: " +
+        return askInput("Select a card to play or pass\nCategory: " +
                 category.toString() + "\n(1)Pass" +
-                displayHand() + "\n Field: \n" + field.display());
+                displayHand() + "\n Field: " + field.display());
     }
 
     @Override
