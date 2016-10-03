@@ -8,8 +8,8 @@ public class User extends Player {
     public User() {
     }
 
-    public User(String name,int playerNo) {
-        super(name,playerNo);
+    public User(String name) {
+        super(name);
     }
 
     @Override

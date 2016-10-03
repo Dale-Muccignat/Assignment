@@ -40,8 +40,8 @@ class TrumpGame {
     }
 
     private void displayHelp() {
-        // TODO: Show how to play screen
-        displayMenu();                                                          //Returns to menu
+        // How to play is images, will be implimented in GUI
+        displayMenu();       //Returns to menu
     }
 
     private void startGame() {
@@ -144,18 +144,16 @@ class TrumpGame {
             }
         }
         players = new ArrayList<>();                                        //Dealer is always the last player
-        int playerCount=0;
         for (int x=0;x<noHumans;x++) {
             //create human players
-            ++playerCount;
             String name;
             name = askInput("Player " + (x+1) + "\nPlease input your name:");   //Gets userName
-            Player player = new User(name,playerCount+1);
+            Player player = new User(name);
             players.add(player);
         }
         for (int i=0;i<noAI;i++) {
             //create ai
-            Player player = new Ai("Ai " + (i+1),playerCount+1);
+            Player player = new Ai("Ai " + (i+1));
             players.add(player);
         }
         Collections.shuffle(players);
@@ -389,7 +387,7 @@ class TrumpGame {
         // returns player that hasn't passed or won the game before
         ArrayList<Player> playersLeft = new ArrayList<>();
         // account for players already won
-        for (Player player : players) {
+        for (Player player : players) {         //unsure of collect call method
             if (!player.getWon()) {
                 playersLeft.add(player);
             }
@@ -401,14 +399,6 @@ class TrumpGame {
         }
         // Should never be reached as it is made sure that there is one player that hasn't passed
         return null;
-    }
-
-    public Card getCurrentCard() {
-        return currentCard;
-    }
-
-    public Category getCurrentCategory() {
-        return currentCategory;
     }
     /* scanner methods to reduce complexity */
 
@@ -426,8 +416,9 @@ class TrumpGame {
             case "2": return false;
             default: displayMessage("Invalid input");
                 askConfirmation(message);
+                //is never reached
+                return false;
         }
-        return null;
     }
 
     private static String askInput(String message)

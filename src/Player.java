@@ -10,19 +10,17 @@ import java.util.Scanner;
 abstract class Player {
 
     String name;
-    private int playerNo;
     private Boolean pass = false,won=false;
     private ArrayList<Card> cardsHand;
 
     Player() {}
-    Player(String name,int playerNo) {
+    Player(String name) {
         this.name = name;
-        this.playerNo = playerNo;
     }
 
     public abstract String runTurn(Category category, Deck field);
 
-    public String displayHand() {
+    String displayHand() {
         String hand = "";
         for (int x = 0; x < cardsHand.size(); x++) {
             hand += "\n" + cardsHand.get(x).display(x + 2);
@@ -30,49 +28,45 @@ abstract class Player {
         return hand;
     }
 
-    public void removeCard(int index) {
+    void removeCard(int index) {
         this.cardsHand.remove(index);
     }
 
-    public void setCardsHand(ArrayList<Card> cardsHand) {
+    void setCardsHand(ArrayList<Card> cardsHand) {
         this.cardsHand = cardsHand;
     }
 
-    public ArrayList<Card> getCardsHand() {
+    ArrayList<Card> getCardsHand() {
         return cardsHand;
     }
 
-    public Boolean getPass() {
+    Boolean getPass() {
         return pass;
     }
 
-    public void setPass(Boolean pass) {
+    void setPass(Boolean pass) {
         this.pass = pass;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Boolean getWon() {
+    Boolean getWon() {
         return won;
     }
 
-    public void setWon(Boolean won) {
+    void setWon(Boolean won) {
         this.won = won;
     }
 
     /* Scanner methods to reduce complexity */
 
-    public static void displayMessage(String message) {
+    static void displayMessage(String message) {
         System.out.println(message);
     }
 
-    public static String askInput(String message)
+    static String askInput(String message)
     {
         System.out.println(message);
         Scanner inputDevice = new Scanner(System.in);

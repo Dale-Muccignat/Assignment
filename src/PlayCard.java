@@ -9,7 +9,7 @@ public class PlayCard extends Card {
                     "3 good", "1 perfect", "1 perfect, 1 good", "1 perfect, 2 good", "2 perfect, 1 good", "3 perfect",
                     "4 perfect", "6 perfect"};
 
-    public PlayCard(int index, String fileName, String imageName, String title, String chemistry, String classification, String cleavage, String crustalAbundance, String crystalSystem, String economicValue, String hardness, String occurrence, String specificGravity) {
+    PlayCard(int index, String fileName, String imageName, String title, String chemistry, String classification, String cleavage, String crustalAbundance, String crystalSystem, String economicValue, String hardness, String occurrence, String specificGravity) {
         super(index, fileName, imageName, title);
         this.chemistry = chemistry.trim();                                      //trim strings
         this.classification = classification.trim();
@@ -24,7 +24,7 @@ public class PlayCard extends Card {
 
     @Override
     public String display(int cardHandNo) {
-        return ("("  + cardHandNo + ") PLAY: Title: " + title + " Hardness: (" + hardness + ") Specific Gravity: (" +
+        return ("("  + cardHandNo + ") PLAY: Title: " + getTitle() + " Hardness: (" + hardness + ") Specific Gravity: (" +
                 specificGravity + ") \nCleavage: (" + cleavage + ") Crustal Abundance: (" +
                 crustalAbundance + ") Economic Value: (" + economicValue + ")");
 //                " Chemistry: " + chemistry + " Classification: " +
@@ -32,19 +32,19 @@ public class PlayCard extends Card {
 //                " Occurrence: " + occurrence);
     }
 
-    public String getCleavage() {
+    private String getCleavage() {
         return cleavage;
     }
 
-    public String getCrustalAbundance() {
+    private String getCrustalAbundance() {
         return crustalAbundance;
     }
 
-    public String getEconomicValue() {
+    private String getEconomicValue() {
         return economicValue;
     }
 
-    public Boolean compareCards(PlayCard lastCard, Category currentCategory) {
+    Boolean compareCards(PlayCard lastCard, Category currentCategory) {
         int lastint=0, thisint=0;
         double lastDouble,thisDouble;
         switch (currentCategory) {
@@ -90,7 +90,7 @@ public class PlayCard extends Card {
         }
     }
 
-    public double getHigherValue(int ident) {
+    private double getHigherValue(int ident) {
         String string;
         if (ident == 1) {
             // remove all whitespace from the string
@@ -111,7 +111,7 @@ public class PlayCard extends Card {
         return higherValue;
     }
 
-    public String getCategoryValue(Category category) {
+    String getCategoryValue(Category category) {
         switch (category) {
             case HARDNESS: return hardness;
             case CLEAVAGE: return cleavage;

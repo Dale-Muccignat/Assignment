@@ -1,27 +1,20 @@
-
-import xmlwise.Plist;
-import xmlwise.XmlParseException;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Random;
 
 /**
  * Created by Dale on 21/09/2016.
  * Deck Object
  */
-public class Deck {
-    private static final int INIT_NO_CARDS = 60;
+class Deck {
     private ArrayList<Card> cards;
-    public Deck() {
+    Deck() {
         cards = new ArrayList<>();
     }
 
@@ -80,7 +73,7 @@ public class Deck {
     return hand;
     }
 
-    public String display() {
+    String display() {
         String ret = "";
         int x=0;
         for (Card card : cards) {
@@ -90,15 +83,15 @@ public class Deck {
         return ret;
     }
 
-    public void addCard(Card card) {
+    void addCard(Card card) {
         cards.add(card);
     }
 
-    public ArrayList<Card> getCards() {
+    ArrayList<Card> getCards() {
         return cards;
     }
 
-    public void addCards(Deck field) {
+    void addCards(Deck field) {
         cards.addAll(field.getCards());
     }
 }
