@@ -99,6 +99,6 @@ public class Deck {
     }
 
     public void addCards(Deck field) {
-        cards.addAll(0,field.getCards());
+        cards.addAll(field.getCards());
     }
 }

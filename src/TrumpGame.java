@@ -23,14 +23,34 @@ class TrumpGame {
         field = new Deck();
         trumpCard=null;
     }
+    void displayMenu() {
+        String input = askInput("Welcome to Super-Trump!\nBy: Dale Muccignat" +
+                "\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
+        switch (input) {
+            case "1": startGame();
+                break;
+            case "2": displayHelp();
+                break;
+            case "3":
+                break;
+            default: displayMessage("Invalid selection");
+                displayMenu();
+                break;
+        }
+    }
 
-    public void startGame() {
+    private void displayHelp() {
+        // TODO: Show how to play screen
+        displayMenu();                                                          //Returns to menu
+    }
+
+    private void startGame() {
         //creates game, plays rounds
         createPlayers();
         createDeck();
         dealCards();
         currentCategory = null;
-        while (players.size() != 1) {
+        while (!checkGameEnd()) {
             //while there is not one player left
             roundEnd = false;
             // error checking
@@ -44,7 +64,22 @@ class TrumpGame {
             shiftArray(players, players.size() - (players.indexOf(playerWonRound))); //shift array so player won is the first of the next round
         }
         // display winning players
+        displayMessage("----------\nThe game has ended!");
         displayWinners();
+        displayMessage("----------\nPlay again?");
+        displayMenu();
+    }
+
+    private boolean checkGameEnd() {
+        int count=0;
+        for (Player player : players) {
+            //count number of players that have one
+            if (player.getWon()) {
+                ++count;
+            }
+        }
+        //if there is only one player that hasn't won, return true
+        return count == (players.size()-1);
     }
 
     private void displayWinners() {
@@ -124,10 +159,12 @@ class TrumpGame {
             players.add(player);
         }
         Collections.shuffle(players);
+        displayMessage("Dealer is: " + players.get(players.size()-1).getName());
     }
 
     private void startRound() {
         String input;
+        playerWonRound=null;
         int playerNoRound = 0;
         // set players pass to false
         setPlayersPass(false);
@@ -136,23 +173,21 @@ class TrumpGame {
             for (Player player : players) {
                 ++playerNoRound;
                 confirm = false;
-                checkIfWinner(player);
                 currentPlayer = player;
-                // if player hasn't passed and round hasn't been won
-                if (!currentPlayer.getPass() && !roundEnd) {
+                checkIfWinner(player);
+                checkWinner();
+                // if player hasn't passed, player hasn't won game and round hasn't been won
+                if (!currentPlayer.getPass() && !roundEnd && !currentPlayer.getWon()) {
+                    displayMessage("----------");
                     displayMessage(currentPlayer.getName() + "'s Turn");
                     while (!confirm) {
-                        //todo display ranking system for categories
                         input = currentPlayer.runTurn(currentCategory, field);
-                        System.out.println(input);
-                        System.out.println("turn success");
                         switch (input) {
                             case "1": {
                                 // 1 is PASS, the rest are cards.
                                 confirm = true;
                                 // pass player, check if winner
                                 pass(currentPlayer);
-                                checkWinner();
                                 break;
                             }
                             default: {
@@ -192,9 +227,14 @@ class TrumpGame {
                         }
                     }
                 }
+                checkIfWinner(player);
             }
-            storeCards();
+            if (checkGameEnd()) {
+                roundEnd = true;
+            }
         }
+        displayMessage(playerWonRound.getName() + " won the round!");
+        storeCards();
     }
 
     private void processCard(int i) {
@@ -241,6 +281,9 @@ class TrumpGame {
             } else {
                 //if geologist ask category
                 currentCategory = currentPlayer.askCategory();
+                while (currentCategory == null) {
+                    currentCategory = currentPlayer.askCategory();
+                }
             }
             displayMessage(currentPlayer.getName() + " Played trump: " +
                     currentCard.getTitle() + "\nCategory has been changed to: " +
@@ -252,15 +295,19 @@ class TrumpGame {
     private void storeCards() {
         if (!field.getCards().isEmpty()) {
             storedCards.addCards(field);
+            field.getCards().clear();
         }
     }
 
     private void checkIfWinner(Player player) {
         if (player.getCardsHand().size() == 0) {
             confirm = true;
-            displayMessage(player.getName() + " has won!");
-            playersWon.add(player);
-            players.remove(player);
+            //if player has not allready won
+            if (!player.getWon()) {
+                displayMessage("#####\n" + player.getName() + " has won!\n#####");
+                playersWon.add(player);
+                player.setWon(true);
+            }
         }
     }
 
@@ -268,8 +315,6 @@ class TrumpGame {
         //check for winner
         if (checkPassed()) {
             playerWonRound = getRoundWinner();
-            //todo null error
-            displayMessage(playerWonRound.getName() + " won the round!");
             roundEnd = true;
             currentCategory = null;
         }
@@ -282,13 +327,20 @@ class TrumpGame {
 
     private Boolean checkPassed() {
         // Checks to see if there is one player left to pass, returns true if there is
-        int count = 0;
+        //account for players winning the game
+        ArrayList<Player> playersLeft = new ArrayList<>();
         for (Player player : players) {
+            if (!player.getWon()) {
+                playersLeft.add(player);
+            }
+        }
+        int count = 0;
+        for (Player player : playersLeft) {
             if (player.getPass()) {
                 ++count;
             }
         }
-        return count == (players.size() - 1);
+        return count == (playersLeft.size() - 1);
     }
 
     private void pass(Player player) {
@@ -334,14 +386,20 @@ class TrumpGame {
     }
 
     private Player getRoundWinner() {
-        // returns player that hasn't passed
-            for (Player player : players) {
-                if (!player.getPass()) {
-                    return player;
-                }
+        // returns player that hasn't passed or won the game before
+        ArrayList<Player> playersLeft = new ArrayList<>();
+        // account for players already won
+        for (Player player : players) {
+            if (!player.getWon()) {
+                playersLeft.add(player);
             }
-        // Should never be reached
-        System.out.println("NULL WAS REACHED ABORT ABORT");
+        }
+        for (Player player : playersLeft) {
+            if (!player.getPass()) {
+                return player;
+            }
+        }
+        // Should never be reached as it is made sure that there is one player that hasn't passed
         return null;
     }
 

@@ -50,14 +50,6 @@ abstract class Player {
         this.pass = pass;
     }
 
-    public int getPlayerNo() {
-        return playerNo;
-    }
-
-    public void setPlayerNo(int playerNo) {
-        this.playerNo = playerNo;
-    }
-
     public String getName() {
         return name;
     }
