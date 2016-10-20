@@ -21,7 +21,7 @@ class TrumpGame {
         playersWon = new ArrayList<>();
         storedCards = new Deck();
         field = new Deck();
-        trumpCard=null;
+        trumpCard = null;
     }
     void displayMenu() {
         String input = askInput("Welcome to Super-Trump!\nBy: Dale Muccignat" +
@@ -44,7 +44,7 @@ class TrumpGame {
         displayMenu();       //Returns to menu
     }
 
-    private void startGame() {
+    public void startGame() {
         //creates game, plays rounds
         createPlayers();
         createDeck();

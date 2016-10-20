@@ -7,8 +7,6 @@ public class SuperTrump {
         startGame();
     }
 
-
-
     private static void startGame() {
         TrumpGame newGame = new TrumpGame();                     //Create game
         newGame.displayMenu();
