@@ -1,5 +1,10 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -7,7 +12,7 @@ import java.util.Scanner;
  * Super Trump (Game Object class)
  */
 
-class TrumpGame {
+class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private static final int NO_CARDS_IN_HAND = 8;
     private ArrayList<Player> players,playersWon;
     private static Deck deck;
@@ -16,14 +21,151 @@ class TrumpGame {
     private Card currentCard,trumpCard;
     private Player playerWonRound,currentPlayer;
     private Category currentCategory;
+    private int inputCount = 0, noHumans=0, noAI=0;
+
+    private Container con;
+    private JMenuBar menuBar = new JMenuBar();
+    private JMenu menu = new JMenu("File");
+    private JMenuItem startMenu = new JMenuItem("Start New Game");
+    private JMenuItem helpMenu = new JMenuItem("How to play");
+    private JMenuItem quitMenu = new JMenuItem("quit");
+    private JPanel inputPanel = new JPanel();
+    private JLabel inputLabel = new JLabel("Please Input:");
+    private JLabel aiLabel = new JLabel("Ai?");
+    private JLabel nameLabel = new JLabel("Name");
+    private JTextField[] inputText = new JTextField[5];
+    private JCheckBox[] aiCheck = new JCheckBox[5];
+    private JButton confirmInputButton = new JButton("Confirm Input");
 
     TrumpGame() {
         playersWon = new ArrayList<>();
         storedCards = new Deck();
         field = new Deck();
         trumpCard = null;
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);
+        setSize(400,400);
+        initialise();
     }
-    void displayMenu() {
+
+    private void PlayerInfoGui() {
+
+        con = getContentPane();
+        // input panel
+        inputPanel.setLayout(new GridLayout(7,2));
+        inputLabel.setText("<html>Please enter player information.<br>" +
+                "Must be at least 3 players.</html>");
+        inputPanel.add(inputLabel);
+        inputPanel.add(confirmInputButton);
+        inputPanel.add(nameLabel);
+        inputPanel.add(aiLabel);
+        for (int i=0;i<5;i++) {
+            inputText[i] = new JTextField();
+            inputPanel.add(inputText[i]);
+            aiCheck[i] = new JCheckBox();
+            inputPanel.add(aiCheck[i]);
+        }
+        confirmInputButton.addActionListener(this);
+        con.add(inputPanel);
+        repaint();
+    }
+
+    void initialise() {
+        initialiseMenuGui();
+        PlayerInfoGui();
+    }
+
+    private void initialiseMenuGui() {
+        setJMenuBar(menuBar);
+        menuBar.add(startMenu);
+        menuBar.add(helpMenu);
+        menuBar.add(quitMenu);
+        startMenu.addActionListener(this);
+        helpMenu.addActionListener(this);
+        quitMenu.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+        if (source == confirmInputButton) {
+            createPlayers();
+        } else if (source == startMenu) {
+            startGame();
+        } else if (source == helpMenu) {
+
+        } else if (source == quitMenu) {
+            dispose();
+        }
+    }
+
+    private void createPlayers() {
+//        aiCheck[1].get
+    }
+
+    private void createAiPlayers(JTextField inputText) {
+        Boolean confirm = false;
+        while (!confirm) {
+            String input = inputText.getText();
+            for (int x = (3-noHumans); x <= (5-noHumans); x++) {
+                String option = Integer.toString(x);
+                if (option.equals(input)) {
+                    noAI = Integer.parseInt(option);
+                    confirm = true;
+                }
+            }
+            if (!confirm) {
+                displayMessage("Error, please enter a valid selection (single integer).");
+            }
+        }
+        for (int i=0;i<noAI;i++) {
+            //create ai
+            Player player = new Ai("Ai " + (i+1));
+            players.add(player);
+        }
+    }
+
+    private void createHumanPlayers(JTextField inputText) {
+        Boolean confirm = false;
+        while (!confirm) {
+            String input = inputText.getText();
+            switch (input) {
+                case "1": noHumans = 1;
+                    confirm = true;
+                    break;
+                case "2": noHumans = 2;
+                    confirm = true;
+                    break;
+                case "3": noHumans = 3;
+                    confirm = true;
+                    break;
+                case "4": noHumans = 4;
+                    confirm = true;
+                    break;
+                case "5": noHumans = 5;
+                    confirm = true;
+                    break;
+                case "0": noHumans = 0;
+                    confirm = true;
+                    break;
+                default:
+                    displayMessage("Error, please enter a valid selection (single integer).");
+                    break;
+            }
+        }
+        players = new ArrayList<>();                                        //Dealer is always the last player
+        for (int x=0;x<noHumans;x++) {
+            //create human players
+            String name;
+            name = askInput("Player " + (x+1) + "\nPlease input your name:");   //Gets userName
+            Player player = new User(name);
+            players.add(player);
+        }
+    }
+
+    //todo redundant
+    private void displayMenu() {
+//        MenuGui menu = new MenuGui();
         String input = askInput("Welcome to Super-Trump!\nBy: Dale Muccignat" +
                 "\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
         switch (input) {
@@ -44,9 +186,9 @@ class TrumpGame {
         displayMenu();       //Returns to menu
     }
 
-    public void startGame() {
+    private void startGame() {
+        //todo create gui
         //creates game, plays rounds
-        createPlayers();
         createDeck();
         dealCards();
         currentCategory = null;
@@ -99,67 +241,6 @@ class TrumpGame {
         deck.buildDeck();
     }
 
-    private void createPlayers() {
-        //create's players array, custom amount of humans/ai
-        Boolean confirm =false;
-        int noHumans=0,noAI=0;
-        while (!confirm) {
-            String input = askInput("How many non-Ai players are playing?" + "\nMust be between 0 and 5 inclusive");
-            switch (input) {
-                case "1": noHumans = 1;
-                    break;
-                case "2": noHumans = 2;
-                    break;
-                case "3": noHumans = 3;
-                    break;
-                case "4": noHumans = 4;
-                    break;
-                case "5": noHumans = 5;
-                    break;
-                case "0": noHumans = 0;
-                    break;
-                default:
-                    displayMessage("Error, please enter a valid selection (single integer).");
-                    break;
-            }
-            confirm = askConfirmation("You have indicated that there are " + noHumans +
-                    " non-Ai player/s.\nIs this Correct?");
-        }
-        confirm = false;
-        while (!confirm) {
-            String input = askInput("How many AI players are playing?\nMust be between " + (3-noHumans) +
-                    " and " + (5 - noHumans) + " inclusive.");
-            for (int x = (3-noHumans); x <= (5-noHumans); x++) {
-                String option = Integer.toString(x);
-                if (option.equals(input)) {
-                    noAI = Integer.parseInt(option);
-                    confirm = true;
-                }
-            }
-            if (!confirm) {
-                displayMessage("Error, please enter a valid selection (single integer).");
-            } else {
-                confirm = askConfirmation("You have indicated that there is/are " + noAI +
-                        " AI player/s.\nIs this Correct?");
-            }
-        }
-        players = new ArrayList<>();                                        //Dealer is always the last player
-        for (int x=0;x<noHumans;x++) {
-            //create human players
-            String name;
-            name = askInput("Player " + (x+1) + "\nPlease input your name:");   //Gets userName
-            Player player = new User(name);
-            players.add(player);
-        }
-        for (int i=0;i<noAI;i++) {
-            //create ai
-            Player player = new Ai("Ai " + (i+1));
-            players.add(player);
-        }
-        Collections.shuffle(players);
-        displayMessage("Dealer is: " + players.get(players.size()-1).getName());
-    }
-
     private void startRound() {
         String input;
         playerWonRound=null;
@@ -174,6 +255,7 @@ class TrumpGame {
                 currentPlayer = player;
                 checkIfWinner(player);
                 checkWinner();
+                //todo runTurn method
                 // if player hasn't passed, player hasn't won game and round hasn't been won
                 if (!currentPlayer.getPass() && !roundEnd && !currentPlayer.getWon()) {
                     displayMessage("----------");
@@ -355,8 +437,6 @@ class TrumpGame {
 
     }
 
-
-
     private static <Player> ArrayList<Player> shiftArray(ArrayList<Player> array, int shift)
     {
         if (array.size() == 0)
@@ -382,7 +462,6 @@ class TrumpGame {
             player.setPass(playersPass);
         }
     }
-
     private Player getRoundWinner() {
         // returns player that hasn't passed or won the game before
         ArrayList<Player> playersLeft = new ArrayList<>();
@@ -400,6 +479,7 @@ class TrumpGame {
         // Should never be reached as it is made sure that there is one player that hasn't passed
         return null;
     }
+
     /* scanner methods to reduce complexity */
 
     private static void displayMessage(String message) {
@@ -421,10 +501,37 @@ class TrumpGame {
         }
     }
 
+
     private static String askInput(String message)
     {
         System.out.println(message);
         Scanner inputDevice = new Scanner(System.in);
         return inputDevice.next();
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == inputText) {
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 }
