@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -23,52 +24,67 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private Card currentCard,trumpCard;
     private Player playerWonRound,currentPlayer;
     private Category currentCategory;
-    private int inputCount = 0, noHumans=0, noAI=0;
+    private int helpCount = 0, noHumans=0, noAI=0;
+    private ImageIcon[] helpCards = new ImageIcon[4];
 
+    private JFrame helpFrame = new JFrame();
     private Container con;
     private JMenuBar menuBar = new JMenuBar();
-    private JMenu menu = new JMenu("File");
     private JMenuItem startMenu = new JMenuItem("Start New Game");
     private JMenuItem helpMenu = new JMenuItem("How to play");
     private JMenuItem quitMenu = new JMenuItem("quit");
-    private JPanel inputPanel = new JPanel();
+    private JPanel gamePanel = new JPanel();
+    private JPanel gamePanel2 = new JPanel();
+    private JPanel gamePanel3 = new JPanel();
+    private JPanel fieldPanel = new JPanel();
+    private JPanel selectionPanel = new JPanel();
+    private JPanel gameInfoPanel = new JPanel();
+    private JPanel handPanel = new JPanel();
     private JLabel inputLabel = new JLabel("Please Input:");
     private JLabel aiLabel = new JLabel("Ai?");
     private JLabel nameLabel = new JLabel("Name");
+    private JLabel errorLabel = new JLabel("");
+    private JLabel infoLabel = new JLabel("");
+    private JLabel helpLabel = new JLabel();
+
     private JTextField[] inputTexts = new JTextField[5];
     private JCheckBox[] aiCheck = new JCheckBox[5];
     private JButton confirmInputButton = new JButton("Confirm Input");
+    private JButton nextHelp = new JButton("Next Page.");
 
     TrumpGame() {
         playersWon = new ArrayList<>();
         storedCards = new Deck();
         field = new Deck();
         trumpCard = null;
+        getHelpCards();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setSize(400,400);
         initialiseMenuGui();
     }
 
-    private void PlayerInfoGui() {
-        removeAll();
+    private void initialiseSetupGui() {
         con = getContentPane();
         // input panel
-        inputPanel.setLayout(new GridLayout(7,2));
+        gamePanel.setLayout(new GridLayout(8,2));
+        infoLabel.setText("Blank fields will be ignored.");
         inputLabel.setText("<html>Please enter player information.<br>" +
                 "Must be at least 3 players.</html>");
-        inputPanel.add(inputLabel);
-        inputPanel.add(confirmInputButton);
-        inputPanel.add(nameLabel);
-        inputPanel.add(aiLabel);
+        gamePanel.add(inputLabel);
+        gamePanel.add(confirmInputButton);
+        gamePanel.add(nameLabel);
+        gamePanel.add(aiLabel);
         for (int i=0;i<5;i++) {
             inputTexts[i] = new JTextField();
-            inputPanel.add(inputTexts[i]);
+            gamePanel.add(inputTexts[i]);
             aiCheck[i] = new JCheckBox();
-            inputPanel.add(aiCheck[i]);
+            gamePanel.add(aiCheck[i]);
         }
+        gamePanel.add(infoLabel);
+        gamePanel.add(errorLabel);
         confirmInputButton.addActionListener(this);
-        con.add(inputPanel);
+        con.add(gamePanel);
         invalidate();
         validate();
         repaint();
@@ -84,17 +100,41 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         quitMenu.addActionListener(this);
     }
 
+    private void initialiseGameGui() {
+        gamePanel.removeAll();
+        gamePanel.setLayout(new GridLayout(1,3));
+        gamePanel2.setLayout(new GridLayout(2,1));
+        gamePanel3.setLayout(new GridLayout(2,1));
+        gamePanel.add(gamePanel2);
+        gamePanel.add(gamePanel3);
+        gamePanel2.add(gameInfoPanel);
+        gamePanel3.add(fieldPanel);
+        gamePanel2.add(selectionPanel);
+        gamePanel3.add(handPanel);
+//        gamePanel.add(selectedCardLabel);
+        gameInfoPanel.add(infoLabel);
+        invalidate();
+        validate();
+        repaint();
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         if (source == confirmInputButton) {
             createPlayers();
         } else if (source == startMenu) {
-            PlayerInfoGui();
+            initialiseSetupGui();
         } else if (source == helpMenu) {
-
+            displayHelp();
         } else if (source == quitMenu) {
             dispose();
+        } else if (source == nextHelp) {
+            ++helpCount;
+            if (helpCount > 3) {
+                helpCount = 0;
+            }
+            helpLabel.setIcon(helpCards[helpCount]);
         }
     }
 
@@ -106,89 +146,48 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
             playerNames[i] = inputTexts[i].getText();
             playerAiCheck[i] = aiCheck[i].isSelected();
         }
-    }
-
-    private void createAiPlayers(JTextField inputText) {
-        Boolean confirm = false;
-        while (!confirm) {
-            String input = inputText.getText();
-            for (int x = (3-noHumans); x <= (5-noHumans); x++) {
-                String option = Integer.toString(x);
-                if (option.equals(input)) {
-                    noAI = Integer.parseInt(option);
-                    confirm = true;
-                }
-            }
-            if (!confirm) {
-                displayMessage("Error, please enter a valid selection (single integer).");
-            }
-        }
-        for (int i=0;i<noAI;i++) {
-            //create ai
-            Player player = new Ai("Ai " + (i+1));
-            players.add(player);
-        }
-    }
-
-    private void createHumanPlayers(JTextField inputText) {
-        Boolean confirm = false;
-        while (!confirm) {
-            String input = inputText.getText();
-            switch (input) {
-                case "1": noHumans = 1;
-                    confirm = true;
-                    break;
-                case "2": noHumans = 2;
-                    confirm = true;
-                    break;
-                case "3": noHumans = 3;
-                    confirm = true;
-                    break;
-                case "4": noHumans = 4;
-                    confirm = true;
-                    break;
-                case "5": noHumans = 5;
-                    confirm = true;
-                    break;
-                case "0": noHumans = 0;
-                    confirm = true;
-                    break;
-                default:
-                    displayMessage("Error, please enter a valid selection (single integer).");
-                    break;
-            }
-        }
         players = new ArrayList<>();                                        //Dealer is always the last player
-        for (int x=0;x<noHumans;x++) {
-            //create human players
-            String name;
-            name = askInput("Player " + (x+1) + "\nPlease input your name:");   //Gets userName
-            Player player = new User(name);
-            players.add(player);
+        for (int i=0;i<5;i++) {
+            if (playerAiCheck[i] && !playerNames[i].equals("")) {
+                Ai ai = new Ai(playerNames[i]);
+                players.add(ai);
+            } else if (!playerNames[i].equals("")) {
+                User player = new User(playerNames[i]);
+                players.add(player);
+            }
         }
-    }
-
-    //todo redundant
-    private void displayMenu() {
-//        MenuGui menu = new MenuGui();
-        String input = askInput("Welcome to Super-Trump!\nBy: Dale Muccignat" +
-                "\nMenu: \n(1) New Game\n(2) How To Play\n(3) Quit");
-        switch (input) {
-            case "1": startGame();
-                break;
-            case "2": displayHelp();
-                break;
-            case "3":
-                break;
-            default: displayMessage("Invalid selection");
-                displayMenu();
-                break;
+        if (players.size() > 2) {
+            System.out.println("wellDOne");
+            initialiseGameGui();
+            startGame();
+        } else {
+            errorLabel.setText("Invalid number of players.");
         }
+        Collections.shuffle(players);
     }
 
     private void displayHelp() {
+        helpFrame.setVisible(true);
+        helpFrame.setLayout(new BorderLayout());
+        helpFrame.setSize(700,700);
+        helpFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        helpLabel.setIcon(helpCards[0]);
+        helpFrame.add(helpLabel);
+        helpFrame.add(nextHelp, BorderLayout.EAST);
+        nextHelp.addActionListener(this);
+        invalidate();
+        validate();
+        repaint();
         // How to play is images, will be implimented in GUI
-        displayMenu();       //Returns to menu
+    }
+
+    private void getHelpCards() {
+        for (int i = 0; i < 4; i++) {
+            helpCards[i] = new ImageIcon("images\\Slide6" + (i+1) + ".jpg");
+            Image image = helpCards[i].getImage(); // transform it
+            Image newimg = image.getScaledInstance(600, 700,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+            helpCards[i] = new ImageIcon(newimg);  // transform it back
+        }
     }
 
     private void startGame() {
@@ -214,7 +213,6 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         displayMessage("----------\nThe game has ended!");
         displayWinners();
         displayMessage("----------\nPlay again?");
-        displayMenu();
     }
 
     private boolean checkGameEnd() {
@@ -467,6 +465,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
             player.setPass(playersPass);
         }
     }
+
     private Player getRoundWinner() {
         // returns player that hasn't passed or won the game before
         ArrayList<Player> playersLeft = new ArrayList<>();

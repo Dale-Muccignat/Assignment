@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * Created by Dale on 23/09/2016.
  * Trump card
@@ -5,8 +8,8 @@
 class TrumpCard extends Card{
     private String subtitle;
 
-    TrumpCard(int index, String fileName, String imageName, String title, String subtitle) {
-        super(index, fileName, imageName, title);
+    TrumpCard(int index, String fileName, String imageName, String title, ImageIcon image, String subtitle) {
+        super(index, fileName, imageName, title, image);
         this.subtitle = subtitle.trim();
     }
 

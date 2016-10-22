@@ -1,7 +1,7 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,10 +18,11 @@ class Deck {
         cards = new ArrayList<>();
     }
 
+
     void buildDeck() {
         String subtitle,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
-
-        Path filePath = Paths.get("F:\\USB\\2P2\\CP2406\\Prac7\\Assignment\\Resources\\dataPlay.txt");
+        ImageIcon image;
+        Path filePath = Paths.get("Resources\\dataPlay.txt");
         InputStream input;
         try
         {
@@ -42,7 +43,9 @@ class Deck {
                 occurrence = reader.readLine();
                 specificGravity = reader.readLine();
                 title = reader.readLine();
-                cards.add(new PlayCard(x,fileName,imageName,title,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
+                System.out.println(fileName);
+                image = new ImageIcon("images\\" + fileName);
+                cards.add(new PlayCard(x,fileName,imageName,title,image,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
             }
             for (int x = 54; x < 60; x++) {
                 reader.readLine();
@@ -50,8 +53,10 @@ class Deck {
                 imageName = reader.readLine();
                 subtitle = reader.readLine();
                 title = reader.readLine();
-                cards.add(new TrumpCard(x,fileName,imageName,title,subtitle));
+                image = new ImageIcon("images\\" + fileName);
+                cards.add(new TrumpCard(x,fileName,imageName,title,image,subtitle));
             }
+
             input.close();
         }
         catch (IOException e)

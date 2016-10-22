@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * Created by Dale on 23/09/2016.
  */
@@ -9,8 +12,8 @@ public class PlayCard extends Card {
                     "3 good", "1 perfect", "1 perfect, 1 good", "1 perfect, 2 good", "2 perfect, 1 good", "3 perfect",
                     "4 perfect", "6 perfect"};
 
-    PlayCard(int index, String fileName, String imageName, String title, String chemistry, String classification, String cleavage, String crustalAbundance, String crystalSystem, String economicValue, String hardness, String occurrence, String specificGravity) {
-        super(index, fileName, imageName, title);
+    PlayCard(int index, String fileName, String imageName, String title, ImageIcon image, String chemistry, String classification, String cleavage, String crustalAbundance, String crystalSystem, String economicValue, String hardness, String occurrence, String specificGravity) {
+        super(index, fileName, imageName, title, image);
         this.chemistry = chemistry.trim();                                      //trim strings
         this.classification = classification.trim();
         this.cleavage = cleavage.trim();
