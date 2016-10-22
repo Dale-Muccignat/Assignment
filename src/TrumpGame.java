@@ -15,6 +15,8 @@ import java.util.Scanner;
 class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private static final int NO_CARDS_IN_HAND = 8;
     private ArrayList<Player> players,playersWon;
+    private String[] playerNames;
+    private Boolean[] playerAiCheck;
     private static Deck deck;
     private Boolean roundEnd,confirm;
     private Deck storedCards,field;
@@ -33,7 +35,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private JLabel inputLabel = new JLabel("Please Input:");
     private JLabel aiLabel = new JLabel("Ai?");
     private JLabel nameLabel = new JLabel("Name");
-    private JTextField[] inputText = new JTextField[5];
+    private JTextField[] inputTexts = new JTextField[5];
     private JCheckBox[] aiCheck = new JCheckBox[5];
     private JButton confirmInputButton = new JButton("Confirm Input");
 
@@ -45,11 +47,11 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setSize(400,400);
-        initialise();
+        initialiseMenuGui();
     }
 
     private void PlayerInfoGui() {
-
+        removeAll();
         con = getContentPane();
         // input panel
         inputPanel.setLayout(new GridLayout(7,2));
@@ -60,19 +62,16 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         inputPanel.add(nameLabel);
         inputPanel.add(aiLabel);
         for (int i=0;i<5;i++) {
-            inputText[i] = new JTextField();
-            inputPanel.add(inputText[i]);
+            inputTexts[i] = new JTextField();
+            inputPanel.add(inputTexts[i]);
             aiCheck[i] = new JCheckBox();
             inputPanel.add(aiCheck[i]);
         }
         confirmInputButton.addActionListener(this);
         con.add(inputPanel);
+        invalidate();
+        validate();
         repaint();
-    }
-
-    void initialise() {
-        initialiseMenuGui();
-        PlayerInfoGui();
     }
 
     private void initialiseMenuGui() {
@@ -91,7 +90,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         if (source == confirmInputButton) {
             createPlayers();
         } else if (source == startMenu) {
-            startGame();
+            PlayerInfoGui();
         } else if (source == helpMenu) {
 
         } else if (source == quitMenu) {
@@ -100,7 +99,13 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     }
 
     private void createPlayers() {
-//        aiCheck[1].get
+        playerNames = new String[5];
+        playerAiCheck = new Boolean[5];
+        // store inputs
+        for (int i=0;i<5;i++) {
+            playerNames[i] = inputTexts[i].getText();
+            playerAiCheck[i] = aiCheck[i].isSelected();
+        }
     }
 
     private void createAiPlayers(JTextField inputText) {
@@ -511,7 +516,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if (e.getSource() == inputText) {
+        if (e.getSource() == inputTexts) {
         }
     }
 
