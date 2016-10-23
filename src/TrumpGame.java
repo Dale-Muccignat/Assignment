@@ -56,9 +56,11 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private JTextField[] inputTexts = new JTextField[5];
     private JCheckBox[] aiCheck = new JCheckBox[5];
     private JButton confirmInputButton = new JButton("Confirm Input");
+    private JButton selectionButton = new JButton("Confirm Input");
     private JButton nextHelp = new JButton("Next Page.");
     private JButton playCardButton = new JButton("Play Selected Card");
     private JButton passButton = new JButton("Pass");
+    JComboBox<Category> selectionBox = new JComboBox<>();
 
     TrumpGame() {
         playersWon = new ArrayList<>();
@@ -115,6 +117,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         gameInfoPanel.setLayout(new GridLayout(4,1));
         handPanel.setLayout(new BorderLayout());
         cardViewPanel.setLayout(new BorderLayout());
+        selectionPanel.setLayout(new BorderLayout());
         // add spacer as menu overlays the card
         cardViewPanel.add(spacerLabel, BorderLayout.NORTH);
         cardViewPanel.add(cardDisplayLabel);
@@ -139,6 +142,8 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         currentPlayer = players.get(0);
         if (currentPlayer instanceof User) {
             displayUserData();
+            initialiseSelectionGui();
+            playCardButton.setEnabled(false);
         } else {
             runTurnAi();
         }
@@ -146,6 +151,22 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         validate();
         repaint();
 
+    }
+
+    private void initialiseSelectionGui() {
+        /* makes the selection panel gui */
+        selectionButton.setEnabled(true);
+        selectionBox.addItem(Category.HARDNESS);
+        selectionBox.addItem(Category.CLEAVAGE);
+        selectionBox.addItem(Category.SPECIFICGRAVITY);
+        selectionBox.addItem(Category.CRUSTALABUNDANCE);
+        selectionBox.addItem(Category.ECONOMICVALUE);
+        selectionPanel.add(selectionBox, BorderLayout.NORTH);
+        selectionPanel.add(selectionButton, BorderLayout.SOUTH);
+        selectionButton.addActionListener(this);
+        invalidate();
+        validate();
+        repaint();
     }
 
     private void displayUserData() {
@@ -235,6 +256,14 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
             } else {
                 infoLabel.setText("Game has Ended");
             }
+        } else if (source == selectionButton) {
+            currentCategory = (Category) selectionBox.getSelectedItem();
+            categoryLabel.setText("Category is: " + currentCategory);
+            playCardButton.setEnabled(true);
+            selectionButton.setEnabled(false);
+            invalidate();
+            validate();
+            repaint();
         }
     }
 
@@ -532,14 +561,6 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         }
     }
 
-    private void initialiseSelectionGui() {
-        JComboBox<Category> selection = new JComboBox<>();
-        selection.addItem(Category.HARDNESS);
-        selectionPanel.add(selection);
-        invalidate();
-        validate();
-        repaint();
-    }
 
     private void storeCards() {
         if (!field.getCards().isEmpty()) {
