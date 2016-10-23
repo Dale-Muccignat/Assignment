@@ -28,8 +28,8 @@ abstract class Player {
         return hand;
     }
 
-    void removeCard(int index) {
-        this.cardsHand.remove(index);
+    void removeCard(Card card) {
+        this.cardsHand.remove(card);
     }
 
     void setCardsHand(ArrayList<Card> cardsHand) {

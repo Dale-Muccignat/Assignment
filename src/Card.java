@@ -23,4 +23,8 @@ abstract class Card {
     String getTitle() {
         return title;
     }
+
+    public ImageIcon getImage() {
+        return image;
+    }
 }
