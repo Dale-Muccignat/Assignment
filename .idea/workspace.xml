@@ -57,52 +57,43 @@
       <file leaf-file-name="TrumpGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="606" column="37" selection-start-line="606" selection-start-column="37" selection-end-line="606" selection-end-column="37" />
+            <state relative-caret-position="282">
+              <caret line="140" column="38" selection-start-line="140" selection-start-column="38" selection-end-line="140" selection-end-column="38" />
               <folding>
                 <element signature="docComment;class#TrumpGame#0" expanded="false" />
+                <element signature="e#361#390#0" expanded="false" />
                 <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#7288#7307#0" expanded="false" />
-                <element signature="e#9755#9798#0" expanded="false" />
-                <element signature="e#11049#11121#0" expanded="false" />
+                <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#12232#12238#0" expanded="false" />
-                <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#12756#12817#0" expanded="false" />
                 <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#15289#15321#0" expanded="false" />
                 <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#16678#16711#0" expanded="false" />
                 <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#21690#21720#0" expanded="false" />
-                <element signature="e#23528#23534#0" expanded="false" />
+                <element signature="e#17952#17982#0" expanded="false" />
+                <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#25645#25723#0" expanded="false" />
+                <element signature="e#22119#22197#0" expanded="false" />
                 <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#26257#26292#0" expanded="false" />
                 <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-                <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+                <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
               </folding>
             </state>
           </provider>
@@ -121,8 +112,8 @@
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="302">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,18 +147,6 @@
             <state relative-caret-position="902">
               <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestBed.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TestBed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -615,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477236399745</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Reformatted game panel, redid round methodology.">
+      <created>1477244419125</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1477244419125</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -632,28 +618,28 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16925466" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16925466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.49707174" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24534161" sideWeight="0.21961933" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.050736498" sideWeight="0.78038067" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35358712" sideWeight="0.78038067" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258593" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
@@ -676,18 +662,11 @@
     <MESSAGE value="Created game panel, started workign on turn system. re-writting ALL the code." />
     <MESSAGE value="Code Cleanup. Organised methods and adjusted them where necassary. Seperated Ai and human turns." />
     <MESSAGE value="Made Selection Panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Selection Panel" />
+    <MESSAGE value="Reformatted game panel, redid round methodology." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformatted game panel, redid round methodology." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/TrumpGame.java</url>
-          <line>382</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
@@ -697,16 +676,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -755,48 +724,39 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#7288#7307#0" expanded="false" />
-            <element signature="e#9755#9798#0" expanded="false" />
-            <element signature="e#11049#11121#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12232#12238#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12756#12817#0" expanded="false" />
             <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#15289#15321#0" expanded="false" />
             <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#16678#16711#0" expanded="false" />
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#21690#21720#0" expanded="false" />
-            <element signature="e#23528#23534#0" expanded="false" />
+            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#25645#25723#0" expanded="false" />
+            <element signature="e#22119#22197#0" expanded="false" />
             <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#26257#26292#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -849,48 +809,39 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#7288#7307#0" expanded="false" />
-            <element signature="e#9755#9798#0" expanded="false" />
-            <element signature="e#11049#11121#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12232#12238#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12756#12817#0" expanded="false" />
             <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#15289#15321#0" expanded="false" />
             <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#16678#16711#0" expanded="false" />
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#21690#21720#0" expanded="false" />
-            <element signature="e#23528#23534#0" expanded="false" />
+            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#25645#25723#0" expanded="false" />
+            <element signature="e#22119#22197#0" expanded="false" />
             <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#26257#26292#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -927,48 +878,39 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#7288#7307#0" expanded="false" />
-            <element signature="e#9755#9798#0" expanded="false" />
-            <element signature="e#11049#11121#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12232#12238#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12756#12817#0" expanded="false" />
             <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#15289#15321#0" expanded="false" />
             <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#16678#16711#0" expanded="false" />
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#21690#21720#0" expanded="false" />
-            <element signature="e#23528#23534#0" expanded="false" />
+            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#25645#25723#0" expanded="false" />
+            <element signature="e#22119#22197#0" expanded="false" />
             <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#26257#26292#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1011,48 +953,39 @@
           <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#7288#7307#0" expanded="false" />
-            <element signature="e#9755#9798#0" expanded="false" />
-            <element signature="e#11049#11121#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12232#12238#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12756#12817#0" expanded="false" />
             <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#15289#15321#0" expanded="false" />
             <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#16678#16711#0" expanded="false" />
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#21690#21720#0" expanded="false" />
-            <element signature="e#23528#23534#0" expanded="false" />
+            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#25645#25723#0" expanded="false" />
+            <element signature="e#22119#22197#0" expanded="false" />
             <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#26257#26292#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1079,48 +1012,39 @@
           <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#7288#7307#0" expanded="false" />
-            <element signature="e#9755#9798#0" expanded="false" />
-            <element signature="e#11049#11121#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12232#12238#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12756#12817#0" expanded="false" />
             <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#15289#15321#0" expanded="false" />
             <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#16678#16711#0" expanded="false" />
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#21690#21720#0" expanded="false" />
-            <element signature="e#23528#23534#0" expanded="false" />
+            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#25645#25723#0" expanded="false" />
+            <element signature="e#22119#22197#0" expanded="false" />
             <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#26257#26292#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1147,48 +1071,39 @@
           <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#7288#7307#0" expanded="false" />
-            <element signature="e#9755#9798#0" expanded="false" />
-            <element signature="e#11049#11121#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12232#12238#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12756#12817#0" expanded="false" />
             <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#15289#15321#0" expanded="false" />
             <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#16678#16711#0" expanded="false" />
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#21690#21720#0" expanded="false" />
-            <element signature="e#23528#23534#0" expanded="false" />
+            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#25645#25723#0" expanded="false" />
+            <element signature="e#22119#22197#0" expanded="false" />
             <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#26257#26292#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1282,16 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
@@ -1324,54 +1229,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/JComboBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="770" column="0" selection-start-line="770" selection-start-column="0" selection-end-line="770" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="606" column="37" selection-start-line="606" selection-start-column="37" selection-end-line="606" selection-end-column="37" />
+        <state relative-caret-position="282">
+          <caret line="140" column="38" selection-start-line="140" selection-start-column="38" selection-end-line="140" selection-end-column="38" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#7288#7307#0" expanded="false" />
-            <element signature="e#9755#9798#0" expanded="false" />
-            <element signature="e#11049#11121#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12232#12238#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#12756#12817#0" expanded="false" />
             <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#15289#15321#0" expanded="false" />
             <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#16678#16711#0" expanded="false" />
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#21690#21720#0" expanded="false" />
-            <element signature="e#23528#23534#0" expanded="false" />
+            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#25645#25723#0" expanded="false" />
+            <element signature="e#22119#22197#0" expanded="false" />
             <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#26257#26292#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askConfirmation#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#askInput#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477244380000" expanded="false" signature="523:2575" ph="..." />
+            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
