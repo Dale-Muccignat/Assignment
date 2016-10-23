@@ -12,7 +12,9 @@ import java.util.Scanner;
  * Created by Dale Muccignat on 21/09/2016.
  * Super Trump (Game Object class)
  */
-
+    //todo reset field after play
+    //todo make rounds
+    //todo trump card functionality
 class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private static final int NO_CARDS_IN_HAND = 8;
     private ArrayList<Player> players,playersWon;
@@ -23,7 +25,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private Deck storedCards,field;
     private Card currentCard,lastCard;
     private Player playerWonRound,currentPlayer;
-    private Category currentCategory;
+    private Category currentCategory = Category.HARDNESS;
     private int helpCount = 0, turnNo = 0, noHumans=0, noAI=0;
     private ImageIcon[] helpCards = new ImageIcon[4];
 
@@ -39,7 +41,6 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private JPanel selectionPanel = new JPanel();
     private JPanel gameInfoPanel = new JPanel();
     private JPanel handPanel = new JPanel();
-    private JPanel handViewPanel = new JPanel();
     private JPanel cardViewPanel = new JPanel();
     private JLabel inputLabel = new JLabel("Please Input:");
     private JLabel aiLabel = new JLabel("Ai?");
@@ -51,7 +52,6 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private JLabel helpLabel = new JLabel();
     private JLabel cardDisplayLabel = new JLabel();
     private JLabel spacerLabel = new JLabel();
-    private ArrayList<JLabel> playerHandLabels = new ArrayList<>();
 
     private JTextField[] inputTexts = new JTextField[5];
     private JCheckBox[] aiCheck = new JCheckBox[5];
@@ -60,7 +60,8 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private JButton nextHelp = new JButton("Next Page.");
     private JButton playCardButton = new JButton("Play Selected Card");
     private JButton passButton = new JButton("Pass");
-    JComboBox<Category> selectionBox = new JComboBox<>();
+    private JComboBox<Category> selectionBox = new JComboBox<>();
+    private JComboBox<String> playerHandBox = new JComboBox<>();
 
     TrumpGame() {
         playersWon = new ArrayList<>();
@@ -113,7 +114,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         gamePanel.removeAll();
         gamePanel.setLayout(new GridLayout(1,2));
         setSize(640,500);
-        gamePanel2.setLayout(new GridLayout(2,2));
+        gamePanel2.setLayout(new GridLayout(4,1));
         gameInfoPanel.setLayout(new GridLayout(4,1));
         handPanel.setLayout(new BorderLayout());
         cardViewPanel.setLayout(new BorderLayout());
@@ -123,34 +124,38 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         cardViewPanel.add(cardDisplayLabel);
         gamePanel.add(gamePanel2);
         gamePanel.add(cardViewPanel);
-//        cardDisplayLabel.setBounds(1,50,640,896);
         gamePanel2.add(gameInfoPanel);
         gamePanel2.add(fieldPanel);
         gamePanel2.add(selectionPanel);
         gamePanel2.add(handPanel);
-//        gamePanel.add(selectedCardLabel);
         gameInfoPanel.add(playerLabel);
         gameInfoPanel.add(infoLabel);
         gameInfoPanel.add(categoryLabel);
         gameInfoPanel.add(passButton);
         infoLabel.setText("Please select a card");
         infoLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        handPanel.add(handViewPanel);
+        handPanel.add(playerHandBox, BorderLayout.NORTH);
         handPanel.add(playCardButton, BorderLayout.SOUTH);
-        handViewPanel.setLayout(new GridLayout(15,1));
+        passButton.addActionListener(this);
+        playCardButton.addActionListener(this);
         playerLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        currentPlayer = players.get(0);
-        if (currentPlayer instanceof User) {
-            displayUserData();
-            initialiseSelectionGui();
-            playCardButton.setEnabled(false);
-        } else {
-            runTurnAi();
-        }
+        startRound();
         invalidate();
         validate();
         repaint();
 
+    }
+
+    private void startRound() {
+        currentPlayer = players.get(0);
+        roundEnd = false;
+        askCategory();
+        if (currentPlayer instanceof User) {
+            displayUserData();
+            playCardButton.setEnabled(false);
+        } else {
+            runTurnAi();
+        }
     }
 
     private void initialiseSelectionGui() {
@@ -170,13 +175,20 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     }
 
     private void displayUserData() {
+        playerHandBox.removeAll();
         playerLabel.setText(currentPlayer.getName() + "'s Turn.");
-        for (Card card : currentPlayer.getCardsHand()) {
-            JLabel cardLabel = new JLabel(card.getTitle());
-            playerHandLabels.add(cardLabel);
-            cardLabel.addMouseListener(this);
-            handViewPanel.add(cardLabel);
+        fieldPanel.setLayout(new GridLayout(field.getCards().size(),1));
+        for (Card card : field.getCards()) {
+            JLabel label = new JLabel(declareCard(card));
+            fieldPanel.add(label);
         }
+        for (Card card : currentPlayer.getCardsHand()) {
+            playerHandBox.addItem(declareCard(card));
+        }
+        playerHandBox.addActionListener(this);
+        invalidate();
+        validate();
+        repaint();
     }
 
     private void runTurnAi() {
@@ -209,7 +221,6 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
                             if (!confirm) {
                                 confirm = processCard(currentPlayer.getCardsHand().get(i - 2));
                             }
-//                                processCard(i);
                         }
                     }
                 }
@@ -224,6 +235,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         if (source == confirmInputButton) {
             createPlayers();
         } else if (source == startMenu) {
+            gamePanel.removeAll();
             initialiseSetupGui();
         } else if (source == helpMenu) {
             displayHelp();
@@ -237,22 +249,29 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
             helpLabel.setIcon(helpCards[helpCount]);
         } else if (source == playCardButton) {
             if (!checkGameEnd()) {
-                currentPlayer = players.get(turnNo);
-                checkIfWinner(currentPlayer);
                 runTurnHuman();
-                ++turnNo;
+                checkIfGameWinner(currentPlayer);
+                currentPlayer = players.get(turnNo);
+                displayUserData();
+                invalidate();
+                validate();
+                repaint();
                 //todo if next player is ai, run auto turns
 //                runAutoTurn();
             } else {
                 infoLabel.setText("Game has Ended");
+                invalidate();
+                validate();
+                repaint();
             }
         } else if (source == passButton) {
             if (!checkGameEnd()) {
                 currentPlayer = players.get(turnNo);
-                checkIfWinner(currentPlayer);
+                checkIfGameWinner(currentPlayer);
                 pass(currentPlayer);
-                checkWinner();
+                checkRoundWinner();
                 ++turnNo;
+                displayUserData();
             } else {
                 infoLabel.setText("Game has Ended");
             }
@@ -265,6 +284,22 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
             validate();
             repaint();
         }
+        /* sets selected card */
+        if (source == playerHandBox) {
+            int index = playerHandBox.getSelectedIndex();
+            currentCard = players.get(turnNo).getCardsHand().get(index);
+            cardDisplayLabel.setIcon(currentCard.getImage());
+        }
+//        for (int i = 0; i< currentPlayer.getCardsHand().size(); i++) {
+//            if (e.getSource() == playerHandButtons.get(i)) {
+//                System.out.println(players.get(turnNo).getName());
+//                currentCard = players.get(turnNo).getCardsHand().get(i);
+//                cardDisplayLabel.setIcon(currentCard.getImage());
+//            }
+//        }
+        invalidate();
+        validate();
+        repaint();
     }
 
     private void runTurnHuman() {
@@ -273,7 +308,9 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         if (!currentPlayer.getPass() && !roundEnd && !currentPlayer.getWon()) {
             //store selected card
             confirm = checkMagnetite();
-            processCard(currentCard);
+            if (!confirm) {
+                processCard(currentCard);
+            }
         }
     }
 
@@ -298,12 +335,13 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         /* sets selected card */
-        for (int i=0;i<playerHandLabels.size();i++) {
-            if (e.getSource() == playerHandLabels.get(i)) {
-                currentCard = players.get(turnNo).getCardsHand().get(i);
-                cardDisplayLabel.setIcon(currentCard.getImage());
-            }
-        }
+//        for (int i = 0; i< playerHandButtons.size(); i++) {
+//            if (e.getSource() == playerHandButtons.get(i)) {
+//                System.out.println(players.get(turnNo).getName());
+//                currentCard = players.get(turnNo).getCardsHand().get(i);
+//                cardDisplayLabel.setIcon(currentCard.getImage());
+//            }
+//        }
         invalidate();
         validate();
         repaint();
@@ -413,8 +451,8 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
 //                ++playerNoRound;
 //                confirm = false;
 //                currentPlayer = player;
-//                checkIfWinner(player);
-//                checkWinner();^
+//                checkIfGameWinner(player);
+//                checkRoundWinner();^
 //                // if player hasn't passed, player hasn't won game and round hasn't been won
 //                if (!currentPlayer.getPass() && !roundEnd && !currentPlayer.getWon()) {
 //                    displayMessage("----------");
@@ -466,7 +504,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
 //                        }
 //                    }
 //                }
-//                checkIfWinner(player);
+//                checkIfGameWinner(player);
 //            }
 //            if (checkGameEnd()) {
 //                roundEnd = true;
@@ -514,7 +552,7 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
                     return true;
                 } else {
                     if (currentPlayer instanceof User) {
-                        displayMessage("Error, card has lower value than the previous card.");
+                        infoLabel.setText("Error, card has lower value than the previous card.");
                     }
                     return false;
                 }
@@ -528,13 +566,14 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
     private void playCard(Card card) {
         /* Plays the card */
         currentPlayer.removeCard(card);                     //remove card from hand
+        cardDisplayLabel.setIcon(new ImageIcon());
         //seperate methods for trump/play
         if (currentCard instanceof PlayCard) {
             field.addCard(currentCard);                            //add card to field
             lastCard = currentCard;
             //todo
-//            displayMessage(currentPlayer.getName() + " has played: " +
-//                    declareCard((PlayCard) currentCard));
+            infoLabel.setText(currentPlayer.getName() + " played: " +
+                    declareCard((PlayCard) currentCard));
         } else {
             storedCards.addCard(currentCard);
             Category category1 = ((TrumpCard) currentCard).getCategory();
@@ -543,21 +582,29 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
                 currentCategory = category1;
             } else {
                 //if geologist ask category
-                if (currentPlayer instanceof Ai) {
-                    currentCategory = currentPlayer.askCategory();
-                    while (currentCategory == null) {
-                        currentCategory = currentPlayer.askCategory();
-                    }
-                } else {
-                    playCardButton.setEnabled(false);
-                    initialiseSelectionGui();
-                    //todo human gui select category
-                }
+                askCategory();
+
             }
             //todo
 //            displayMessage(currentPlayer.getName() + " Played trump: " +
 //                    currentCard.getTitle() + "\nCategory has been changed to: " +
 //                    currentCategory.toString());
+        }
+        currentCard = null;
+        ++turnNo;
+    }
+
+    private void askCategory() {
+        if (currentPlayer instanceof Ai) {
+            System.out.println("Ai");
+            currentCategory = currentPlayer.askCategory();
+            while (currentCategory == null) {
+                currentCategory = currentPlayer.askCategory();
+            }
+        } else {
+            System.out.println("human");
+            playCardButton.setEnabled(false);
+            initialiseSelectionGui();
         }
     }
 
@@ -569,10 +616,10 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         }
     }
 
-    private void checkIfWinner(Player player) {
+    private void checkIfGameWinner(Player player) {
         if (player.getCardsHand().size() == 0) {
             confirm = true;
-            //if player has not allready won
+            //if player has not already won
             if (!player.getWon()) {
                 displayMessage("#####\n" + player.getName() + " has won!\n#####");
                 playersWon.add(player);
@@ -581,21 +628,23 @@ class TrumpGame extends JFrame implements MouseListener,ActionListener {
         }
     }
 
-    private void checkWinner() {
+    private void checkRoundWinner() {
         //check for winner
         if (checkPassed()) {
             playerWonRound = getRoundWinner();
+            shiftArray(players, players.size() - (players.indexOf(playerWonRound)));
+            turnNo = 0;
             roundEnd = true;
-            currentCategory = null;
+            startRound();
         }
     }
 
     private String declareCard(Card currentCard) {
         if (currentCard instanceof PlayCard) {
-            return "Played: " + currentCard.getTitle() + ", " + currentCategory.toString().toLowerCase() +
+            return currentCard.getTitle() + ", " + currentCategory.toString().toLowerCase() +
                     ", (" + ((PlayCard) currentCard).getCategoryValue(currentCategory) + ")";
         } else {
-            return "Played: " + currentCard.getTitle() + ", changes category to: " + ((TrumpCard) currentCard).getCategory().toString();
+            return currentCard.getTitle() + ", changes category to: " + ((TrumpCard) currentCard).getCategory().toString();
         }
     }
 
