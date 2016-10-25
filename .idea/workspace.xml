@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c15356b0-c02e-4619-94d5-f31937a8b682" name="Default" comment="">
+    <list default="true" id="222de12b-eee8-40d8-8ec8-5e3b3b0cf396" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TrumpGame.java" afterPath="$PROJECT_DIR$/src/TrumpGame.java" />
     </list>
     <ignored path="Assignment.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,32 +24,12 @@
     <favorites_list name="Assignment" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="SuperTrump.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrumpCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TrumpCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -57,20 +38,19 @@
       <file leaf-file-name="TrumpGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="140" column="38" selection-start-line="140" selection-start-column="38" selection-end-line="140" selection-end-column="38" />
+            <state relative-caret-position="358">
+              <caret line="338" column="20" selection-start-line="338" selection-start-column="20" selection-end-line="338" selection-end-column="20" />
               <folding>
                 <element signature="docComment;class#TrumpGame#0" expanded="false" />
-                <element signature="e#361#390#0" expanded="false" />
                 <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-                <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
@@ -81,41 +61,17 @@
                 <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#17952#17982#0" expanded="false" />
+                <element signature="e#17885#17915#0" expanded="false" />
                 <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
+                <element signature="e#19963#19983#0" expanded="false" />
                 <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-                <element signature="e#22119#22197#0" expanded="false" />
-                <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
                 <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-                <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Card.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,28 +80,34 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="197">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding>
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+                <element signature="e#1083#1084#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ai.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ai.java">
+      <file leaf-file-name="AbstractButton.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="297">
+              <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
+              <folding>
+                <element signature="e#83485#83486#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Deck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <file leaf-file-name="DefaultButtonModel.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="180">
+              <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -153,15 +115,7 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -172,26 +126,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/InputTextGui.java" />
-        <option value="$PROJECT_DIR$/src/MenuGui.java" />
-        <option value="$PROJECT_DIR$/src/GameGui.java" />
-        <option value="$PROJECT_DIR$/src/SuperTrump.java" />
-        <option value="$PROJECT_DIR$/src/TestBed.java" />
-        <option value="$PROJECT_DIR$/src/PlayCard.java" />
-        <option value="$PROJECT_DIR$/src/TrumpCard.java" />
-        <option value="$PROJECT_DIR$/src/Card.java" />
-        <option value="$PROJECT_DIR$/src/Deck.java" />
-        <option value="$PROJECT_DIR$/src/Player.java" />
-        <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/src/TrumpGame.java" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1384" />
-    <option name="height" value="748" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -218,53 +167,56 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
-    <property name="last_opened_file_path" value="D:/Program Files (SD)/Git/bin/git.exe" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="js.eslint.eslintPackage" value="" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Application.SuperTrump">
     <configuration default="false" name="SuperTrump" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="SuperTrump" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Assignment" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestBed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="TestBed" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Assignment" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="MenuGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="MenuGui" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -305,7 +257,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -328,7 +283,10 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -521,126 +479,65 @@
       <listeners />
       <method />
     </configuration>
-    <list size="3">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.SuperTrump" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TestBed" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MenuGui" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.SuperTrump" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestBed" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MenuGui" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c15356b0-c02e-4619-94d5-f31937a8b682" name="Default" comment="" />
-      <created>1476753747718</created>
+      <changelist id="222de12b-eee8-40d8-8ec8-5e3b3b0cf396" name="Default" comment="" />
+      <created>1477264564675</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1476753747718</updated>
+      <updated>1477264564675</updated>
+      <workItem from="1477264567138" duration="1058000" />
     </task>
-    <task id="LOCAL-00001" summary="Created initial MenuGui which starts the game">
-      <created>1476956998904</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1476956998904</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Removed specific Gui classed, converted TrumpGame class to gui. Several method modifications.">
-      <created>1477052419917</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1477052419917</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Made Gui for entering player names/ai">
-      <created>1477108616916</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1477108616916</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Frame work for game panel, help frame created. Images for cards added.">
-      <created>1477136549223</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1477136549223</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Created game panel, started workign on turn system. re-writting ALL the code.">
-      <created>1477189181132</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1477189181132</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Code Cleanup. Organised methods and adjusted them where necassary. Seperated Ai and human turns.">
-      <created>1477234472365</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1477234472365</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Made Selection Panel">
-      <created>1477236399745</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1477236399745</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Reformatted game panel, redid round methodology.">
-      <created>1477244419125</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1477244419125</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1058000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1384" height="748" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16925466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.49707174" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24534161" sideWeight="0.21961933" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35358712" sideWeight="0.78038067" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258593" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31606767" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13802083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.61627907" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="969" y="15" width="939" height="1071" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -654,171 +551,87 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created initial MenuGui which starts the game" />
-    <MESSAGE value="Removed specific Gui classed, converted TrumpGame class to gui. Several method modifications." />
-    <MESSAGE value="Made Gui for entering player names/ai" />
-    <MESSAGE value="Frame work for game panel, help frame created. Images for cards added." />
-    <MESSAGE value="Created game panel, started workign on turn system. re-writting ALL the code." />
-    <MESSAGE value="Code Cleanup. Organised methods and adjusted them where necassary. Seperated Ai and human turns." />
-    <MESSAGE value="Made Selection Panel" />
-    <MESSAGE value="Reformatted game panel, redid round methodology." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformatted game panel, redid round methodology." />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="39" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="turnNo" language="JAVA" />
+        <watch expression="players" language="JAVA" />
+        <watch expression="" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="153">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#TrumpGame#0" expanded="false" />
-            <element signature="e#361#390#0" expanded="false" />
-            <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#17952#17982#0" expanded="false" />
-            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#22119#22197#0" expanded="false" />
-            <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
+            <element signature="e#83485#83486#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="197">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="358">
+          <caret line="338" column="20" selection-start-line="338" selection-start-column="20" selection-end-line="338" selection-end-column="20" />
           <folding>
             <element signature="docComment;class#TrumpGame#0" expanded="false" />
-            <element signature="e#361#390#0" expanded="false" />
             <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
@@ -829,463 +642,17 @@
             <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#17952#17982#0" expanded="false" />
+            <element signature="e#17885#17915#0" expanded="false" />
             <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
+            <element signature="e#19963#19983#0" expanded="false" />
             <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#22119#22197#0" expanded="false" />
-            <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
             <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#TrumpGame#0" expanded="false" />
-            <element signature="e#361#390#0" expanded="false" />
-            <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#17952#17982#0" expanded="false" />
-            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#22119#22197#0" expanded="false" />
-            <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGui.java" />
-    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="docComment;class#TrumpGame#0" expanded="false" />
-            <element signature="e#361#390#0" expanded="false" />
-            <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#17952#17982#0" expanded="false" />
-            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#22119#22197#0" expanded="false" />
-            <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGui.java" />
-    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#TrumpGame#0" expanded="false" />
-            <element signature="e#361#390#0" expanded="false" />
-            <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#17952#17982#0" expanded="false" />
-            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#22119#22197#0" expanded="false" />
-            <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGui.java" />
-    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#TrumpGame#0" expanded="false" />
-            <element signature="e#361#390#0" expanded="false" />
-            <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#17952#17982#0" expanded="false" />
-            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#22119#22197#0" expanded="false" />
-            <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/GameGui.java" />
-    <entry file="file://$PROJECT_DIR$/src/InputTextGui.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGui.java" />
-    <entry file="file://$PROJECT_DIR$/src/PlayCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TrumpCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ai.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/JComboBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="770" column="0" selection-start-line="770" selection-start-column="0" selection-end-line="770" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="140" column="38" selection-start-line="140" selection-start-column="38" selection-end-line="140" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;class#TrumpGame#0" expanded="false" />
-            <element signature="e#361#390#0" expanded="false" />
-            <element signature="method#TrumpGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#initialiseMenuGui#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#addLog#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#endGame#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayHelp#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#displayWinners#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#17952#17982#0" expanded="false" />
-            <element signature="method#playCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#declareCard#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#checkPassed#0;class#TrumpGame#0" expanded="false" />
-            <element signature="e#22119#22197#0" expanded="false" />
-            <element signature="method#pass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#shiftArray#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#dealCards#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#setPlayersPass#0;class#TrumpGame#0" expanded="false" />
-            <element signature="method#getRoundWinner#0;class#TrumpGame#0" expanded="false" />
-            <marker date="1477256976000" expanded="true" signature="515:2613" ph="..." />
           </folding>
         </state>
       </provider>
