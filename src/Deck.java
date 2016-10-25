@@ -43,9 +43,7 @@ class Deck {
                 occurrence = reader.readLine();
                 specificGravity = reader.readLine();
                 title = reader.readLine();
-                System.out.println(fileName);
                 image = new ImageIcon("imagesc3\\" + fileName);
-//                image = resizeImage(image,600,700);
                 cards.add(new PlayCard(x,fileName,imageName,title,image,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
             }
             for (int x = 54; x < 60; x++) {
@@ -55,7 +53,6 @@ class Deck {
                 subtitle = reader.readLine();
                 title = reader.readLine();
                 image = new ImageIcon("imagesc3\\" + fileName);
-//                image = resizeImage(image,600,700);
                 cards.add(new TrumpCard(x,fileName,imageName,title,image,subtitle));
             }
 
@@ -65,12 +62,6 @@ class Deck {
         {
             System.out.println(e);
         }
-    }
-
-    private ImageIcon resizeImage(ImageIcon image, int i, int i1) {
-        Image image2 = image.getImage(); // transform it
-        Image newimg = image2.getScaledInstance(i, i1,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
-        return new ImageIcon(newimg);  // transform it back
     }
 
 

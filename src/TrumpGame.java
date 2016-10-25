@@ -2,69 +2,43 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
 
 /**
  * Created by Dale Muccignat on 21/09/2016.
- * Super Trump (Game Object class)
+ * Super Trump (Game Object class with gui)
  */
-    //todo start new game doesn't clear window
-    //todo random fucking errors - reset category spinner
-    //todo error 4 appears twice
+
 class TrumpGame extends JFrame implements ActionListener {
     private static final int NO_CARDS_IN_HAND = 8;
     private ArrayList<Player> players,playersWon;
-    private String[] playerNames;
-    private Boolean[] playerAiCheck;
     private static Deck deck;
     private Boolean roundEnd,confirm;
     private Deck storedCards,field;
     private Card currentCard,lastCard;
     private Player playerWonRound,currentPlayer;
-    private Category currentCategory = Category.HARDNESS;
-    private int helpCount = 0, turnNo = 0, noHumans=0, noAI=0;
-    private ImageIcon[] helpCards = new ImageIcon[4];
-
-    private JFrame helpFrame = new JFrame();
-    private Container con;
-    private JMenuBar menuBar = new JMenuBar();
-    private JMenuItem startMenu = new JMenuItem("Start New Game");
-    private JMenuItem helpMenu = new JMenuItem("How to play");
-    private JMenuItem quitMenu = new JMenuItem("quit");
-    private JPanel gamePanel = new JPanel();
-    private JPanel gamePanel2 = new JPanel();
-    private JPanel fieldPanel = new JPanel();
-    private JPanel selectionPanel = new JPanel();
-    private JPanel gameInfoPanel = new JPanel();
-    private JPanel handPanel = new JPanel();
-    private JPanel cardViewPanel = new JPanel();
-    private JLabel inputLabel = new JLabel("Please Input:");
-    private JLabel aiLabel = new JLabel("Ai?");
-    private JLabel nameLabel = new JLabel("Name");
-    private JLabel errorLabel = new JLabel("");
-    private JLabel infoLabel = new JLabel("");
-    private JLabel playerLabel = new JLabel("");
-    private JLabel categoryLabel = new JLabel("");
-    private JLabel helpLabel = new JLabel();
-    private JLabel cardDisplayLabel = new JLabel();
-    private JLabel spacerLabel = new JLabel();
-    private JLabel fieldLabel = new JLabel();
-
-    private JTextField[] inputTexts = new JTextField[5];
-    private JCheckBox[] aiCheck = new JCheckBox[5];
-    private JButton confirmInputButton = new JButton("Confirm Input");
-    private JButton selectionButton = new JButton("Confirm Input");
-    private JButton nextHelp = new JButton("Next Page.");
-    private JButton playCardButton = new JButton("Play Selected Card");
-    private JButton passButton = new JButton("Pass");
-    private JComboBox<Category> selectionBox = new JComboBox<>();
-    private JComboBox<String> playerHandBox = new JComboBox<>();
-    private JPanel logPanel = new JPanel();
-    private ArrayList<JLabel> loglist = new ArrayList<>();
+    private Category currentCategory;
+    private int helpCount = 0, turnNo = 0;
+    private JMenu helpMenu;
+    private JMenuItem startMenu;
+    private JMenuItem quitMenu;
+    private JLabel infoLabel;
+    private JLabel helpLabel;
+    private JLabel cardDisplayLabel;
+    private JLabel categoryLabel;
+    private JPanel gamePanel;
+    private JPanel fieldPanel;
+    private JPanel selectionPanel;
+    private JPanel logPanel;
+    private ImageIcon[] helpCards;
+    private JCheckBox[] aiCheck;
+    private JTextField[] inputTexts;
+    private JComboBox<Category> selectionBox;
+    private JComboBox<String> playerHandBox;
+    private ArrayList<JLabel> playerLabels,loglist;
+    private JButton selectionButton,playCardButton,passButton,confirmInputButton,nextHelp;
+    Container con = getContentPane();
 
     TrumpGame() {
         playersWon = new ArrayList<>();
@@ -73,12 +47,21 @@ class TrumpGame extends JFrame implements ActionListener {
         getHelpCards();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
-        setSize(400,400);
         initialiseMenuGui();
+        setResizable(false);
     }
 
     private void initialiseSetupGui() {
-        con = getContentPane();
+        setSize(400,400);
+        gamePanel = new JPanel();
+        infoLabel = new JLabel("");
+        confirmInputButton = new JButton("Confirm Input");
+        inputTexts = new JTextField[5];
+        aiCheck = new JCheckBox[5];
+        JLabel inputLabel = new JLabel("Please Input:");
+        JLabel nameLabel = new JLabel("Name");
+        JLabel aiLabel = new JLabel("Ai?");
+        JLabel errorLabel = new JLabel("");
         // input panel
         gamePanel.setLayout(new GridLayout(8,2));
         infoLabel.setText("Blank fields will be ignored.");
@@ -104,48 +87,90 @@ class TrumpGame extends JFrame implements ActionListener {
     }
 
     private void initialiseMenuGui() {
+        helpMenu = new JMenu("Help");
+        startMenu = new JMenuItem("Start New Game");
+        quitMenu = new JMenuItem("quit");
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+        JMenuItem howMenu = new JMenuItem("How to play");
+        setSize(400,400);
         setJMenuBar(menuBar);
-        menuBar.add(startMenu);
+        menuBar.add(fileMenu);
         menuBar.add(helpMenu);
-        menuBar.add(quitMenu);
+        fileMenu.add(startMenu);
+        fileMenu.add(howMenu);
+        helpMenu.add(quitMenu);
         startMenu.addActionListener(this);
         helpMenu.addActionListener(this);
         quitMenu.addActionListener(this);
+        initialiseSetupGui();
     }
 
     private void initialiseGameGui() {
+        cardDisplayLabel = new JLabel();
+        selectionButton = new JButton("Confirm Input");
+        playCardButton = new JButton("Play Selected Card");
+        passButton = new JButton("Pass");
+        selectionBox = new JComboBox<>();
+        playerHandBox = new JComboBox<>();
+        logPanel = new JPanel();
+        loglist = new ArrayList<>();
+        categoryLabel = new JLabel("");
+        fieldPanel = new JPanel();
+        selectionPanel = new JPanel();
+        JPanel gamePanel2 = new JPanel();
+        JPanel gameInfoPanel = new JPanel();
+        JPanel handPanel = new JPanel();
+        JPanel cardViewPanel = new JPanel();
+        JPanel playerPanel = new JPanel();
+
+
         gamePanel.removeAll();
         gamePanel.setLayout(new GridLayout(1,3));
         setSize(960,500);
-        gamePanel2.setLayout(new GridLayout(4,1));
-        gameInfoPanel.setLayout(new GridLayout(5,1));
-        handPanel.setLayout(new BorderLayout());
-        cardViewPanel.setLayout(new BorderLayout());
-        selectionPanel.setLayout(new BorderLayout());
-        logPanel.setLayout(new GridLayout(30,1));
-        // add spacer as menu overlays the card
-        cardViewPanel.add(spacerLabel, BorderLayout.NORTH);
-        cardViewPanel.add(cardDisplayLabel);
         gamePanel.add(gamePanel2);
         gamePanel.add(cardViewPanel);
         gamePanel.add(logPanel);
+
+        gamePanel2.setLayout(new GridLayout(4,1));
         gamePanel2.add(gameInfoPanel);
         gamePanel2.add(fieldPanel);
         gamePanel2.add(selectionPanel);
         gamePanel2.add(handPanel);
-        gameInfoPanel.add(playerLabel);
+
+        gameInfoPanel.setLayout(new GridLayout(3,1));
+        gameInfoPanel.setBorder(BorderFactory.createTitledBorder("Game Information"));
+        gameInfoPanel.add(playerPanel);
+        playerPanel.setLayout(new GridLayout(1,playerLabels.size()));
+        for (JLabel playerLabel : playerLabels) {
+            playerPanel.add(playerLabel);
+        }
         gameInfoPanel.add(infoLabel);
         gameInfoPanel.add(categoryLabel);
-        gameInfoPanel.add(passButton);
-        gameInfoPanel.add(fieldLabel);
-        fieldLabel.setText("Field: ");
-        infoLabel.setText("Please select a card");
-        infoLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        handPanel.add(playerHandBox, BorderLayout.NORTH);
-        handPanel.add(playCardButton, BorderLayout.SOUTH);
+        infoLabel.setText("What to do: Please select a card");
+        infoLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        categoryLabel.setHorizontalAlignment(SwingConstants.LEFT);
         passButton.addActionListener(this);
+
+        handPanel.setLayout(new BorderLayout());
+        handPanel.setBorder(BorderFactory.createTitledBorder("Turn Options"));
+        handPanel.add(playerHandBox, BorderLayout.CENTER);
+        handPanel.add(playCardButton, BorderLayout.SOUTH);
+        handPanel.add(passButton, BorderLayout.NORTH);
         playCardButton.addActionListener(this);
-        playerLabel.setHorizontalAlignment(SwingConstants.CENTER);
+
+        fieldPanel.setBorder(BorderFactory.createTitledBorder("Field Information"));
+
+
+        cardViewPanel.setLayout(new BorderLayout());
+        cardViewPanel.add(cardDisplayLabel);
+
+        selectionPanel.setLayout(new BorderLayout());
+        selectionPanel.setBorder(BorderFactory.createTitledBorder("Category Selection"));
+
+        logPanel.setLayout(new GridLayout(30,1));
+        logPanel.setBorder(BorderFactory.createTitledBorder("Event Log"));
+
         currentCategory = null;
         startRound();
         invalidate();
@@ -155,6 +180,7 @@ class TrumpGame extends JFrame implements ActionListener {
     }
 
     private void addLog(String message) {
+        System.out.println(message);
         logPanel.removeAll();
         JLabel label = new JLabel(message);
         if (loglist.size() == 30) {
@@ -177,7 +203,10 @@ class TrumpGame extends JFrame implements ActionListener {
         categoryLabel.setText("Current category: ");
         setPlayersPass(false);
         storeCards();
-        currentPlayer = players.get(0);
+        currentPlayer = players.get(turnNo);
+        playerLabels.get(turnNo).setBorder(BorderFactory.createLineBorder(Color.RED));
+        addLog("New Round!");
+        addLog("----------");
         roundEnd = false;
         if (lastCard instanceof PlayCard) {
             lastCard = null;
@@ -204,16 +233,21 @@ class TrumpGame extends JFrame implements ActionListener {
         selectionPanel.add(selectionBox, BorderLayout.NORTH);
         selectionPanel.add(selectionButton, BorderLayout.SOUTH);
         selectionButton.addActionListener(this);
-        infoLabel.setText("Please select a category.");
+        infoLabel.setText("What to do: Please select a category.");
         invalidate();
         validate();
         repaint();
     }
 
     private void displayUserData() {
+        // remove previous display
         playerHandBox.removeAllItems();
         fieldPanel.removeAll();
-        playerLabel.setText(currentPlayer.getName() + "'s Turn.");
+        for (JLabel playerLabel : playerLabels) {
+            playerLabel.setBorder(BorderFactory.createEmptyBorder());
+        }
+        //set new display
+        playerLabels.get(turnNo).setBorder(BorderFactory.createLineBorder(Color.RED));
         fieldPanel.setLayout(new GridLayout(field.getCards().size(),1));
         for (Card card : field.getCards()) {
             JLabel label = new JLabel(declareCard(card));
@@ -269,6 +303,7 @@ class TrumpGame extends JFrame implements ActionListener {
         if (source == confirmInputButton) {
             createPlayers();
         } else if (source == startMenu) {
+            con.removeAll();
             gamePanel.removeAll();
             initialiseSetupGui();
         } else if (source == helpMenu) {
@@ -301,8 +336,9 @@ class TrumpGame extends JFrame implements ActionListener {
             playCardButton.setEnabled(true);
             selectionButton.setEnabled(false);
             passButton.setEnabled(true);
-            infoLabel.setText("Please select a card.");
+            infoLabel.setText("What to do: Please select a card.");
             displayUserData();
+            selectionPanel.removeAll();
             invalidate();
             validate();
             repaint();
@@ -332,9 +368,7 @@ class TrumpGame extends JFrame implements ActionListener {
         Boolean found =false;
         nextTurn();
         while (!found) {
-            addLog("error6");
             if (!currentPlayer.getPass() && !currentPlayer.getWon()) {
-                addLog("found");
                 found = true;
             } else {
                 nextTurn();
@@ -345,13 +379,13 @@ class TrumpGame extends JFrame implements ActionListener {
     private void runAutoTurns() {
         Boolean confirm=false;
         while (!confirm) {
+            System.out.println("heyo");
             currentPlayer = players.get(turnNo);
             if (!currentPlayer.getPass() && !currentPlayer.getWon()) {
                 // if player is still playing
                 if (currentPlayer instanceof Ai) {
                     // if next player is ai, run ai turn
                     runTurnAi();
-                    // stop if round won
                 } else  {
                     // if player hasn't won or passed
                     confirm = true;
@@ -367,10 +401,10 @@ class TrumpGame extends JFrame implements ActionListener {
             repaint();
         }
         //check if the round has ended
-        addLog("error 4");
         if (roundEnd) {
-            addLog("error 5");
             startRound();
+        } else {
+            displayUserData();
         }
     }
 
@@ -412,8 +446,8 @@ class TrumpGame extends JFrame implements ActionListener {
     }
 
     private void createPlayers() {
-        playerNames = new String[5];
-        playerAiCheck = new Boolean[5];
+        String[] playerNames = new String[5];
+        Boolean[] playerAiCheck = new Boolean[5];
         // store inputs
         for (int i=0;i<5;i++) {
             playerNames[i] = inputTexts[i].getText();
@@ -430,6 +464,10 @@ class TrumpGame extends JFrame implements ActionListener {
             }
         }
         Collections.shuffle(players);
+        playerLabels = new ArrayList<>();
+        for (Player player : players) {
+            playerLabels.add(new JLabel(player.getName(), SwingConstants.CENTER));
+        }
         if (players.size() > 2) {
             createDeck();
             dealCards();
@@ -444,6 +482,10 @@ class TrumpGame extends JFrame implements ActionListener {
 
     private void displayHelp() {
         /* Displays how to play screen */
+        helpLabel = new JLabel();
+        nextHelp = new JButton("Next Page.");
+        JFrame helpFrame = new JFrame();
+
         helpFrame.setVisible(true);
         helpFrame.setLayout(new BorderLayout());
         helpFrame.setSize(700,700);
@@ -458,6 +500,8 @@ class TrumpGame extends JFrame implements ActionListener {
     }
 
     private void getHelpCards() {
+        int NO_HELP_CARDS = 4;
+        helpCards = new ImageIcon[NO_HELP_CARDS];
         for (int i = 0; i < 4; i++) {
             helpCards[i] = new ImageIcon("imagesc3\\Slide6" + (i+1) + ".jpg");
             Image image = helpCards[i].getImage(); // transform it
@@ -537,7 +581,6 @@ class TrumpGame extends JFrame implements ActionListener {
             field.addCard(currentCard);                            //add card to field
             addLog(currentPlayer.getName() + " played: " +
                     declareCard(currentCard));
-            findNextTurn();
         } else if (currentCard instanceof TrumpCard) {
             field.addCard(currentCard);
             Category category1 = ((TrumpCard) currentCard).getCategory();
@@ -553,8 +596,8 @@ class TrumpGame extends JFrame implements ActionListener {
             categoryLabel.setText("Category is: " + currentCategory);
             //reset player order
             //todo this is redundant
-            shiftArray(players, players.size() - (players.indexOf(currentPlayer)));
-            turnNo = 0;
+//            shiftArray(players, players.size() - (players.indexOf(currentPlayer)));
+//            turnNo = 0;
         }
         currentCard = null;
         checkIfGameWinner();
@@ -567,6 +610,8 @@ class TrumpGame extends JFrame implements ActionListener {
         } else {
             if (lastCard instanceof TrumpCard) {
                 startRound();
+            } else if (lastCard instanceof PlayCard) {
+                findNextTurn();
             }
         }
 
@@ -579,6 +624,7 @@ class TrumpGame extends JFrame implements ActionListener {
                 currentCategory = currentPlayer.askCategory();
             }
             categoryLabel.setText("Current Category: " + currentCategory);
+            addLog(currentPlayer.getName() + " changed the category to: " + currentCategory);
         } else {
             selectionButton.setEnabled(true);
             playCardButton.setEnabled(false);
@@ -614,8 +660,8 @@ class TrumpGame extends JFrame implements ActionListener {
         if (checkPassed()) {
             playerWonRound = getRoundWinner();
             addLog(playerWonRound.getName() + " Won the round!");
-            shiftArray(players, players.size() - (players.indexOf(playerWonRound)));
-            turnNo = 0;
+            // select winning player as starting player
+            turnNo = players.indexOf(playerWonRound);
             roundEnd = true;
             currentCategory = null;
         }
@@ -668,7 +714,6 @@ class TrumpGame extends JFrame implements ActionListener {
         currentPlayer.getCardsHand().addAll(deck.dealCards(1));
         findNextTurn();
         checkRoundWinner();
-
     }
 
     private static <Player> ArrayList<Player> shiftArray(ArrayList<Player> array, int shift)
