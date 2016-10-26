@@ -603,9 +603,6 @@ class TrumpGame extends JFrame implements ActionListener {
             addLog("Category has been changed to: " + currentCategory.toString());
             categoryLabel.setText("Category is: " + currentCategory);
             //reset player order
-            //todo this is redundant
-//            shiftArray(players, players.size() - (players.indexOf(currentPlayer)));
-//            turnNo = 0;
         }
         currentCard = null;
         checkIfGameWinner();

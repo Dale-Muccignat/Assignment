@@ -1,0 +1,732 @@
+play
+SiO_2	
+tectosilicate 
+poor/none 
+high 	
+hexagonal 
+moderate 
+Slide01.jpg
+7 	
+Slide01 	
+igneous,metamorphic,sedimentary 	
+2.65 	
+Quartz
+play
+Na Al Si_3 O_8 - Ca Al_2 Si_2 O_8
+tectosilicate
+1 perfect, 1 good
+very high
+triclinic
+moderate
+Slide02.jpg
+6-6.5
+Slide02
+igneous,metamorphic,sedimentary
+2.6-2.8
+Plagioclase
+play
+K Al Si_3 O_3
+tectosilicate
+1 perfect, 1 good
+high
+monoclinic
+moderate
+Slide03.jpg
+6-6.5
+Slide03
+igneous,metamorphic,sedimentary
+2.5-2.6
+Orthoclase
+play
+K(Fe, Mg)_3 Al Si_3 O_10 (OH)_2
+phyllosilicate
+1 perfect
+moderate
+monoclinic
+low
+Slide04.jpg
+2.5-3
+Slide04
+igneous,metamorphic
+2.7-3.3
+Biotite
+play
+K Al_3 Si_3 O_10 (O H)_2
+phyllosilicate
+1 perfect
+moderate
+monoclinic
+moderate
+Slide05.jpg
+2.5-3
+Slide05
+igneous,metamorphic
+2.8-2.9
+Muscovite
+play
+Ca_2 (Mg, Fe)_4 Al_2 Si_7 O_22 (OH)_2
+inosilicate
+2 good
+moderate
+monoclinic
+trivial
+Slide06.jpg
+5-6
+Slide06
+igneous,metamorphic
+3.0-3.5
+Hornblende
+play
+Ca_2 (Mg, Fe)_5 Si_8 O_22 (OH)_2
+inosilicate
+2 good
+low
+monoclinic
+low
+Slide07.jpg
+5-6
+Slide07
+metamorphic
+3.0-3.5
+Actinolite
+play
+Na_2 (Mg, Fe)_3 Al_2 Si_8 O_22 (OH)_2
+inosilicate
+2 good
+low
+monoclinic
+trivial
+Slide08.jpg
+6
+Slide08
+metamorphic
+3.0-3.2
+Glaucophane
+play
+(Mg, Fe)_2 Si O_4
+nesosilicate
+2 poor
+high
+orthorhombic
+low
+Slide09.jpg
+6.5-7
+Slide09
+igneous,metamorphic,mantle
+3.2-4.4
+Olivine
+play
+(Fe, Mg, Ca, Mn)_3 (Al, Fe)_2 Si_3 O_12
+nesosilicate
+none
+moderate
+isometric
+moderate
+Slide10.jpg
+6-7.5
+Slide10
+igneous,metamorphic,mantle
+3.5-4.3
+Garnet
+play
+Ca Ti Si O_5
+nesosilicate
+3 good
+low
+monoclinic
+low
+Slide11.jpg
+5-5.5
+Slide11
+igneous,metamorphic
+3.4-3.6
+Titanite
+play
+Zr Si O_4
+nesosilicate
+2 poor
+trace
+tetragonal
+moderate
+Slide12.jpg
+7.5
+Slide12
+igneous,metamorphic,sedimentary
+4.6-4.7
+Zircon
+play
+Ca (Mg, Fe) Si_2 O_6
+inosilicate
+2 good
+high
+monoclinic
+trivial
+Slide13.jpg
+5.5-6.5
+Slide13
+igneous,metamorphic
+3.2-3.6
+Augite
+play
+(Mg, Fe)_2 Si_2 O_6
+inosilicate
+2 good
+high
+orthorhombic
+trivial
+Slide14.jpg
+5-6
+Slide14
+igneous,metamorphic,mantle
+3.2-3.9
+Orthopyroxene
+play
+(Mg, Fe)_5 Al_2 Si_3 O_10 (OH)_8
+phyllosilicate
+1 perfect
+moderate
+monoclinic
+low
+Slide15.jpg
+2-3
+Slide15
+metamorphic
+2.6-3.3
+Chlorite
+play
+(Mg, Fe)_3 Si_2 O_5 (OH)_4
+phyllosilicate
+1 perfect
+low
+monoclinic
+low
+Slide16.jpg
+3.5-4
+Slide16
+metamorphic,mantle
+2.6
+Antigorite
+play
+Mg_3 Si_4 O_10 (OH)_2
+phyllosilicate
+1 perfect
+low
+monoclinic
+moderate
+Slide17.jpg
+1
+Slide17
+metamorphic
+2.6-2.8
+Talc
+play
+Al_2 Si_2 O_5 (OH)_4
+phyllosilicate
+1 perfect
+moderate
+triclinic
+high
+Slide18.jpg
+1.5-2.5
+Slide18
+sedimentary
+2.6-2.7
+Kaolinite
+play
+Al_2 Si O_5
+nesosilicate
+2 good
+low
+orthorhombic
+moderate
+Slide19.jpg
+6.5-7
+Slide19
+metamorphic
+3.15
+Andalusite
+play
+Al_2 Si O_5
+nesosilicate
+1 perfect, 1 good
+trace
+triclinic
+moderate
+Slide20.jpg
+5.5-7
+Slide20
+metamorphic
+3.5-3.7
+Kyanite
+play
+Al_2 Si O_5
+nesosilicate
+1 perfect, 1 good
+low
+orthorhombic
+low
+Slide21.jpg
+6.5-7.5
+Slide21
+igneous,metamorphic
+3.25
+Sillimanite
+play
+(Fe, Mg)_2 Al_9 Si_4 O_22 (OH)_2
+nesosilicate
+1 good
+trace
+monoclinic
+low
+Slide22.jpg
+7
+Slide22
+metamorphic
+3.7-3.8
+Staurolite
+play
+Ca_2 (Al, Fe)_3 Si_3 O_12 (OH)
+sorosilicate
+1 perfect
+moderate
+monoclinic
+trivial
+Slide23.jpg
+6 - 6.5
+Slide23
+igneous,metamorphic
+3.2 - 3.5
+Epidote
+play
+Na (Mg, Fe)_3 Al_6 B_3 Si_6 O_27 (OH)_4
+cyclosilicate
+2 poor
+trace
+hexagonal
+moderate
+Slide24.jpg
+7 - 7.5
+Slide24
+metamorphic
+3.0 - 3.2
+Tourmaline
+play
+Al_2 Si O_4 (F, OH)_2
+nesosilicate
+1 perfect
+ultratrace
+orthorhombic
+low
+Slide25.jpg
+8
+Slide25
+metamorphic,sedimentary
+3.5 - 3.6
+Topaz
+play
+Be_3 Al_2 Si_6 O_18
+cyclosilicate
+1 poor
+trace
+hexagonal
+moderate
+Slide26.jpg
+7.5 - 8
+Slide26
+igneous,metamorphic
+2.6 - 2.9
+Beryl
+play
+Fe S_2
+sulfide
+2 poor
+low
+isometric
+moderate
+Slide27.jpg
+6 - 6.5
+Slide27
+igneous,metamorphic
+5
+Pyrite
+play
+Fe_{1-x} S
+sulfide
+none
+low
+monoclinic
+moderate
+Slide28.jpg
+3.5 - 4.5
+Slide28
+igneous,metamorphic
+4.6
+Pyrrhotite
+play
+Cu Fe S_2
+sulfide
+2 poor
+low
+tetragonal
+very high
+Slide29.jpg
+3.5 - 4
+Slide29
+igneous,metamorphic
+4.1 - 4.3
+Chalcopyrite
+play
+Pb S
+sulfide
+3 perfect
+trace
+isometric
+high
+Slide30.jpg
+2.5
+Slide30
+metamorphic
+7.5 - 7.6
+Galena
+play
+(Zn, Fe) S
+sulfide
+6 perfect
+trace
+isometric
+high
+Slide31.jpg
+3.5 - 4
+Slide31
+metamorphic
+3.9 - 4.1
+Sphalerite
+play
+Mo S_2
+sulfide
+1 perfect
+trace
+hexagonal
+high
+Slide32.jpg
+1 - 1.5
+Slide32
+igneous,metamorphic
+4.7
+Molybdenite
+play
+Au
+native element
+none
+ultratrace
+isometric
+I'm rich!
+Slide33.jpg
+2.5 - 3
+Slide33
+metamorphic,sedimentary
+19.3
+Gold
+play
+C
+native element
+4 perfect
+ultratrace
+isometric
+I'm rich!
+Slide34.jpg
+10
+Slide34
+igneous,metamorphic,sedimentary
+3.5
+Diamond
+play
+C
+native element
+1 perfect
+trace
+hexagonal
+moderate
+Slide35.jpg
+1 - 2
+Slide35
+metamorphic,sedimentary
+2.2
+Graphite
+play
+Na Cl
+halide
+3 perfect
+trace
+isometric
+moderate
+Slide36.jpg
+2.5
+Slide36
+sedimentary
+2.2
+Halite
+play
+Ca F_2
+halide
+4 perfect
+trace
+isometric
+moderate
+Slide37.jpg
+4
+Slide37
+metamorphic
+3.2
+Fluorite
+play
+Ca S O_4 (H_2 O)_2
+sulfate
+1 perfect, 2 good
+trace
+monoclinic
+high
+Slide38.jpg
+2
+Slide38
+metamorphic,sedimentary
+2.3
+Gypsum
+play
+Ba S O_4
+sulfate
+2 perfect, 1 good
+trace
+orthorhombic
+moderate
+Slide39.jpg
+3 - 3.5
+Slide39
+metamorphic,sedimentary
+4.5
+Barite
+play
+Ca_5 (P O_4)_3 (OH, F, Cl)
+phosphate
+2 poor
+low
+hexagonal
+high
+Slide40.jpg
+5
+Slide40
+igneous,metamorphic,sedimentary
+3.1 - 3.2
+Apatite
+play
+(La, Ce, Nd) P O_4
+phosphate
+1 good, 1 poor
+trace
+monoclinic
+moderate
+Slide41.jpg
+5
+Slide41
+igneous,metamorphic,sedimentary
+5.0 - 5.3
+Monazite
+play
+Ca C O_3
+carbonate
+3 perfect
+moderate
+hexagonal
+high
+Slide42.jpg
+3
+Slide42
+igneous,metamorphic,sedimentary
+2.7
+Calcite
+play
+Ca Mg (C O_3)_2
+carbonate
+3 perfect
+low
+hexagonal
+low
+Slide43.jpg
+3.5 - 4
+Slide43
+metamorphic,sedimentary
+2.9
+Dolomite
+play
+Mg C O_3
+carbonate
+3 perfect
+low
+hexagonal
+moderate
+Slide44.jpg
+4
+Slide44
+metamorphic,sedimentary
+3.0
+Magnesite
+play
+Fe C O_3
+carbonate
+3 perfect
+trace
+hexagonal
+moderate
+Slide45.jpg
+4 - 4.5
+Slide45
+metamorphic,sedimentary
+4
+Siderite
+play
+Fe_3 O_4
+oxide (spinel)
+none
+moderate
+isometric
+very high
+Slide46.jpg
+5.5 - 6
+Slide46
+igneous,metamorphic,sedimentary
+5.2
+Magnetite
+play
+Fe_2 O_3
+oxide
+none
+trace
+hexagonal
+high
+Slide47.jpg
+5 - 6
+Slide47
+metamorphic,sedimentary
+5.3
+Hematite
+play
+(Fe, Mg) Cr_2 O_4
+oxide (spinel)
+none
+low
+isometric
+high
+Slide48.jpg
+5.5
+Slide48
+igneous,sedimentary
+4.5 - 5.1
+Chromite
+play
+Ti Fe O_3
+oxide
+none
+low
+hexagonal
+moderate
+Slide49.jpg
+5 - 6
+Slide49
+igneous,metamorphic,sedimentary
+4.7 - 4.8
+Ilmenite
+play
+Ti O_2
+oxide
+2 good
+low
+tetragonal
+high
+Slide50.jpg
+6 - 6.5
+Slide50
+metamorphic,sedimentary
+4.3
+Rutile
+play
+Al_2 O_3
+oxide
+none
+trace
+hexagonal
+moderate
+Slide51.jpg
+9
+Slide51
+metamorphic,sedimentary
+4.0
+Corundum
+play
+Sn O_2
+oxide
+1 good, 1 poor
+trace
+tetragonal
+high
+Slide52.jpg
+6 - 7
+Slide52
+igneous,metamorphic,sedimentary
+6.9 - 7.1
+Cassiterite
+play
+Al (O H)_3
+hydroxide
+1 perfect
+low
+monoclinic
+high
+Slide53.jpg
+2.5 - 3.5
+Slide53
+metamorphic,sedimentary
+2.4
+Gibbsite
+play
+Fe O (OH)
+hydroxide
+1 perfect, 1 good
+moderate
+orthorhombic
+moderate
+Slide54.jpg
+5 - 5.5
+Slide54
+sedimentary
+4.3
+Goethite
+trump
+Slide55.jpg
+Slide55
+Economic value
+The Miner
+trump
+Slide56.jpg
+Slide56
+Crustal abundance
+The Petrologist
+trump
+Slide57.jpg
+Slide57
+Hardness
+The Gemmologist
+trump
+Slide58.jpg
+Slide58
+Cleavage
+The Mineralogist
+trump
+Slide59.jpg
+Slide59
+Specific gravity
+The Geophysicist
+trump
+Slide60.jpg
+Slide60
+Change to trumps category of your choice
+The Geologist
