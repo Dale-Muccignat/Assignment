@@ -1,7 +1,7 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
 import java.io.*;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -22,11 +22,13 @@ class Deck {
     void buildDeck() {
         String subtitle,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,fileName,hardness,imageName,occurrence,specificGravity,title;
         ImageIcon image;
-        Path filePath = Paths.get("Resources\\dataPlay.txt");
+//        Path filePath = Paths.get("dataPlay.txt");
         InputStream input;
         try
         {
-            input = Files.newInputStream(filePath);
+//            input = Files.newInputStream(filePath);
+            input = getClass().getResourceAsStream("dataPlay.txt");
+//            input = Thread.currentThread().getContextClassLoader().getResourceAsStream("dataPlay.txt");
             BufferedReader reader = new
                     BufferedReader(new InputStreamReader(input));
             for (int x=0; x < 54 ; x++) {                                       //Read cards from file
@@ -43,8 +45,10 @@ class Deck {
                 occurrence = reader.readLine();
                 specificGravity = reader.readLine();
                 title = reader.readLine();
-                image = new ImageIcon("imagesc3\\" + fileName);
+                URL imgURL = getClass().getResource(fileName);
+                image = new ImageIcon(imgURL);
                 cards.add(new PlayCard(x,fileName,imageName,title,image,chemistry,classification,cleavage,crustalAbundance,crystalSystem,economicValue,hardness,occurrence,specificGravity));
+
             }
             for (int x = 54; x < 60; x++) {
                 reader.readLine();
@@ -52,7 +56,8 @@ class Deck {
                 imageName = reader.readLine();
                 subtitle = reader.readLine();
                 title = reader.readLine();
-                image = new ImageIcon("imagesc3\\" + fileName);
+                URL imgURL = getClass().getResource(fileName);
+                image = new ImageIcon(imgURL);
                 cards.add(new TrumpCard(x,fileName,imageName,title,image,subtitle));
             }
 

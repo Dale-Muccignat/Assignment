@@ -1,7 +1,10 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -22,6 +25,7 @@ class TrumpGame extends JFrame implements ActionListener {
     private int helpCount = 0, turnNo = 0;
     private JMenu helpMenu;
     private JMenuItem startMenu;
+    private JMenuItem howMenu;
     private JMenuItem quitMenu;
     private JLabel infoLabel;
     private JLabel helpLabel;
@@ -92,16 +96,16 @@ class TrumpGame extends JFrame implements ActionListener {
         quitMenu = new JMenuItem("quit");
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
-        JMenuItem howMenu = new JMenuItem("How to play");
+        howMenu = new JMenuItem("How to play");
         setSize(400,400);
         setJMenuBar(menuBar);
         menuBar.add(fileMenu);
         menuBar.add(helpMenu);
         fileMenu.add(startMenu);
-        fileMenu.add(howMenu);
-        helpMenu.add(quitMenu);
+        fileMenu.add(quitMenu);
+        helpMenu.add(howMenu);
         startMenu.addActionListener(this);
-        helpMenu.addActionListener(this);
+        howMenu.addActionListener(this);
         quitMenu.addActionListener(this);
         initialiseSetupGui();
     }
@@ -306,7 +310,7 @@ class TrumpGame extends JFrame implements ActionListener {
             con.removeAll();
             gamePanel.removeAll();
             initialiseSetupGui();
-        } else if (source == helpMenu) {
+        } else if (source == howMenu) {
             displayHelp();
         } else if (source == quitMenu) {
             dispose();
@@ -485,7 +489,6 @@ class TrumpGame extends JFrame implements ActionListener {
         helpLabel = new JLabel();
         nextHelp = new JButton("Next Page.");
         JFrame helpFrame = new JFrame();
-
         helpFrame.setVisible(true);
         helpFrame.setLayout(new BorderLayout());
         helpFrame.setSize(700,700);
@@ -503,10 +506,15 @@ class TrumpGame extends JFrame implements ActionListener {
         int NO_HELP_CARDS = 4;
         helpCards = new ImageIcon[NO_HELP_CARDS];
         for (int i = 0; i < 4; i++) {
-            helpCards[i] = new ImageIcon("imagesc3\\Slide6" + (i+1) + ".jpg");
-            Image image = helpCards[i].getImage(); // transform it
-            Image newimg = image.getScaledInstance(600, 700,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
-            helpCards[i] = new ImageIcon(newimg);  // transform it back
+            try {
+                URL imgURL = getClass().getResource("Slide6" + (i + 1) + ".jpg");
+                helpCards[i] = new ImageIcon(imgURL);
+                Image image = helpCards[i].getImage(); // transform it
+                Image newimg = image.getScaledInstance(600, 700,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+                helpCards[i] = new ImageIcon(newimg);  // transform it back
+            } catch (Exception e) {
+                System.out.println("Couldn't find help file");
+            }
         }
     }
 
