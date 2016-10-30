@@ -23,7 +23,6 @@ class TrumpGame extends JFrame implements ActionListener {
     private Player playerWonRound,currentPlayer;
     private Category currentCategory;
     private int helpCount = 0, turnNo = 0;
-    private JMenu helpMenu;
     private JMenuItem startMenu;
     private JMenuItem howMenu;
     private JMenuItem quitMenu;
@@ -42,7 +41,7 @@ class TrumpGame extends JFrame implements ActionListener {
     private JComboBox<String> playerHandBox;
     private ArrayList<JLabel> playerLabels,loglist;
     private JButton selectionButton,playCardButton,passButton,confirmInputButton,nextHelp;
-    Container con = getContentPane();
+    private Container con = getContentPane();
 
     TrumpGame() {
         playersWon = new ArrayList<>();
@@ -53,9 +52,11 @@ class TrumpGame extends JFrame implements ActionListener {
         setVisible(true);
         initialiseMenuGui();
         setResizable(false);
+        setTitle("SuperTrump");
     }
 
     private void initialiseSetupGui() {
+        /* Initialise player info gui */
         setSize(400,400);
         gamePanel = new JPanel();
         infoLabel = new JLabel("");
@@ -91,7 +92,8 @@ class TrumpGame extends JFrame implements ActionListener {
     }
 
     private void initialiseMenuGui() {
-        helpMenu = new JMenu("Help");
+        /* initialise the menubar */
+        JMenu helpMenu = new JMenu("Help");
         startMenu = new JMenuItem("Start New Game");
         quitMenu = new JMenuItem("quit");
         JMenuBar menuBar = new JMenuBar();
@@ -111,6 +113,7 @@ class TrumpGame extends JFrame implements ActionListener {
     }
 
     private void initialiseGameGui() {
+        /* Initialise the game gui */
         cardDisplayLabel = new JLabel();
         selectionButton = new JButton("Confirm Input");
         playCardButton = new JButton("Play Selected Card");
@@ -184,17 +187,16 @@ class TrumpGame extends JFrame implements ActionListener {
     }
 
     private void addLog(String message) {
+        /* build arraylist of label messages */
         System.out.println(message);
         logPanel.removeAll();
         JLabel label = new JLabel(message);
         if (loglist.size() == 30) {
-            for (int i = 1; i < 30; i++) {
-                loglist.set((i-1),loglist.get(i));
-            }
-            loglist.set(29,label);
-        } else {
-            loglist.add(label);
+            // if loglist is greater than 30, remove oldest label
+            loglist.remove(0);
         }
+        loglist.add(label);
+
         for (JLabel label1 : loglist) {
             logPanel.add(label1);
         }
@@ -395,6 +397,9 @@ class TrumpGame extends JFrame implements ActionListener {
                     confirm = true;
                     displayUserData();
                 }
+            } else {
+                // if player has won or passed, find next player turn
+                findNextTurn();
             }
             if (!confirm) {
                 // if haven't found a human player and all other players are passed
@@ -418,6 +423,7 @@ class TrumpGame extends JFrame implements ActionListener {
         confirmInputButton.setEnabled(false);
         passButton.setEnabled(false);
         displayWinners();
+        playersWon.clear();
     }
 
     private void runTurnHuman() {
@@ -489,6 +495,7 @@ class TrumpGame extends JFrame implements ActionListener {
         helpLabel = new JLabel();
         nextHelp = new JButton("Next Page.");
         JFrame helpFrame = new JFrame();
+        helpFrame.setTitle("How to Play");
         helpFrame.setVisible(true);
         helpFrame.setLayout(new BorderLayout());
         helpFrame.setSize(700,700);
@@ -719,19 +726,6 @@ class TrumpGame extends JFrame implements ActionListener {
         currentPlayer.getCardsHand().addAll(deck.dealCards(1));
         findNextTurn();
         checkRoundWinner();
-    }
-
-    private static <Player> ArrayList<Player> shiftArray(ArrayList<Player> array, int shift)
-    {
-        if (array.size() == 0)
-            return array;
-        for(int i = 0; i < shift; i++)
-        {
-            // remove last element, add it to front of the ArrayList
-            Player element = array.remove( array.size() - 1 );
-            array.add(0, element);
-        }
-        return array;
     }
 
     private void dealCards() {

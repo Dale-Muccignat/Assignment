@@ -6,76 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="222de12b-eee8-40d8-8ec8-5e3b3b0cf396" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide26.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide27.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide28.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide29.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide30.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide31.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide32.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide33.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide34.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide35.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide36.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide37.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide38.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide39.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide41.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide42.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide43.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide44.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide45.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide46.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide47.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide48.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide49.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide50.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide51.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide52.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide53.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide54.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide55.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide56.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide57.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide58.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide59.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide60.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide61.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide62.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide63.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagesc3/Slide64.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="222de12b-eee8-40d8-8ec8-5e3b3b0cf396" name="Default" comment="Final debugging">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assignment.iml" afterPath="$PROJECT_DIR$/Assignment.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Deck.java" afterPath="$PROJECT_DIR$/src/Deck.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TrumpGame.java" afterPath="$PROJECT_DIR$/src/TrumpGame.java" />
     </list>
     <ignored path="Assignment.iws" />
@@ -108,22 +40,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrumpGame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TrumpGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="510" column="53" selection-start-line="510" selection-start-column="53" selection-end-line="510" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="884">
+              <caret line="719" column="18" selection-start-line="719" selection-start-column="18" selection-end-line="719" selection-end-column="18" />
+              <folding>
+                <element signature="docComment;class#TrumpGame#0" expanded="false" />
+                <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#startRound#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#actionPerformed#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
+                <element signature="e#19712#19742#0" expanded="false" />
+                <element signature="method#askCategory#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+                <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Deck.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Deck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="714">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding>
+                <marker date="1477446296000" expanded="true" signature="2667:2673" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,186 +88,10 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="80">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <element signature="e#1083#1084#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractButton.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37740">
-              <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#111030#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#9995#9996#0" expanded="false" />
-                <element signature="e#10032#10033#0" expanded="false" />
-                <element signature="e#10166#10167#0" expanded="false" />
-                <element signature="e#10193#10194#0" expanded="false" />
-                <element signature="e#11258#11259#0" expanded="false" />
-                <element signature="e#11299#11300#0" expanded="false" />
-                <element signature="e#12221#12222#0" expanded="false" />
-                <element signature="e#12248#12249#0" expanded="false" />
-                <element signature="e#14664#14665#0" expanded="false" />
-                <element signature="e#14736#14737#0" expanded="false" />
-                <element signature="e#14880#14881#0" expanded="false" />
-                <element signature="e#14914#14915#0" expanded="false" />
-                <element signature="e#16617#16618#0" expanded="false" />
-                <element signature="e#16651#16652#0" expanded="false" />
-                <element signature="e#17687#17688#0" expanded="false" />
-                <element signature="e#17722#17723#0" expanded="false" />
-                <element signature="e#19179#19180#0" expanded="false" />
-                <element signature="e#19214#19215#0" expanded="false" />
-                <element signature="e#20391#20392#0" expanded="false" />
-                <element signature="e#20434#20435#0" expanded="false" />
-                <element signature="e#26036#26037#0" expanded="false" />
-                <element signature="e#26076#26077#0" expanded="false" />
-                <element signature="e#27748#27749#0" expanded="false" />
-                <element signature="e#27790#27791#0" expanded="false" />
-                <element signature="e#29687#29688#0" expanded="false" />
-                <element signature="e#29730#29731#0" expanded="false" />
-                <element signature="e#31224#31225#0" expanded="false" />
-                <element signature="e#31269#31270#0" expanded="false" />
-                <element signature="e#33029#33030#0" expanded="false" />
-                <element signature="e#33063#33064#0" expanded="false" />
-                <element signature="e#36388#36389#0" expanded="false" />
-                <element signature="e#36446#36447#0" expanded="false" />
-                <element signature="e#40368#40369#0" expanded="false" />
-                <element signature="e#40397#40398#0" expanded="false" />
-                <element signature="e#42031#42032#0" expanded="false" />
-                <element signature="e#42059#42060#0" expanded="false" />
-                <element signature="e#45826#45827#0" expanded="false" />
-                <element signature="e#45862#45863#0" expanded="false" />
-                <element signature="e#48150#48151#0" expanded="false" />
-                <element signature="e#48185#48186#0" expanded="false" />
-                <element signature="e#48840#48841#0" expanded="false" />
-                <element signature="e#48874#48875#0" expanded="false" />
-                <element signature="e#50443#50444#0" expanded="false" />
-                <element signature="e#50476#50477#0" expanded="false" />
-                <element signature="e#51568#51569#0" expanded="false" />
-                <element signature="e#51608#51609#0" expanded="false" />
-                <element signature="e#53193#53194#0" expanded="false" />
-                <element signature="e#53231#53232#0" expanded="false" />
-                <element signature="e#54315#54316#0" expanded="false" />
-                <element signature="e#54346#54347#0" expanded="false" />
-                <element signature="e#58957#58958#0" expanded="false" />
-                <element signature="e#58993#58994#0" expanded="false" />
-                <element signature="e#61731#61732#0" expanded="false" />
-                <element signature="e#61774#61775#0" expanded="false" />
-                <element signature="e#61950#61951#0" expanded="false" />
-                <element signature="e#61978#61979#0" expanded="false" />
-                <element signature="e#63730#63731#0" expanded="false" />
-                <element signature="e#63766#63767#0" expanded="false" />
-                <element signature="e#66497#66498#0" expanded="false" />
-                <element signature="e#66554#66555#0" expanded="false" />
-                <element signature="e#66720#66721#0" expanded="false" />
-                <element signature="e#66780#66781#0" expanded="false" />
-                <element signature="e#67125#67126#0" expanded="false" />
-                <element signature="e#67195#67196#0" expanded="false" />
-                <element signature="e#68197#68198#0" expanded="false" />
-                <element signature="e#68254#68255#0" expanded="false" />
-                <element signature="e#69107#69108#0" expanded="false" />
-                <element signature="e#69177#69178#0" expanded="false" />
-                <element signature="e#69476#69477#0" expanded="false" />
-                <element signature="e#69511#69512#0" expanded="false" />
-                <element signature="e#70380#70381#0" expanded="false" />
-                <element signature="e#70432#70433#0" expanded="false" />
-                <element signature="e#73943#73944#0" expanded="false" />
-                <element signature="e#73978#73979#0" expanded="false" />
-                <element signature="e#74030#74031#0" expanded="false" />
-                <element signature="e#74065#74066#0" expanded="false" />
-                <element signature="e#74647#74648#0" expanded="false" />
-                <element signature="e#74679#74680#0" expanded="false" />
-                <element signature="e#75000#75001#0" expanded="false" />
-                <element signature="e#75030#75031#0" expanded="false" />
-                <element signature="e#75227#75228#0" expanded="false" />
-                <element signature="e#75282#75283#0" expanded="false" />
-                <element signature="e#75473#75474#0" expanded="false" />
-                <element signature="e#75531#75532#0" expanded="false" />
-                <element signature="e#75866#75867#0" expanded="false" />
-                <element signature="e#75934#75935#0" expanded="false" />
-                <element signature="e#89488#89489#0" expanded="false" />
-                <element signature="e#89523#89524#0" expanded="false" />
-                <element signature="e#89919#89920#0" expanded="false" />
-                <element signature="e#89954#89955#0" expanded="false" />
-                <element signature="e#90263#90264#0" expanded="false" />
-                <element signature="e#90295#90296#0" expanded="false" />
-                <element signature="e#92244#92245#0" expanded="false" />
-                <element signature="e#92293#92294#0" expanded="false" />
-                <element signature="e#92478#92479#0" expanded="false" />
-                <element signature="e#92527#92528#0" expanded="false" />
-                <element signature="e#107793#107794#0" expanded="false" />
-                <element signature="e#107828#107829#0" expanded="false" />
-                <element signature="e#108058#108059#0" expanded="false" />
-                <element signature="e#108125#108126#0" expanded="false" />
-                <element signature="e#108370#108371#0" expanded="false" />
-                <element signature="e#108428#108429#0" expanded="false" />
-                <element signature="e#109077#109078#0" expanded="false" />
-                <element signature="e#109133#109134#0" expanded="false" />
-                <element signature="e#109380#109381#0" expanded="false" />
-                <element signature="e#109420#109421#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultButtonModel.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5865">
-              <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14280#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#3205#3206#0" expanded="false" />
-                <element signature="e#3255#3256#0" expanded="false" />
-                <element signature="e#3332#3333#0" expanded="false" />
-                <element signature="e#3368#3369#0" expanded="false" />
-                <element signature="e#3437#3438#0" expanded="false" />
-                <element signature="e#3484#3485#0" expanded="false" />
-                <element signature="e#3556#3557#0" expanded="false" />
-                <element signature="e#3606#3607#0" expanded="false" />
-                <element signature="e#3677#3678#0" expanded="false" />
-                <element signature="e#3726#3727#0" expanded="false" />
-                <element signature="e#3797#3798#0" expanded="false" />
-                <element signature="e#3846#3847#0" expanded="false" />
-                <element signature="e#3918#3919#0" expanded="false" />
-                <element signature="e#3968#3969#0" expanded="false" />
-                <element signature="e#6935#6936#0" expanded="false" />
-                <element signature="e#6966#6967#0" expanded="false" />
-                <element signature="e#7058#7059#0" expanded="false" />
-                <element signature="e#7115#7116#0" expanded="false" />
-                <element signature="e#7210#7211#0" expanded="false" />
-                <element signature="e#7270#7271#0" expanded="false" />
-                <element signature="e#7713#7714#0" expanded="false" />
-                <element signature="e#7783#7784#0" expanded="false" />
-                <element signature="e#8695#8696#0" expanded="false" />
-                <element signature="e#8752#8753#0" expanded="false" />
-                <element signature="e#8847#8848#0" expanded="false" />
-                <element signature="e#8907#8908#0" expanded="false" />
-                <element signature="e#9350#9351#0" expanded="false" />
-                <element signature="e#9420#9421#0" expanded="false" />
-                <element signature="e#10362#10363#0" expanded="false" />
-                <element signature="e#10417#10418#0" expanded="false" />
-                <element signature="e#10508#10509#0" expanded="false" />
-                <element signature="e#10566#10567#0" expanded="false" />
-                <element signature="e#10995#10996#0" expanded="false" />
-                <element signature="e#11063#11064#0" expanded="false" />
-                <element signature="e#13656#13657#0" expanded="false" />
-                <element signature="e#13683#13684#0" expanded="false" />
-                <element signature="e#13767#13768#0" expanded="false" />
-                <element signature="e#13801#13802#0" expanded="false" />
-                <element signature="e#14107#14108#0" expanded="false" />
-                <element signature="e#14135#14136#0" expanded="false" />
-                <element signature="e#14163#14164#0" expanded="false" />
-                <element signature="e#14194#14195#0" expanded="false" />
-                <element signature="e#14236#14237#0" expanded="false" />
-                <element signature="e#14276#14277#0" expanded="false" />
+                <element signature="e#916#917#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -329,9 +110,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/TrumpGame.java" />
         <option value="$PROJECT_DIR$/src/dataPlay.txt" />
         <option value="$PROJECT_DIR$/src/Deck.java" />
+        <option value="$PROJECT_DIR$/src/TrumpGame.java" />
       </list>
     </option>
   </component>
@@ -349,10 +130,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -379,8 +160,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -415,7 +197,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -752,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1477408185032</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed file paths to work when exporting into a .jar.">
+      <created>1477446656419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1477446656419</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added files to git">
+      <created>1477451170404</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1477451170404</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -768,7 +563,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -778,16 +573,16 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3794926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39130434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13802083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13762811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.61627907" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="969" y="15" width="939" height="1071" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.61627907" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="302" y="410" width="906" height="733" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -813,20 +608,36 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Various debugging. Fixed display issues. Fixed even logger." />
     <MESSAGE value="Fixed bugs, game is fully operational." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs, game is fully operational." />
+    <MESSAGE value="Fixed file paths to work when exporting into a .jar." />
+    <MESSAGE value="Added files to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added files to git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TrumpGame.java</url>
+          <line>617</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TrumpGame.java</url>
+          <line>542</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="45" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="turnNo" language="JAVA" />
         <watch expression="players" language="JAVA" />
-        <watch expression="players" language="JAVA" />
+        <watch expression="playersWon" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -837,8 +648,67 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="136">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="198" column="30" selection-start-line="198" selection-start-column="30" selection-end-line="198" selection-end-column="30" />
+          <folding>
+            <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#startRound#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
+            <element signature="e#19712#19742#0" expanded="false" />
+            <element signature="method#askCategory#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <marker date="1477446296000" expanded="true" signature="2667:2673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -847,148 +717,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#startRound#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
+            <element signature="e#19712#19742#0" expanded="false" />
+            <element signature="method#askCategory#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="924">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <marker date="1477446296000" expanded="true" signature="2667:2673" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="1210">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39899">
+        <state relative-caret-position="51634">
           <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
           <folding>
-            <element signature="e#0#111030#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9995#9996#0" expanded="false" />
-            <element signature="e#10032#10033#0" expanded="false" />
-            <element signature="e#10166#10167#0" expanded="false" />
-            <element signature="e#10193#10194#0" expanded="false" />
-            <element signature="e#11258#11259#0" expanded="false" />
-            <element signature="e#11299#11300#0" expanded="false" />
-            <element signature="e#12221#12222#0" expanded="false" />
-            <element signature="e#12248#12249#0" expanded="false" />
-            <element signature="e#14664#14665#0" expanded="false" />
-            <element signature="e#14736#14737#0" expanded="false" />
-            <element signature="e#14880#14881#0" expanded="false" />
-            <element signature="e#14914#14915#0" expanded="false" />
-            <element signature="e#16617#16618#0" expanded="false" />
-            <element signature="e#16651#16652#0" expanded="false" />
-            <element signature="e#17687#17688#0" expanded="false" />
-            <element signature="e#17722#17723#0" expanded="false" />
-            <element signature="e#19179#19180#0" expanded="false" />
-            <element signature="e#19214#19215#0" expanded="false" />
-            <element signature="e#20391#20392#0" expanded="false" />
-            <element signature="e#20434#20435#0" expanded="false" />
-            <element signature="e#26036#26037#0" expanded="false" />
-            <element signature="e#26076#26077#0" expanded="false" />
-            <element signature="e#27748#27749#0" expanded="false" />
-            <element signature="e#27790#27791#0" expanded="false" />
-            <element signature="e#29687#29688#0" expanded="false" />
-            <element signature="e#29730#29731#0" expanded="false" />
-            <element signature="e#31224#31225#0" expanded="false" />
-            <element signature="e#31269#31270#0" expanded="false" />
-            <element signature="e#33029#33030#0" expanded="false" />
-            <element signature="e#33063#33064#0" expanded="false" />
-            <element signature="e#36388#36389#0" expanded="false" />
-            <element signature="e#36446#36447#0" expanded="false" />
-            <element signature="e#40368#40369#0" expanded="false" />
-            <element signature="e#40397#40398#0" expanded="false" />
-            <element signature="e#42031#42032#0" expanded="false" />
-            <element signature="e#42059#42060#0" expanded="false" />
-            <element signature="e#45826#45827#0" expanded="false" />
-            <element signature="e#45862#45863#0" expanded="false" />
-            <element signature="e#48150#48151#0" expanded="false" />
-            <element signature="e#48185#48186#0" expanded="false" />
-            <element signature="e#48840#48841#0" expanded="false" />
-            <element signature="e#48874#48875#0" expanded="false" />
-            <element signature="e#50443#50444#0" expanded="false" />
-            <element signature="e#50476#50477#0" expanded="false" />
-            <element signature="e#51568#51569#0" expanded="false" />
-            <element signature="e#51608#51609#0" expanded="false" />
-            <element signature="e#53193#53194#0" expanded="false" />
-            <element signature="e#53231#53232#0" expanded="false" />
-            <element signature="e#54315#54316#0" expanded="false" />
-            <element signature="e#54346#54347#0" expanded="false" />
-            <element signature="e#58957#58958#0" expanded="false" />
-            <element signature="e#58993#58994#0" expanded="false" />
-            <element signature="e#61731#61732#0" expanded="false" />
-            <element signature="e#61774#61775#0" expanded="false" />
-            <element signature="e#61950#61951#0" expanded="false" />
-            <element signature="e#61978#61979#0" expanded="false" />
-            <element signature="e#63730#63731#0" expanded="false" />
-            <element signature="e#63766#63767#0" expanded="false" />
-            <element signature="e#66497#66498#0" expanded="false" />
-            <element signature="e#66554#66555#0" expanded="false" />
-            <element signature="e#66720#66721#0" expanded="false" />
-            <element signature="e#66780#66781#0" expanded="false" />
-            <element signature="e#67125#67126#0" expanded="false" />
-            <element signature="e#67195#67196#0" expanded="false" />
-            <element signature="e#68197#68198#0" expanded="false" />
-            <element signature="e#68254#68255#0" expanded="false" />
-            <element signature="e#69107#69108#0" expanded="false" />
-            <element signature="e#69177#69178#0" expanded="false" />
-            <element signature="e#69476#69477#0" expanded="false" />
-            <element signature="e#69511#69512#0" expanded="false" />
-            <element signature="e#70380#70381#0" expanded="false" />
-            <element signature="e#70432#70433#0" expanded="false" />
-            <element signature="e#73943#73944#0" expanded="false" />
-            <element signature="e#73978#73979#0" expanded="false" />
-            <element signature="e#74030#74031#0" expanded="false" />
-            <element signature="e#74065#74066#0" expanded="false" />
-            <element signature="e#74647#74648#0" expanded="false" />
-            <element signature="e#74679#74680#0" expanded="false" />
-            <element signature="e#75000#75001#0" expanded="false" />
-            <element signature="e#75030#75031#0" expanded="false" />
-            <element signature="e#75227#75228#0" expanded="false" />
-            <element signature="e#75282#75283#0" expanded="false" />
-            <element signature="e#75473#75474#0" expanded="false" />
-            <element signature="e#75531#75532#0" expanded="false" />
-            <element signature="e#75866#75867#0" expanded="false" />
-            <element signature="e#75934#75935#0" expanded="false" />
-            <element signature="e#89488#89489#0" expanded="false" />
-            <element signature="e#89523#89524#0" expanded="false" />
-            <element signature="e#89919#89920#0" expanded="false" />
-            <element signature="e#89954#89955#0" expanded="false" />
-            <element signature="e#90263#90264#0" expanded="false" />
-            <element signature="e#90295#90296#0" expanded="false" />
-            <element signature="e#92244#92245#0" expanded="false" />
-            <element signature="e#92293#92294#0" expanded="false" />
-            <element signature="e#92478#92479#0" expanded="false" />
-            <element signature="e#92527#92528#0" expanded="false" />
-            <element signature="e#107793#107794#0" expanded="false" />
-            <element signature="e#107828#107829#0" expanded="false" />
-            <element signature="e#108058#108059#0" expanded="false" />
-            <element signature="e#108125#108126#0" expanded="false" />
-            <element signature="e#108370#108371#0" expanded="false" />
-            <element signature="e#108428#108429#0" expanded="false" />
-            <element signature="e#109077#109078#0" expanded="false" />
-            <element signature="e#109133#109134#0" expanded="false" />
-            <element signature="e#109380#109381#0" expanded="false" />
-            <element signature="e#109420#109421#0" expanded="false" />
+            <element signature="e#83485#83486#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5865">
+        <state relative-caret-position="8822">
           <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
           <folding>
             <element signature="e#0#14280#0" expanded="false" />
@@ -1043,15 +831,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#startRound#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
+            <element signature="e#19712#19742#0" expanded="false" />
+            <element signature="method#askCategory#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <marker date="1477446296000" expanded="true" signature="2667:2673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51634">
+          <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
+          <folding>
+            <element signature="e#83485#83486#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5865">
+        <state relative-caret-position="8822">
           <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
           <folding>
             <element signature="e#0#14280#0" expanded="false" />
@@ -1100,123 +949,6 @@
             <element signature="e#14194#14195#0" expanded="false" />
             <element signature="e#14236#14237#0" expanded="false" />
             <element signature="e#14276#14277#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37740">
-          <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#111030#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9995#9996#0" expanded="false" />
-            <element signature="e#10032#10033#0" expanded="false" />
-            <element signature="e#10166#10167#0" expanded="false" />
-            <element signature="e#10193#10194#0" expanded="false" />
-            <element signature="e#11258#11259#0" expanded="false" />
-            <element signature="e#11299#11300#0" expanded="false" />
-            <element signature="e#12221#12222#0" expanded="false" />
-            <element signature="e#12248#12249#0" expanded="false" />
-            <element signature="e#14664#14665#0" expanded="false" />
-            <element signature="e#14736#14737#0" expanded="false" />
-            <element signature="e#14880#14881#0" expanded="false" />
-            <element signature="e#14914#14915#0" expanded="false" />
-            <element signature="e#16617#16618#0" expanded="false" />
-            <element signature="e#16651#16652#0" expanded="false" />
-            <element signature="e#17687#17688#0" expanded="false" />
-            <element signature="e#17722#17723#0" expanded="false" />
-            <element signature="e#19179#19180#0" expanded="false" />
-            <element signature="e#19214#19215#0" expanded="false" />
-            <element signature="e#20391#20392#0" expanded="false" />
-            <element signature="e#20434#20435#0" expanded="false" />
-            <element signature="e#26036#26037#0" expanded="false" />
-            <element signature="e#26076#26077#0" expanded="false" />
-            <element signature="e#27748#27749#0" expanded="false" />
-            <element signature="e#27790#27791#0" expanded="false" />
-            <element signature="e#29687#29688#0" expanded="false" />
-            <element signature="e#29730#29731#0" expanded="false" />
-            <element signature="e#31224#31225#0" expanded="false" />
-            <element signature="e#31269#31270#0" expanded="false" />
-            <element signature="e#33029#33030#0" expanded="false" />
-            <element signature="e#33063#33064#0" expanded="false" />
-            <element signature="e#36388#36389#0" expanded="false" />
-            <element signature="e#36446#36447#0" expanded="false" />
-            <element signature="e#40368#40369#0" expanded="false" />
-            <element signature="e#40397#40398#0" expanded="false" />
-            <element signature="e#42031#42032#0" expanded="false" />
-            <element signature="e#42059#42060#0" expanded="false" />
-            <element signature="e#45826#45827#0" expanded="false" />
-            <element signature="e#45862#45863#0" expanded="false" />
-            <element signature="e#48150#48151#0" expanded="false" />
-            <element signature="e#48185#48186#0" expanded="false" />
-            <element signature="e#48840#48841#0" expanded="false" />
-            <element signature="e#48874#48875#0" expanded="false" />
-            <element signature="e#50443#50444#0" expanded="false" />
-            <element signature="e#50476#50477#0" expanded="false" />
-            <element signature="e#51568#51569#0" expanded="false" />
-            <element signature="e#51608#51609#0" expanded="false" />
-            <element signature="e#53193#53194#0" expanded="false" />
-            <element signature="e#53231#53232#0" expanded="false" />
-            <element signature="e#54315#54316#0" expanded="false" />
-            <element signature="e#54346#54347#0" expanded="false" />
-            <element signature="e#58957#58958#0" expanded="false" />
-            <element signature="e#58993#58994#0" expanded="false" />
-            <element signature="e#61731#61732#0" expanded="false" />
-            <element signature="e#61774#61775#0" expanded="false" />
-            <element signature="e#61950#61951#0" expanded="false" />
-            <element signature="e#61978#61979#0" expanded="false" />
-            <element signature="e#63730#63731#0" expanded="false" />
-            <element signature="e#63766#63767#0" expanded="false" />
-            <element signature="e#66497#66498#0" expanded="false" />
-            <element signature="e#66554#66555#0" expanded="false" />
-            <element signature="e#66720#66721#0" expanded="false" />
-            <element signature="e#66780#66781#0" expanded="false" />
-            <element signature="e#67125#67126#0" expanded="false" />
-            <element signature="e#67195#67196#0" expanded="false" />
-            <element signature="e#68197#68198#0" expanded="false" />
-            <element signature="e#68254#68255#0" expanded="false" />
-            <element signature="e#69107#69108#0" expanded="false" />
-            <element signature="e#69177#69178#0" expanded="false" />
-            <element signature="e#69476#69477#0" expanded="false" />
-            <element signature="e#69511#69512#0" expanded="false" />
-            <element signature="e#70380#70381#0" expanded="false" />
-            <element signature="e#70432#70433#0" expanded="false" />
-            <element signature="e#73943#73944#0" expanded="false" />
-            <element signature="e#73978#73979#0" expanded="false" />
-            <element signature="e#74030#74031#0" expanded="false" />
-            <element signature="e#74065#74066#0" expanded="false" />
-            <element signature="e#74647#74648#0" expanded="false" />
-            <element signature="e#74679#74680#0" expanded="false" />
-            <element signature="e#75000#75001#0" expanded="false" />
-            <element signature="e#75030#75031#0" expanded="false" />
-            <element signature="e#75227#75228#0" expanded="false" />
-            <element signature="e#75282#75283#0" expanded="false" />
-            <element signature="e#75473#75474#0" expanded="false" />
-            <element signature="e#75531#75532#0" expanded="false" />
-            <element signature="e#75866#75867#0" expanded="false" />
-            <element signature="e#75934#75935#0" expanded="false" />
-            <element signature="e#89488#89489#0" expanded="false" />
-            <element signature="e#89523#89524#0" expanded="false" />
-            <element signature="e#89919#89920#0" expanded="false" />
-            <element signature="e#89954#89955#0" expanded="false" />
-            <element signature="e#90263#90264#0" expanded="false" />
-            <element signature="e#90295#90296#0" expanded="false" />
-            <element signature="e#92244#92245#0" expanded="false" />
-            <element signature="e#92293#92294#0" expanded="false" />
-            <element signature="e#92478#92479#0" expanded="false" />
-            <element signature="e#92527#92528#0" expanded="false" />
-            <element signature="e#107793#107794#0" expanded="false" />
-            <element signature="e#107828#107829#0" expanded="false" />
-            <element signature="e#108058#108059#0" expanded="false" />
-            <element signature="e#108125#108126#0" expanded="false" />
-            <element signature="e#108370#108371#0" expanded="false" />
-            <element signature="e#108428#108429#0" expanded="false" />
-            <element signature="e#109077#109078#0" expanded="false" />
-            <element signature="e#109133#109134#0" expanded="false" />
-            <element signature="e#109380#109381#0" expanded="false" />
-            <element signature="e#109420#109421#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1229,20 +961,313 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#startRound#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
+            <element signature="e#19712#19742#0" expanded="false" />
+            <element signature="method#askCategory#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <marker date="1477446296000" expanded="true" signature="2667:2673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="663">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39899">
+          <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
+          <folding>
+            <element signature="e#83485#83486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5865">
+          <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14280#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3255#3256#0" expanded="false" />
+            <element signature="e#3332#3333#0" expanded="false" />
+            <element signature="e#3368#3369#0" expanded="false" />
+            <element signature="e#3437#3438#0" expanded="false" />
+            <element signature="e#3484#3485#0" expanded="false" />
+            <element signature="e#3556#3557#0" expanded="false" />
+            <element signature="e#3606#3607#0" expanded="false" />
+            <element signature="e#3677#3678#0" expanded="false" />
+            <element signature="e#3726#3727#0" expanded="false" />
+            <element signature="e#3797#3798#0" expanded="false" />
+            <element signature="e#3846#3847#0" expanded="false" />
+            <element signature="e#3918#3919#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#6935#6936#0" expanded="false" />
+            <element signature="e#6966#6967#0" expanded="false" />
+            <element signature="e#7058#7059#0" expanded="false" />
+            <element signature="e#7115#7116#0" expanded="false" />
+            <element signature="e#7210#7211#0" expanded="false" />
+            <element signature="e#7270#7271#0" expanded="false" />
+            <element signature="e#7713#7714#0" expanded="false" />
+            <element signature="e#7783#7784#0" expanded="false" />
+            <element signature="e#8695#8696#0" expanded="false" />
+            <element signature="e#8752#8753#0" expanded="false" />
+            <element signature="e#8847#8848#0" expanded="false" />
+            <element signature="e#8907#8908#0" expanded="false" />
+            <element signature="e#9350#9351#0" expanded="false" />
+            <element signature="e#9420#9421#0" expanded="false" />
+            <element signature="e#10362#10363#0" expanded="false" />
+            <element signature="e#10417#10418#0" expanded="false" />
+            <element signature="e#10508#10509#0" expanded="false" />
+            <element signature="e#10566#10567#0" expanded="false" />
+            <element signature="e#10995#10996#0" expanded="false" />
+            <element signature="e#11063#11064#0" expanded="false" />
+            <element signature="e#13656#13657#0" expanded="false" />
+            <element signature="e#13683#13684#0" expanded="false" />
+            <element signature="e#13767#13768#0" expanded="false" />
+            <element signature="e#13801#13802#0" expanded="false" />
+            <element signature="e#14107#14108#0" expanded="false" />
+            <element signature="e#14135#14136#0" expanded="false" />
+            <element signature="e#14163#14164#0" expanded="false" />
+            <element signature="e#14194#14195#0" expanded="false" />
+            <element signature="e#14236#14237#0" expanded="false" />
+            <element signature="e#14276#14277#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="510" column="53" selection-start-line="510" selection-start-column="53" selection-end-line="510" selection-end-column="53" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#startRound#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
+            <element signature="e#19712#19742#0" expanded="false" />
+            <element signature="method#askCategory#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+          <folding>
+            <marker date="1477446296000" expanded="true" signature="2667:2673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39899">
+          <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
+          <folding>
+            <element signature="e#83485#83486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5865">
+          <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14280#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3255#3256#0" expanded="false" />
+            <element signature="e#3332#3333#0" expanded="false" />
+            <element signature="e#3368#3369#0" expanded="false" />
+            <element signature="e#3437#3438#0" expanded="false" />
+            <element signature="e#3484#3485#0" expanded="false" />
+            <element signature="e#3556#3557#0" expanded="false" />
+            <element signature="e#3606#3607#0" expanded="false" />
+            <element signature="e#3677#3678#0" expanded="false" />
+            <element signature="e#3726#3727#0" expanded="false" />
+            <element signature="e#3797#3798#0" expanded="false" />
+            <element signature="e#3846#3847#0" expanded="false" />
+            <element signature="e#3918#3919#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#6935#6936#0" expanded="false" />
+            <element signature="e#6966#6967#0" expanded="false" />
+            <element signature="e#7058#7059#0" expanded="false" />
+            <element signature="e#7115#7116#0" expanded="false" />
+            <element signature="e#7210#7211#0" expanded="false" />
+            <element signature="e#7270#7271#0" expanded="false" />
+            <element signature="e#7713#7714#0" expanded="false" />
+            <element signature="e#7783#7784#0" expanded="false" />
+            <element signature="e#8695#8696#0" expanded="false" />
+            <element signature="e#8752#8753#0" expanded="false" />
+            <element signature="e#8847#8848#0" expanded="false" />
+            <element signature="e#8907#8908#0" expanded="false" />
+            <element signature="e#9350#9351#0" expanded="false" />
+            <element signature="e#9420#9421#0" expanded="false" />
+            <element signature="e#10362#10363#0" expanded="false" />
+            <element signature="e#10417#10418#0" expanded="false" />
+            <element signature="e#10508#10509#0" expanded="false" />
+            <element signature="e#10566#10567#0" expanded="false" />
+            <element signature="e#10995#10996#0" expanded="false" />
+            <element signature="e#11063#11064#0" expanded="false" />
+            <element signature="e#13656#13657#0" expanded="false" />
+            <element signature="e#13683#13684#0" expanded="false" />
+            <element signature="e#13767#13768#0" expanded="false" />
+            <element signature="e#13801#13802#0" expanded="false" />
+            <element signature="e#14107#14108#0" expanded="false" />
+            <element signature="e#14135#14136#0" expanded="false" />
+            <element signature="e#14163#14164#0" expanded="false" />
+            <element signature="e#14194#14195#0" expanded="false" />
+            <element signature="e#14236#14237#0" expanded="false" />
+            <element signature="e#14276#14277#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7590">
+          <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14280#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3255#3256#0" expanded="false" />
+            <element signature="e#3332#3333#0" expanded="false" />
+            <element signature="e#3368#3369#0" expanded="false" />
+            <element signature="e#3437#3438#0" expanded="false" />
+            <element signature="e#3484#3485#0" expanded="false" />
+            <element signature="e#3556#3557#0" expanded="false" />
+            <element signature="e#3606#3607#0" expanded="false" />
+            <element signature="e#3677#3678#0" expanded="false" />
+            <element signature="e#3726#3727#0" expanded="false" />
+            <element signature="e#3797#3798#0" expanded="false" />
+            <element signature="e#3846#3847#0" expanded="false" />
+            <element signature="e#3918#3919#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#6935#6936#0" expanded="false" />
+            <element signature="e#6966#6967#0" expanded="false" />
+            <element signature="e#7058#7059#0" expanded="false" />
+            <element signature="e#7115#7116#0" expanded="false" />
+            <element signature="e#7210#7211#0" expanded="false" />
+            <element signature="e#7270#7271#0" expanded="false" />
+            <element signature="e#7713#7714#0" expanded="false" />
+            <element signature="e#7783#7784#0" expanded="false" />
+            <element signature="e#8695#8696#0" expanded="false" />
+            <element signature="e#8752#8753#0" expanded="false" />
+            <element signature="e#8847#8848#0" expanded="false" />
+            <element signature="e#8907#8908#0" expanded="false" />
+            <element signature="e#9350#9351#0" expanded="false" />
+            <element signature="e#9420#9421#0" expanded="false" />
+            <element signature="e#10362#10363#0" expanded="false" />
+            <element signature="e#10417#10418#0" expanded="false" />
+            <element signature="e#10508#10509#0" expanded="false" />
+            <element signature="e#10566#10567#0" expanded="false" />
+            <element signature="e#10995#10996#0" expanded="false" />
+            <element signature="e#11063#11064#0" expanded="false" />
+            <element signature="e#13656#13657#0" expanded="false" />
+            <element signature="e#13683#13684#0" expanded="false" />
+            <element signature="e#13767#13768#0" expanded="false" />
+            <element signature="e#13801#13802#0" expanded="false" />
+            <element signature="e#14107#14108#0" expanded="false" />
+            <element signature="e#14135#14136#0" expanded="false" />
+            <element signature="e#14163#14164#0" expanded="false" />
+            <element signature="e#14194#14195#0" expanded="false" />
+            <element signature="e#14236#14237#0" expanded="false" />
+            <element signature="e#14276#14277#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuperTrump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1251,15 +1276,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="714">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <marker date="1477446296000" expanded="true" signature="2667:2673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="2347" column="0" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
+          <folding>
+            <element signature="e#83485#83486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TrumpGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="719" column="18" selection-start-line="719" selection-start-column="18" selection-end-line="719" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSetupGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseGameGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#startRound#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#initialiseSelectionGui#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#displayUserData#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnAi#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#nextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#findNextTurn#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runAutoTurns#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#runTurnHuman#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkMagnetite#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createPlayers#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#getHelpCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkGameEnd#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#createDeck#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#processCard#0;class#TrumpGame#0" expanded="false" />
+            <element signature="e#19712#19742#0" expanded="false" />
+            <element signature="method#askCategory#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#storeCards#0;class#TrumpGame#0" expanded="false" />
+            <element signature="method#checkIfGameWinner#0;class#TrumpGame#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
